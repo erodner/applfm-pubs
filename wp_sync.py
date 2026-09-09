@@ -54,6 +54,9 @@ PROOFS = HERE / "proofs.json"
 # --- ACF field keys of the publication post type (discovered 2026-09-09) ---
 F_PUBLISHED = "acf[field_69b30e1ec24c5]"                       # venue text
 F_BIBTEX = "acf[field_69b30b0eca792]"                          # code editor
+F_TAX_CATEGORY = "acf[field_69b308c077956]"                    # taxonomy select (term id)
+F_TAX_YEAR = "acf[field_69b30a9758056]"                        # taxonomy select (term id)
+F_TAX_TYPE = "acf[field_69b30aa158057]"                        # taxonomy select (term id)
 AUTH_REP = "acf[field_69b30be47cff9]"                          # authors repeater
 AUTH_CONN = "field_69b30cbd7cffe"                              # 'Team' | 'External'
 AUTH_TEAM = "field_69b30c657cffc"                              # team post id
@@ -66,16 +69,42 @@ RES_LINK = "field_69b31d481aa20"                               # link: title/url
 TYPE_MAP = {"article": "Article", "inproceedings": "Conference Paper",
             "misc": "Preprint", "book": "Book", "phdthesis": "PhD Thesis"}
 
-# Research-area category per bib group; per-key overrides below. Keys without a
-# mapping are created without a category (assign manually in wp-admin).
+# Research-area category per bib group (fallback for future entries); the
+# per-key map below covers every current non-preprint entry. Rules confirmed by
+# the user 2026-09: M1 imprinting, M2 vision, M3 evaluation/robustness/fairness
+# (incl. XAI, data quality, health-data quality), M4 NLP, R3 Löser medical NLP.
 GROUP_CATEGORY = {
     "Boblan group (robotics, BHT Berlin)": "R1 - Robotics",
     "Höppner group (robotics, BHT Berlin)": "R1 - Robotics",
     "Reber group (BHT Berlin)": "R2 - Quantitative Biology",
     "Grohmann group (BHT Berlin)": "R2 - Quantitative Biology",
 }
+R2, R3 = "R2 - Quantitative Biology", "R3 - Predictive Medicine"
+M1, M2 = "M1 - Continual Few-Shot Learning", "M2 - Vision and Motion"
+M3, M4 = "M3 - Holistic Evaluation, Fairness, Robustness", "M4 - Adapting Text Embeddings"
 KEY_CATEGORY = {
-    "Koddenbrock2026Microtubule": "R2 - Quantitative Biology",
+    "Koddenbrock2026Microtubule": R2, "Bangera2026Plasmodium": R2,
+    "Biswas2025Density": R2, "Kletter2025Spindle": R2, "Kuhlmann2026TraF": R2,
+    "Papaioannou2025SPONGE": R3, "Papaioannou2026ConformalPrediction": R3,
+    "Roehr2024MIMIC": R3, "Grundmann2026CliniBench": R3,
+    "Roehr2025WhereDoesItHurt": R3, "Roehr2026DeepICD": R3,
+    "Figueroa2024LongTail": R3, "Fast2024AMEGA": R3,
+    "Figueroa2025FinancialLiteracy": M4, "Mi2026Idiomaticity": M4,
+    "Buchem2025Furhat": M4, "Kolomenko2026Embedding": M4,
+    "Saha2025Pseudonymization": M4,
+    "Knauer2025GrandmotherCells": M3, "Knauer2026ConceptTracer": M3,
+    "Knauer2025DecisionTree": M3, "Knauer2026Physiotherapy": M3,
+    "Westerhoff2025SCAM": M3, "Kostic2026SameMeaning": M3,
+    "Chiaburu2025UncertaintyXAI": M3, "Jung2025MechDetect": M3,
+    "Jung2025ErrorModels": M3, "Huang2024TinyChirp": M3,
+    "Orynbay2025BloodSample": M3, "Nanevski2026SyntheticData": M3,
+    "Nanevski2026FallRisk": M3, "Seibert2026AINCRA": M3,
+    "Kozcuer2024Fairness": M3,
+    "Singh2026SoilNet": M2,
+    "Westerhoff2025WeightImprinting": M1,
+    "Koddenbrock2026DeepBench": M3, "Reiss2025VisualICL": M2,
+    "Harnischmacher2024BreastCancer": R3, "Schwarz2024FaultyLabels": M2,
+    "Figueroa2025Comply": M4,
 }
 
 
@@ -262,17 +291,27 @@ def resource_rows(entry):
     return fields
 
 
-def entry_fields(entry, team_index):
+def entry_fields(entry, team_index, terms):
+    """terms: {"category": {name: id}, "year": {...}, "type": {...}}"""
     cat = KEY_CATEGORY.get(entry["key"]) or GROUP_CATEGORY.get(entry["group"], "")
+    type_name = TYPE_MAP.get(entry["type"], "Article")
     fields = {
         "post_title": entry["title"],
         F_PUBLISHED: entry["venue"],
         F_BIBTEX: entry["bibtex"],
-        "tax_input[publication-year]": entry["year"],
-        "tax_input[publication-bibtex-type]": TYPE_MAP.get(entry["type"], "Article"),
     }
-    if cat:
-        fields["tax_input[publication-category]"] = cat
+    year_id = terms["year"].get(entry["year"])
+    type_id = terms["type"].get(type_name)
+    cat_id = terms["category"].get(cat) if cat else None
+    if year_id:
+        fields[F_TAX_YEAR] = str(year_id)
+        fields["tax_input[publication-year][]"] = str(year_id)
+    if type_id:
+        fields[F_TAX_TYPE] = str(type_id)
+        fields["tax_input[publication-bibtex-type][]"] = str(type_id)
+    if cat_id:
+        fields[F_TAX_CATEGORY] = str(cat_id)
+        fields["tax_input[publication-category][]"] = str(cat_id)
     fields.update(author_rows(entry, team_index))
     fields.update(resource_rows(entry))
     return fields
@@ -286,6 +325,10 @@ def main():
     ap.add_argument("--update", action="store_true", help="with --apply: rewrite matched posts")
     ap.add_argument("--publish", action="store_true", help="create posts as published, not drafts")
     ap.add_argument("--limit", type=int, default=0, help="only process the first N creations (testing)")
+    ap.add_argument("--include-preprints", action="store_true",
+                    help="also sync @misc entries (preprints); skipped by default")
+    ap.add_argument("--only", default="",
+                    help="comma-separated bib keys: restrict create/update to these entries")
     args = ap.parse_args()
 
     wp = WPSession(load_creds())
@@ -294,6 +337,12 @@ def main():
     team = wp.rest_all("/wp/v2/team", {"status": "publish,draft"})
     team_index = {norm_name(re.sub(r"<[^>]+>", "", t["title"]["rendered"])): t["id"] for t in team}
     print(f"Team members: {len(team)}")
+
+    terms = {}
+    for label, tax in [("category", "publication-category"), ("year", "publication-year"),
+                       ("type", "publication-bibtex-type")]:
+        terms[label] = {html.unescape(t["name"]): t["id"] for t in wp.rest_all(f"/wp/v2/{tax}")}
+    print(f"Taxonomy terms: {', '.join(f'{k}={len(v)}' for k, v in terms.items())}")
 
     existing = wp.rest_all("/wp/v2/publication",
                            {"context": "edit", "status": "publish,draft,pending,private"})
@@ -315,6 +364,15 @@ def main():
                 by_key[km.group(1)] = p
 
     entries = build_entries()
+    preprints = [e for e in entries if e["type"] == "misc"]
+    if not args.include_preprints:
+        entries = [e for e in entries if e["type"] != "misc"]
+        for e in preprints:
+            print(f"  SKIP (preprint) [{e['year']}] {e['title'][:64]}")
+    if args.only:
+        wanted = {k.strip() for k in args.only.split(",") if k.strip()}
+        entries = [e for e in entries if e["key"] in wanted]
+        print(f"--only filter: {len(entries)} entries")
     to_create, matched = [], []
     for e in entries:
         post = by_key.get(e["key"])
@@ -351,7 +409,7 @@ def main():
     creations = to_create[:args.limit] if args.limit else to_create
     for e, _ in creations:
         pid, hidden, _ = wp.edit_form()  # auto-draft via post-new.php
-        fields = entry_fields(e, team_index)
+        fields = entry_fields(e, team_index, terms)
         url, err = wp.submit_post(hidden, fields, publish=args.publish)
         status = "publish" if args.publish else "draft"
         print(f"  created #{pid} ({status}) {e['title'][:60]}" + (f"  WARN: {err}" if err else ""))
@@ -359,7 +417,7 @@ def main():
     if args.update:
         for e, p in matched:
             pid, hidden, _ = wp.edit_form(p["id"])
-            fields = entry_fields(e, team_index)
+            fields = entry_fields(e, team_index, terms)
             publish = p["status"] == "publish"
             url, err = wp.submit_post(hidden, fields, publish=publish)
             print(f"  updated #{pid} {e['title'][:60]}" + (f"  WARN: {err}" if err else ""))
