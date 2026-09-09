@@ -1,38 +1,41 @@
 #!/usr/bin/env python3
-"""Sync applfm.bib entries to the WordPress 'publication' post type.
+"""Sync applfm.bib entries to the WordPress 'publication' post type on
+foundationmodels.bht-berlin.de.
 
 Setup
 -----
-1. In WordPress, create an Application Password:
-   wp-admin -> Users -> Profile -> Application Passwords -> add one (e.g. "applfm-sync").
-2. Copy wp_credentials.example.json to wp_credentials.json (gitignored) and fill in:
-   - base_url: https://foundationmodels.bht-berlin.de
-   - username: your WP login name
-   - app_password: the generated application password (spaces are fine)
+Copy wp_credentials.example.json to wp_credentials.json (gitignored):
+  { "base_url": "https://foundationmodels.bht-berlin.de",
+    "username": "...", "password": "..." }
+The account's normal WordPress login is used (the site blocks unauthenticated
+REST and application passwords), via wp-login.php cookies + a REST nonce for
+reading and the classic-editor post form for writing.
 
 Usage
 -----
-  python3 wp_sync.py --inspect       # discover the REST route and dump one existing
-                                     # publication's JSON (use this first to see which
-                                     # meta/ACF fields the post type has)
   python3 wp_sync.py                 # dry run: report what would be created/updated
   python3 wp_sync.py --apply         # create missing entries as drafts
-  python3 wp_sync.py --apply --publish   # create as published instead of draft
-  python3 wp_sync.py --apply --update    # also update already-synced posts in place
+  python3 wp_sync.py --apply --publish   # create as published instead of drafts
+  python3 wp_sync.py --apply --update    # also rewrite matched posts' fields
 
-Behavior
---------
-- Entries are matched to existing posts first by a hidden marker
-  (<!-- applfm-key: ... --> in the post content), then by normalized title.
-- Posts are never deleted; publications on WordPress that have no bib entry
-  are only reported.
-- The post body is a formatted citation (authors, venue, year, DOI/arXiv/PDF
-  links) plus the raw BibTeX in a <pre> block. If --inspect reveals dedicated
-  meta/ACF fields (e.g. authors, year, doi), map them in META_MAP below and
-  they will be filled as well.
+Data model of the publication post type (ACF)
+---------------------------------------------
+  title                          post_title
+  venue                          acf text field 'published'
+  raw BibTeX                     acf code field 'bibtex' (also used for matching:
+                                 the bib key inside it identifies synced posts)
+  authors                        acf repeater: Team (post_object -> team CPT) or
+                                 External (name + institution)
+  DOI / arXiv / PDF / link       acf repeater 'resources' (link fields)
+  year, bibtex type, category    taxonomies publication-year,
+                                 publication-bibtex-type, publication-category
+
+Posts are matched by bib key in the bibtex field, then by normalized title.
+Nothing is ever deleted; unmatched WordPress posts are reported.
 """
 import argparse
-import base64
+import html
+import http.cookiejar
 import json
 import re
 import sys
@@ -48,16 +51,32 @@ CRED_FILE = HERE / "wp_credentials.json"
 BIB = HERE / "applfm.bib"
 PROOFS = HERE / "proofs.json"
 
-REST_BASE_CANDIDATES = ["publication", "publications"]
+# --- ACF field keys of the publication post type (discovered 2026-09-09) ---
+F_PUBLISHED = "acf[field_69b30e1ec24c5]"                       # venue text
+F_BIBTEX = "acf[field_69b30b0eca792]"                          # code editor
+AUTH_REP = "acf[field_69b30be47cff9]"                          # authors repeater
+AUTH_CONN = "field_69b30cbd7cffe"                              # 'Team' | 'External'
+AUTH_TEAM = "field_69b30c657cffc"                              # team post id
+AUTH_EXT_GROUP = "field_69b30c9d7cffd"
+AUTH_EXT_NAME = "field_69b30d0f7cfff"
+AUTH_EXT_INST = "field_69b30d427d001"
+RES_REP = "acf[field_69b30eb3b5814]"                           # resources repeater
+RES_LINK = "field_69b31d481aa20"                               # link: title/url/target
 
-# After running --inspect, map bib data to the post type's meta/ACF fields here,
-# e.g. {"authors": "authors_text", "year": "year", "doi": "doi", "url": "external_url"}.
-# Left side: one of authors|year|venue|doi|url|arxiv|pdf|bibtex ; right side: WP field name.
-# Fields are written into the "acf" object if USE_ACF, else into "meta".
-META_MAP: dict = {}
-USE_ACF = False
+TYPE_MAP = {"article": "Article", "inproceedings": "Conference Paper",
+            "misc": "Preprint", "book": "Book", "phdthesis": "PhD Thesis"}
 
-MARKER = "applfm-key"
+# Research-area category per bib group; per-key overrides below. Keys without a
+# mapping are created without a category (assign manually in wp-admin).
+GROUP_CATEGORY = {
+    "Boblan group (robotics, BHT Berlin)": "R1 - Robotics",
+    "Höppner group (robotics, BHT Berlin)": "R1 - Robotics",
+    "Reber group (BHT Berlin)": "R2 - Quantitative Biology",
+    "Grohmann group (BHT Berlin)": "R2 - Quantitative Biology",
+}
+KEY_CATEGORY = {
+    "Koddenbrock2026Microtubule": "R2 - Quantitative Biology",
+}
 
 
 def die(msg):
@@ -67,91 +86,110 @@ def die(msg):
 
 def load_creds():
     if not CRED_FILE.exists():
-        die(f"{CRED_FILE.name} not found. Copy wp_credentials.example.json to "
-            f"{CRED_FILE.name} and fill in username + application password.")
+        die(f"{CRED_FILE.name} not found - copy wp_credentials.example.json and fill it in.")
     c = json.loads(CRED_FILE.read_text())
-    for k in ("base_url", "username", "app_password"):
+    c["password"] = c.get("password") or c.get("app_password")
+    for k in ("base_url", "username", "password"):
         if not c.get(k):
             die(f"{CRED_FILE.name} is missing '{k}'.")
     c["base_url"] = c["base_url"].rstrip("/")
     return c
 
 
-class WP:
+class WPSession:
     def __init__(self, creds):
         self.base = creds["base_url"]
-        token = base64.b64encode(
-            f"{creds['username']}:{creds['app_password']}".encode()).decode()
-        self.headers = {
-            "Authorization": f"Basic {token}",
-            "User-Agent": "applfm-wp-sync/1.0",
-            "Accept": "application/json",
-        }
+        self.cj = http.cookiejar.CookieJar()
+        self.op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(self.cj))
+        self.op.addheaders = [("User-Agent", "Mozilla/5.0 applfm-sync/1.0")]
+        self._login(creds)
+        self.nonce = self._get("/wp-admin/admin-ajax.php?action=rest-nonce").strip()
 
-    def req(self, method, path, payload=None, params=None):
-        url = f"{self.base}/wp-json{path}"
-        if params:
-            url += "?" + urllib.parse.urlencode(params)
-        data = json.dumps(payload).encode() if payload is not None else None
-        headers = dict(self.headers)
-        if data:
-            headers["Content-Type"] = "application/json"
-        req = urllib.request.Request(url, data=data, headers=headers, method=method)
-        try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                return json.loads(r.read().decode()), dict(r.headers)
-        except urllib.error.HTTPError as e:
-            body = e.read().decode(errors="replace")[:500]
-            raise RuntimeError(f"{method} {url} -> HTTP {e.code}: {body}") from e
+    def _login(self, creds):
+        self._get("/wp-login.php")
+        data = urllib.parse.urlencode({
+            "log": creds["username"], "pwd": creds["password"],
+            "wp-submit": "Log In", "redirect_to": self.base + "/wp-admin/",
+            "testcookie": "1"}).encode()
+        r = self.op.open(self.base + "/wp-login.php", data=data, timeout=45)
+        if not any(k.name.startswith("wordpress_logged_in") for k in self.cj):
+            die("WordPress login failed - check username/password in wp_credentials.json.")
 
-    def get_all(self, path, params=None):
+    def _get(self, path):
+        return self.op.open(self.base + path, timeout=60).read().decode(errors="replace")
+
+    def rest(self, path, params=None):
+        url = self.base + "/wp-json" + path + ("?" + urllib.parse.urlencode(params) if params else "")
+        req = urllib.request.Request(url, headers={"X-WP-Nonce": self.nonce})
+        return json.loads(self.op.open(req, timeout=60).read().decode())
+
+    def rest_all(self, path, params=None):
         params = dict(params or {})
         params.setdefault("per_page", 100)
-        page, out = 1, []
+        out, page = [], 1
         while True:
             params["page"] = page
             try:
-                items, headers = self.req("GET", path, params=params)
-            except RuntimeError as e:
-                if "rest_post_invalid_page_number" in str(e):
-                    break
-                raise
-            if not isinstance(items, list) or not items:
+                items = self.rest(path, params)
+            except urllib.error.HTTPError:
+                break
+            if not items:
                 break
             out.extend(items)
-            total_pages = int(headers.get("X-WP-TotalPages", "1"))
-            if page >= total_pages:
+            if len(items) < params["per_page"]:
                 break
             page += 1
         return out
 
+    def edit_form(self, post_id=None):
+        """Fetch the classic-editor form; returns (post_id, hidden_fields)."""
+        path = (f"/wp-admin/post.php?post={post_id}&action=edit" if post_id
+                else "/wp-admin/post-new.php?post_type=publication")
+        page = self._get(path)
+        hidden = {}
+        for m in re.finditer(r'<input[^>]*type=["\']hidden["\'][^>]*>', page):
+            tag = m.group(0)
+            nm = re.search(r'name=["\']([^"\']+)["\']', tag)
+            vl = re.search(r'value=["\']([^"\']*)["\']', tag)
+            if nm:
+                hidden[html.unescape(nm.group(1))] = html.unescape(vl.group(1)) if vl else ""
+        pid = hidden.get("post_ID") or (str(post_id) if post_id else None)
+        if not pid:
+            die(f"could not obtain post form for {path}")
+        return int(pid), hidden, page
 
-def discover_rest_base(wp):
-    """Find the REST base of the publication post type."""
-    try:
-        types, _ = wp.req("GET", "/wp/v2/types")
-    except RuntimeError as e:
-        die(f"Cannot query post types ({e}).\nCheck the credentials, and that "
-            "Application Passwords are enabled on the site.")
-    for slug, t in types.items():
-        if slug in ("publication", "publications") or \
-           "publication" in (t.get("rest_base") or "") or \
-           "publikation" in slug:
-            rb = t.get("rest_base") or slug
-            return rb, t
-    # not in the types listing -> maybe not show_in_rest; probe candidates anyway
-    for rb in REST_BASE_CANDIDATES:
-        try:
-            wp.req("GET", f"/wp/v2/{rb}", params={"per_page": 1})
-            return rb, {}
-        except RuntimeError:
-            continue
-    die("The 'publication' post type is not exposed in the REST API "
-        "(show_in_rest is off). Ask the site admin to enable it, e.g. via:\n"
-        "  add_filter('register_post_type_args', function($args, $type) {\n"
-        "    if ($type === 'publication') { $args['show_in_rest'] = true; }\n"
-        "    return $args; }, 10, 2);\n"
-        "Then re-run this script.")
+    def submit_post(self, hidden, fields, publish):
+        payload = dict(hidden)
+        # drop fields that would trigger unrelated actions
+        for k in list(payload):
+            if k.startswith(("meta-box-order", "wp-preview", "screen_id")):
+                payload.pop(k)
+        payload.update(fields)
+        payload["action"] = "editpost"
+        payload["post_type"] = "publication"
+        if publish:
+            payload["post_status"] = "publish"
+            payload["publish"] = "Publish"
+        else:
+            payload["post_status"] = "draft"
+            payload["save"] = "Save Draft"
+        data = urllib.parse.urlencode(payload, doseq=True).encode()
+        r = self.op.open(self.base + "/wp-admin/post.php", data=data, timeout=90)
+        body = r.read().decode(errors="replace")
+        if "post.php" not in r.url and "login" in r.url:
+            die("session expired during submit")
+        err = re.search(r'<div id="message"[^>]*class="[^"]*error[^"]*"[^>]*>(.*?)</div>', body, re.S)
+        return r.url, (re.sub(r"<[^>]+>", " ", err.group(1)).strip() if err else None)
+
+
+# ---------------------------------------------------------------- bib helpers
+def norm_name(n):
+    n = re.sub(r"\b(Prof|Dr|Ing|Jun|Sen)\.?\s*", "", n)
+    n = n.replace("ß", "ss").lower()
+    parts = [p for p in re.split(r"[\s.]+", n) if len(p) > 1]
+    if len(parts) >= 2:
+        return parts[0] + " " + parts[-1]
+    return " ".join(parts)
 
 
 def norm_title(t):
@@ -159,15 +197,14 @@ def norm_title(t):
 
 
 def plain_authors(raw):
-    parts = [p.strip() for p in delatex(raw).split(" and ")]
     out = []
-    for p in parts:
+    for p in [x.strip() for x in delatex(raw).split(" and ")]:
         if "," in p:
             last, first = [x.strip() for x in p.split(",", 1)]
             out.append(f"{first} {last}")
         else:
             out.append(p)
-    return ", ".join(out)
+    return out
 
 
 def build_entries():
@@ -178,138 +215,154 @@ def build_entries():
         for e in g["entries"]:
             f = e["fields"]
             proof = proofs.get(e["key"], {})
-            aid = arxiv_id(e)
             entries.append({
-                "key": e["key"],
+                "key": e["key"], "type": e["type"].lower(),
                 "title": delatex(f.get("title", e["key"])),
                 "authors": plain_authors(f.get("author", "")),
                 "year": f.get("year", ""),
                 "venue": venue_of(e),
-                "doi": f.get("doi", ""),
-                "url": f.get("url", ""),
-                "arxiv": aid or "",
-                "pdf": pdf_url(e, proof),
-                "bibtex": e["raw"],
-                "group": g["name"],
+                "doi": f.get("doi", ""), "url": f.get("url", ""),
+                "arxiv": arxiv_id(e) or "", "pdf": pdf_url(e, proof),
+                "bibtex": e["raw"], "group": g["name"],
             })
     return entries
 
 
-def render_content(entry):
+def author_rows(entry, team_index):
+    fields = {}
+    for i, name in enumerate(entry["authors"]):
+        row = f"{AUTH_REP}[row-{i}]"
+        tid = team_index.get(norm_name(name))
+        if tid:
+            fields[f"{row}[{AUTH_CONN}]"] = "Team"
+            fields[f"{row}[{AUTH_TEAM}]"] = str(tid)
+        else:
+            fields[f"{row}[{AUTH_CONN}]"] = "External"
+            fields[f"{row}[{AUTH_EXT_GROUP}][{AUTH_EXT_NAME}]"] = name
+            fields[f"{row}[{AUTH_EXT_GROUP}][{AUTH_EXT_INST}]"] = ""
+    return fields
+
+
+def resource_rows(entry):
     links = []
     if entry["doi"]:
-        links.append(f'<a href="https://doi.org/{entry["doi"]}">DOI</a>')
+        links.append(("DOI", f"https://doi.org/{entry['doi']}"))
     if entry["arxiv"]:
-        links.append(f'<a href="https://arxiv.org/abs/{entry["arxiv"]}">arXiv</a>')
-    if entry["url"]:
-        links.append(f'<a href="{entry["url"]}">Link</a>')
+        links.append(("arXiv", f"https://arxiv.org/abs/{entry['arxiv']}"))
     if entry["pdf"]:
-        links.append(f'<a href="{entry["pdf"]}">PDF</a>')
-    bib = entry["bibtex"].replace("<", "&lt;").replace(">", "&gt;")
-    return (
-        f"<!-- {MARKER}: {entry['key']} -->\n"
-        f"<p>{entry['authors']}</p>\n"
-        f"<p><em>{entry['venue']}</em>, {entry['year']}</p>\n"
-        + (f"<p>{' &middot; '.join(links)}</p>\n" if links else "")
-        + f"<details><summary>BibTeX</summary><pre>{bib}</pre></details>"
-    )
+        links.append(("PDF", entry["pdf"]))
+    if entry["url"]:
+        links.append(("Link", entry["url"]))
+    fields = {}
+    for i, (title, url) in enumerate(links):
+        row = f"{RES_REP}[row-{i}][{RES_LINK}]"
+        fields[f"{row}[title]"] = title
+        fields[f"{row}[url]"] = url
+        fields[f"{row}[target]"] = "_blank"
+    return fields
 
 
-def meta_payload(entry):
-    if not META_MAP:
-        return {}
-    fields = {wp_field: entry.get(src, "") for src, wp_field in META_MAP.items()}
-    return {"acf": fields} if USE_ACF else {"meta": fields}
+def entry_fields(entry, team_index):
+    cat = KEY_CATEGORY.get(entry["key"]) or GROUP_CATEGORY.get(entry["group"], "")
+    fields = {
+        "post_title": entry["title"],
+        F_PUBLISHED: entry["venue"],
+        F_BIBTEX: entry["bibtex"],
+        "tax_input[publication-year]": entry["year"],
+        "tax_input[publication-bibtex-type]": TYPE_MAP.get(entry["type"], "Article"),
+    }
+    if cat:
+        fields["tax_input[publication-category]"] = cat
+    fields.update(author_rows(entry, team_index))
+    fields.update(resource_rows(entry))
+    return fields
 
 
+# ---------------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--inspect", action="store_true",
-                    help="dump REST discovery info and one existing publication")
-    ap.add_argument("--apply", action="store_true",
-                    help="actually write to WordPress (default: dry run)")
-    ap.add_argument("--update", action="store_true",
-                    help="with --apply: update existing matched posts in place")
-    ap.add_argument("--publish", action="store_true",
-                    help="create new posts with status 'publish' instead of 'draft'")
+    ap.add_argument("--apply", action="store_true", help="write to WordPress (default: dry run)")
+    ap.add_argument("--update", action="store_true", help="with --apply: rewrite matched posts")
+    ap.add_argument("--publish", action="store_true", help="create posts as published, not drafts")
+    ap.add_argument("--limit", type=int, default=0, help="only process the first N creations (testing)")
     args = ap.parse_args()
 
-    wp = WP(load_creds())
-    rest_base, type_info = discover_rest_base(wp)
-    print(f"Publication post type found; REST route: /wp/v2/{rest_base}")
+    wp = WPSession(load_creds())
+    print("Logged in.")
 
-    existing = wp.get_all(f"/wp/v2/{rest_base}",
-                          params={"context": "edit", "status": "publish,draft,pending,private"})
-    print(f"Existing publications on WordPress: {len(existing)}")
+    team = wp.rest_all("/wp/v2/team", {"status": "publish,draft"})
+    team_index = {norm_name(re.sub(r"<[^>]+>", "", t["title"]["rendered"])): t["id"] for t in team}
+    print(f"Team members: {len(team)}")
 
-    if args.inspect:
-        print("\n--- post type info ---")
-        print(json.dumps(type_info, indent=1, ensure_ascii=False)[:1500])
-        if existing:
-            print("\n--- first existing publication (full JSON) ---")
-            print(json.dumps(existing[0], indent=1, ensure_ascii=False)[:4000])
-            print("\nUse this to fill META_MAP in wp_sync.py if the post type has "
-                  "dedicated meta/ACF fields.")
-        else:
-            print("\nNo existing publications to inspect. Create one manually in "
-                  "wp-admin and re-run --inspect to see its field structure.")
-        return
+    existing = wp.rest_all("/wp/v2/publication",
+                           {"context": "edit", "status": "publish,draft,pending,private"})
+    print(f"Existing publications: {len(existing)}")
 
-    # index existing posts by marker key, then by normalized title
-    by_key, by_title = {}, {}
+    # fetch each existing post's bibtex field to extract the bib key
+    by_key, by_title, post_bibkey = {}, {}, {}
     for p in existing:
-        content = (p.get("content") or {}).get("raw") or (p.get("content") or {}).get("rendered", "")
-        m = re.search(MARKER + r":\s*(\S+?)\s*-->", content)
+        title = re.sub(r"<[^>]+>", "", (p["title"].get("raw") or p["title"].get("rendered", "")))
+        if title.strip():
+            nt = norm_title(title)
+            by_title.setdefault(nt, []).append(p)
+        _, _, page = wp.edit_form(p["id"])
+        m = re.search(r'name="' + re.escape(F_BIBTEX) + r'"[^>]*>(.*?)</textarea>', page, re.S)
         if m:
-            by_key[m.group(1)] = p
-        t = (p.get("title") or {}).get("raw") or (p.get("title") or {}).get("rendered", "")
-        by_title[norm_title(re.sub(r"<[^>]+>", "", t))] = p
+            km = re.search(r"@\w+\{\s*([^,\s]+)", html.unescape(m.group(1)))
+            if km:
+                post_bibkey[p["id"]] = km.group(1)
+                by_key[km.group(1)] = p
 
     entries = build_entries()
-    to_create, to_update, unchanged = [], [], []
+    to_create, matched = [], []
     for e in entries:
-        post = by_key.get(e["key"]) or by_title.get(norm_title(e["title"]))
-        if post is None:
-            to_create.append(e)
-        else:
-            new_content = render_content(e)
-            cur = (post.get("content") or {}).get("raw", "")
-            (to_update if cur.strip() != new_content.strip() else unchanged).append((e, post))
+        post = by_key.get(e["key"])
+        if not post:
+            cands = by_title.get(norm_title(e["title"]), [])
+            post = cands[0] if cands else None
+        (matched if post else to_create).append((e, post))
 
-    matched_ids = {p["id"] for _, p in to_update + unchanged}
+    matched_ids = {p["id"] for _, p in matched}
     orphans = [p for p in existing if p["id"] not in matched_ids]
+    dupes = {t: ps for t, ps in by_title.items() if len(ps) > 1}
 
-    print(f"\nBib entries: {len(entries)}  |  create: {len(to_create)}  |  "
-          f"update: {len(to_update)}  |  unchanged: {len(unchanged)}  |  "
-          f"on WP but not in bib: {len(orphans)}")
-    for e in to_create:
-        print(f"  CREATE  [{e['year']}] {e['title'][:70]}")
-    for e, p in to_update:
-        print(f"  UPDATE  #{p['id']} [{e['year']}] {e['title'][:70]}")
+    print(f"\nBib entries: {len(entries)} | create: {len(to_create)} | "
+          f"matched existing: {len(matched)} | on WP but not in bib: {len(orphans)}")
+    for e, _ in to_create:
+        cat = KEY_CATEGORY.get(e["key"]) or GROUP_CATEGORY.get(e["group"], "(no category)")
+        ext = [a for a in e["authors"] if norm_name(a) not in team_index]
+        print(f"  CREATE [{e['year']}] {e['title'][:64]}")
+        print(f"         type={TYPE_MAP.get(e['type'])}  cat={cat}  "
+              f"team-authors={len(e['authors']) - len(ext)}/{len(e['authors'])}")
+    for e, p in matched:
+        print(f"  MATCH  #{p['id']} [{p['status']}] {e['title'][:64]}")
     for p in orphans:
-        t = re.sub(r"<[^>]+>", "", (p.get("title") or {}).get("rendered", ""))
-        print(f"  ORPHAN  #{p['id']} {t[:70]}  (left untouched)")
+        t = re.sub(r"<[^>]+>", "", p["title"].get("rendered", "")) or "(empty title)"
+        print(f"  ORPHAN #{p['id']} [{p['status']}] {t[:64]} (left untouched)")
+    for t, ps in dupes.items():
+        print(f"  DUPLICATE on WP: {', '.join('#' + str(p['id']) for p in ps)} share the same title")
 
     if not args.apply:
-        print("\nDry run - nothing written. Re-run with --apply to create"
-              + (" and --update to update" if to_update else "") + ".")
+        print("\nDry run - nothing written. Use --apply to create"
+              + (", --update to also rewrite matched posts" if matched else "") + ".")
         return
 
-    status = "publish" if args.publish else "draft"
-    for e in to_create:
-        payload = {"title": e["title"], "content": render_content(e), "status": status}
-        payload.update(meta_payload(e))
-        created, _ = wp.req("POST", f"/wp/v2/{rest_base}", payload)
-        print(f"  created #{created['id']} ({status}): {e['title'][:60]}")
+    creations = to_create[:args.limit] if args.limit else to_create
+    for e, _ in creations:
+        pid, hidden, _ = wp.edit_form()  # auto-draft via post-new.php
+        fields = entry_fields(e, team_index)
+        url, err = wp.submit_post(hidden, fields, publish=args.publish)
+        status = "publish" if args.publish else "draft"
+        print(f"  created #{pid} ({status}) {e['title'][:60]}" + (f"  WARN: {err}" if err else ""))
+
     if args.update:
-        for e, p in to_update:
-            payload = {"title": e["title"], "content": render_content(e)}
-            payload.update(meta_payload(e))
-            wp.req("POST", f"/wp/v2/{rest_base}/{p['id']}", payload)
-            print(f"  updated #{p['id']}: {e['title'][:60]}")
-    elif to_update:
-        print(f"  ({len(to_update)} posts differ; re-run with --update to update them)")
+        for e, p in matched:
+            pid, hidden, _ = wp.edit_form(p["id"])
+            fields = entry_fields(e, team_index)
+            publish = p["status"] == "publish"
+            url, err = wp.submit_post(hidden, fields, publish=publish)
+            print(f"  updated #{pid} {e['title'][:60]}" + (f"  WARN: {err}" if err else ""))
     print("Done.")
 
 

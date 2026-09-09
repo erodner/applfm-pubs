@@ -1,2 +1,4 @@
 wp_credentials.json
 __pycache__/
+*.swp
+.*.swp
