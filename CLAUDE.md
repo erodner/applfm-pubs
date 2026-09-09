@@ -11,7 +11,7 @@ Curated BibTeX collection of publications acknowledging the DFG project **ApplFM
 
 A paper belongs here **only if its own full text** mentions the project — by name ("ApplFM" / "Berlin Initiative for Applied Foundation Model Research") or by DFG Project-ID 528483508 (often "Project-ID 528483508 - FIP 12"). Author affiliation or topical fit alone is NOT sufficient.
 
-Participating PIs to check for: Kristian Hildebrand, Ivo Boblan, Hannes Höppner, Alexander Löser, Erik Rodner, Felix Biessmann, Simone Reber, Elisabeth Grohmann, Felix Gers.
+Consortium members to check for: Kristian Hildebrand, Ivo Boblan, Hannes Höppner, Alexander Löser, Erik Rodner, Felix Biessmann, Simone Reber, Elisabeth Grohmann, Felix Gers, Amy Siu. (Beware: a Scholar full-text match for a member's name plus the project ID can come from the paper's reference list citing their earlier work — confirm the person is an author or acknowledged, not merely cited.)
 
 ## Updating the collection
 

@@ -8,7 +8,7 @@ BibTeX entries ([`applfm.bib`](applfm.bib)) for publications that mention the DF
 
 A paper is included only if its full text mentions the project — either by name ("ApplFM" / "Berlin Initiative for Applied Foundation Model Research") or by the DFG Project-ID 528483508 (often written as "Project-ID 528483508 - FIP 12"). Author affiliation alone is not sufficient.
 
-Every entry was checked explicitly for the participating PIs: **Kristian Hildebrand, Ivo Boblan, Hannes Höppner, Alexander Löser, Erik Rodner, Felix Biessmann, Simone Reber, Elisabeth Grohmann, Felix Gers** (last checked: 2026-09-09).
+Every entry was checked explicitly for the participating consortium members: **Kristian Hildebrand, Ivo Boblan, Hannes Höppner, Alexander Löser, Erik Rodner, Felix Biessmann, Simone Reber, Elisabeth Grohmann, Felix Gers, Amy Siu** (last checked: 2026-09-09). As of that date, no publication authored by Amy Siu mentioning the project was found (Scholar matches for her name plus the project ID are citations of her earlier work in other papers' reference lists).
 
 Verification method is tagged per entry in `applfm.bib`:
 

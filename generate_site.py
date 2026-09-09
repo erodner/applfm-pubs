@@ -18,6 +18,7 @@ PIS = [
     "Kristian Hildebrand", "Ivo Boblan", "Hannes Höppner", "Alexander Löser",
     "Erik Rodner", "Felix Biessmann", "Felix Bießmann", "Simone Reber",
     "Elisabeth Grohmann", "Felix Gers", "Felix A. Gers", "Felix Alexander Gers",
+    "Amy Siu",
 ]
 
 LATEX = {
