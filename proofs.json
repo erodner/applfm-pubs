@@ -1,0 +1,257 @@
+{
+ "Koddenbrock2026DeepBench": {
+  "quote": "This research was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) via the Project ApplFM ( 528483508 ) and the Institut für angewandte Forschung Berlin (IFAF, Berlin Institute for Applied Research) via Project TrustAdHocAI (TAHAI).",
+  "source": "https://arxiv.org/abs/2506.23663"
+ },
+ "Koddenbrock2025DomainRobustnessSSRN": {
+  "quote": null,
+  "source": null
+ },
+ "Koddenbrock2026Microtubule": {
+  "quote": "Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.",
+  "source": "https://doi.org/10.1371/journal.pcbi.1013901",
+  "pdf": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1013901&type=printable"
+ },
+ "Koddenbrock2026RamanBench": {
+  "quote": "Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – FIP-12 – Project-ID 528483508 and DFG’s project MEDEA (Grant No.",
+  "source": "https://arxiv.org/abs/2605.02003"
+ },
+ "Westerhoff2025WeightImprinting": {
+  "quote": "Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – FIP-12 – Project-ID 528483508, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).",
+  "source": "https://arxiv.org/abs/2503.14572"
+ },
+ "Westerhoff2025SCAM": {
+  "quote": "Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2504.04893"
+ },
+ "Knauer2025GrandmotherCells": {
+  "quote": "This research was funded by the Bundesministerium für Bildung und Forschung (BMBF, project number: 16DHBKI071) and the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, project number: 528483508).",
+  "source": "https://arxiv.org/abs/2601.03657"
+ },
+ "Knauer2026ConceptTracer": {
+  "quote": "Research Foundation, project: Berlin Initiative for Applied Foundation Model Research, project number: 528483508).",
+  "source": "https://arxiv.org/abs/2604.07019"
+ },
+ "Knauer2025DecisionTree": {
+  "quote": "The work in this article was funded by the Bundesministerium für Bildung und Forschung (16DHBKI071), the Deutsche Forschungsgemeinschaft (CRC 1444, BR 6698/1-1, 528483508), the European Research Council (101054501), and the National Institute for Health Research (501100000272).",
+  "source": "https://arxiv.org/abs/2409.18594"
+ },
+ "Knauer2026Physiotherapy": {
+  "quote": "Research Foundation, project number: 528483508).",
+  "source": "https://www.frontiersin.org/articles/10.3389/fdgth.2026.1789412/full",
+  "pdf": "https://www.frontiersin.org/articles/10.3389/fdgth.2026.1789412/pdf"
+ },
+ "Kolomenko2026Embedding": {
+  "quote": "This research was funded by the Bundesministerium für Bildung und Forschung (BMBF, project number: 16DHBKI071) and the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, project number: 528483508).",
+  "source": "https://arxiv.org/abs/2603.17737"
+ },
+ "Tenckhoff2024FeedbackDetection": {
+  "quote": "Acknowledgment This research was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – Project Number 528483508 .",
+  "source": "https://arxiv.org/abs/2411.19835"
+ },
+ "Harnischmacher2024BreastCancer": {
+  "quote": null,
+  "source": null
+ },
+ "Reiss2025VisualICL": {
+  "quote": "This research was also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) via the Project ApplFM (528483508).",
+  "source": "https://arxiv.org/abs/2507.00868"
+ },
+ "Papaioannou2025SPONGE": {
+  "quote": "This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.",
+  "source": "https://openreview.net/pdf?id=OevFdPgk3h"
+ },
+ "Papaioannou2026ConformalPrediction": {
+  "quote": "This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.",
+  "source": "https://openreview.net/pdf?id=nJ4p8rh3Ig"
+ },
+ "Figueroa2025FinancialLiteracy": {
+  "quote": "This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).",
+  "source": "https://aclanthology.org/2025.finnlp-1.6.pdf"
+ },
+ "Roehr2024MIMIC": {
+  "quote": "This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).",
+  "source": "https://aclanthology.org/2024.clinicalnlp-1.18.pdf"
+ },
+ "Grundmann2026CliniBench": {
+  "quote": "This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) ProjectID 528483508- FIP 12, as well as the European Union under the grant project 101079894 (COMFORT- Improving Urologic Cancer Care with Artificial Intelligence Solutions), as well as by BMWe SOOFI, Grant Agreement 13IPC040D.",
+  "source": "https://arxiv.org/abs/2509.26136v2"
+ },
+ "Roehr2025WhereDoesItHurt": {
+  "quote": "This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).",
+  "source": "https://arxiv.org/abs/2508.19077v1"
+ },
+ "Roehr2026DeepICD": {
+  "quote": null,
+  "source": null
+ },
+ "Figueroa2024LongTail": {
+  "quote": null,
+  "source": null
+ },
+ "Figueroa2025Comply": {
+  "quote": "This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).",
+  "source": "https://arxiv.org/abs/2502.01706v3"
+ },
+ "Mi2026Idiomaticity": {
+  "quote": "GA is supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – FIP-12 – [Project-ID 528483508], and the European Union [grant number 101079894].",
+  "source": "https://arxiv.org/abs/2606.03817v1"
+ },
+ "Kostic2026SameMeaning": {
+  "quote": "This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 – FIP 12 , as well as the European Union under the grant project 101079894 ( COMFORT – Improving Urologic Cancer Care with Artificial Intelligence Solutions).",
+  "source": "https://arxiv.org/abs/2602.17316"
+ },
+ "Gurgurov2026ReasonXL": {
+  "quote": "Research (BMBF) under the project AI4SCM (01—S23015A), the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12 and the European Union under the grant project COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions (101079894).",
+  "source": "https://arxiv.org/abs/2604.12378"
+ },
+ "Fast2024AMEGA": {
+  "quote": "Also, DATEXIS’ work is funded by the German Federal Ministry of Education and Research (BMBF) under the grant agreement 16SV8857 (KIP-SDM) and by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.",
+  "source": "https://www.nature.com/articles/s41746-024-01356-6",
+  "pdf": "https://www.nature.com/articles/s41746-024-01356-6.pdf"
+ },
+ "Buchem2025Furhat": {
+  "quote": null,
+  "source": null
+ },
+ "Singh2026SoilNet": {
+  "quote": "This research was supported by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2508.03785"
+ },
+ "Chiaburu2025SoilAnnotation": {
+  "quote": "This research was also supported by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2509.24873"
+ },
+ "Chiaburu2025UncertaintyXAI": {
+  "quote": "ER project (with the project number 01MD22007H, 01MD22007C), the German Federal Ministry of Education and Research grant number 16SV8856 and 16SV8835, by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2504.03736v1"
+ },
+ "Singh2026SewerEdge": {
+  "quote": "Acknowledgments The authors acknowledge financial support from the Federal Ministry of Research, Technology and Space of Germany for the RIWWER project (Grant Nos. 01MD22007H, 01MD22007C) and from the German Research Foundation (DFG) under Project No. 528483508 (FIP 12).",
+  "source": "https://arxiv.org/abs/2605.10592"
+ },
+ "Singh2024SewerModeling": {
+  "quote": "Research Foundation (Project number: 528483508 - FIP 12).",
+  "source": "https://arxiv.org/abs/2408.11619"
+ },
+ "Saha2026Redakto": {
+  "quote": "This research was supported by the German Federal Ministry of Research, Technology and Space grant numbers 16SV8857, by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2608.18260"
+ },
+ "Saha2025Pseudonymization": {
+  "quote": null,
+  "source": null
+ },
+ "Mitra2026Cascades": {
+  "quote": "This research was also supported by the German Research Foundation (DFG), project number 528483508 – FIP 12.",
+  "source": "https://arxiv.org/abs/2608.17711"
+ },
+ "Doering2026GlobalCrises": {
+  "quote": "This research was supported by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2608.18268"
+ },
+ "Jung2025MechDetect": {
+  "quote": "16SV8835, by the Federal Ministry for Economic Affairs and Climate Action of Germany for the RIWWER project (Project number: 01MD22007H, 01MD22007C), by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2512.04138v1"
+ },
+ "Jung2025ErrorModels": {
+  "quote": null,
+  "source": null
+ },
+ "Huang2024TinyChirp": {
+  "quote": "Felix Bießmann received support from the Einstein Center Digital Future, Berlin, the German Research Foundation (DFG) (528483508 - FIP 12), the Federal Ministry of Economic Affairs and Climate Action (RIWWER 01MD22007H), the German Federal Ministry of the Environment (GCA 67KI2022A) and the German Federal Ministry of Education and Research (KIP-SDM 16SV8856).",
+  "source": "https://arxiv.org/abs/2407.21453"
+ },
+ "Orynbay2025BloodSample": {
+  "quote": null,
+  "source": null
+ },
+ "Nanevski2026SyntheticData": {
+  "quote": "Research Foundation (DFG) ( https://www.dfg.de/en )- Project number: 528483508 - FIP 12.",
+  "source": "https://doi.org/10.1371/journal.pdig.0001522",
+  "pdf": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001522&type=printable"
+ },
+ "Nanevski2026FallRisk": {
+  "quote": "This research was supported by the German Federal Ministry of Research, Technology and Space grant numbers 16SV8856, 16SV8835 and 16SV8858, by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://www.nature.com/articles/s41597-026-07910-z",
+  "pdf": "https://www.nature.com/articles/s41597-026-07910-z.pdf"
+ },
+ "Seibert2026AINCRA": {
+  "quote": null,
+  "source": null
+ },
+ "Kozcuer2024Fairness": {
+  "quote": "This research is also funded by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://link.springer.com/article/10.1007/s11023-024-09663-3",
+  "pdf": "https://link.springer.com/content/pdf/10.1007/s11023-024-09663-3.pdf"
+ },
+ "Nguyen2024SatelliteImagery": {
+  "quote": "Felix Bießmann received funding from the Einstein Center Digital Future, Berlin and the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2409.01138"
+ },
+ "Schwarz2024FaultyLabels": {
+  "quote": "This research is funded by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.",
+  "source": "https://arxiv.org/abs/2409.03887"
+ },
+ "Weiss2026LNNControl": {
+  "quote": null,
+  "source": null
+ },
+ "Weiss2024PDILC": {
+  "quote": null,
+  "source": null
+ },
+ "Weiss2024GaitLibrary": {
+  "quote": null,
+  "source": null
+ },
+ "Weiss2025LearningByDoing": {
+  "quote": null,
+  "source": null
+ },
+ "Hoeppner2025TorsionalSprings": {
+  "quote": "This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - project number 528483508.",
+  "source": "https://doi.org/10.1109/LRA.2025.3549658"
+ },
+ "Puhlmann2025VSB": {
+  "quote": null,
+  "source": null
+ },
+ "Puhlmann2024Fingertip": {
+  "quote": null,
+  "source": null
+ },
+ "Bangera2026Plasmodium": {
+  "quote": "This work was supported in part by the Max Planck Society and the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, Project-ID 528483508 – FIP 12 and RE 3925/6-1) to S.R.",
+  "source": "https://www.nature.com/articles/s41467-026-70181-0",
+  "pdf": "https://www.nature.com/articles/s41467-026-70181-0.pdf"
+ },
+ "Biswas2025Density": {
+  "quote": "Download references Acknowledgements The authors acknowledge funding from the DFG (RE 3925/1-1 and 528483508 – FIP 12 to S.R., SPP2191 KR 5755/1-1 to M.L.K.",
+  "source": "https://www.nature.com/articles/s41467-025-62605-0",
+  "pdf": "https://www.nature.com/articles/s41467-025-62605-0.pdf"
+ },
+ "Kletter2025Spindle": {
+  "quote": "For funding, the authors acknowledge the Max Planck Society (to O.M. and S.R.), the Horizon 2020 Framework Programme of the European Union (iNEXT grant 653706, project PID 3503 to S.R.) and the Deutsche Forschungsgemeinschaft Project-ID 528483508 – FIP 12 (to S.R.).",
+  "source": "https://www.nature.com/articles/s41556-025-01678-x",
+  "pdf": "https://www.nature.com/articles/s41556-025-01678-x.pdf"
+ },
+ "Narduzzi2026Demixing": {
+  "quote": "Footnotes Figure numbers in the text were corrected Funder Information Declared Boehringer Ingelheim Fonds, https://ror.org/00dkye506 European Commission , 101154995 Max Planck Society, https://ror.org/01hhn8329 Deutsche Forschungsgemeinschaft , 528483508 ETH Zurich , 310030_212660 Swiss National Science Foundation, https://ror.org/00yjd3n13 , PCEFP3_187003 Copyright The copyright holder for this preprint is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.",
+  "source": "https://doi.org/10.64898/2026.07.22.739830",
+  "pdf": "https://www.biorxiv.org/content/10.64898/2026.07.22.739830v1.full.pdf"
+ },
+ "Franck2026Tau": {
+  "quote": "Funder Information Declared Deutsche Forschungsgemeinschaft , 19138680 , 506373047 , 545039200 , 528483508 – FIP 12 Hertie Foundation, https://ror.org/03ak9vt35 , P1200002 Copyright The copyright holder for this preprint is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.",
+  "source": "https://doi.org/10.64898/2026.03.18.711671",
+  "pdf": "https://www.biorxiv.org/content/10.64898/2026.03.18.711671v1.full.pdf"
+ },
+ "Marin2025Naphthyl": {
+  "quote": null,
+  "source": null
+ },
+ "Kuhlmann2026TraF": {
+  "quote": null,
+  "source": null
+ }
+}

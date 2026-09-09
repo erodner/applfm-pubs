@@ -69,6 +69,13 @@ h1 { font-size: 2rem; letter-spacing: -0.02em; }
   border-radius: 6px; padding: 0.1rem 0.5rem; font-size: 0.72rem; cursor: pointer;
 }
 .copybtn:hover { color: var(--accent); border-color: var(--accent); }
+.proofbox {
+  margin-top: 0.6rem; background: var(--accent-soft); border: 1px solid var(--line);
+  border-left: 3px solid var(--accent); border-radius: 8px; padding: 0.7rem 0.9rem;
+}
+.proofbox blockquote { font-size: 0.88rem; font-style: italic; }
+.proofsrc { font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }
+.proofsrc a { color: var(--accent); }
 footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
 footer a { color: var(--accent); }
 </style>
@@ -94,7 +101,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">On the Domain Robustness of Contrastive Vision-Language Models</div>
       <div class="pauthors">Mario Koddenbrock, Rudolf Hoffmann, David Brodmann, <strong>Erik Rodner</strong></div>
       <div class="pvenue">KI 2025: Advances in Artificial Intelligence (48th German Conference on AI), pp. 62–76</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-02813-6_5">DOI</a> · <a href="https://arxiv.org/abs/2506.23663">arXiv</a><button class="bibbtn" data-key="Koddenbrock2026DeepBench">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-02813-6_5">DOI</a> · <a href="https://arxiv.org/abs/2506.23663">arXiv</a> · <a href="https://arxiv.org/pdf/2506.23663">PDF</a><button class="bibbtn togglebtn" data-target="bib-Koddenbrock2026DeepBench">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Koddenbrock2026DeepBench">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Koddenbrock2026DeepBench" hidden>
         <button class="copybtn" data-key="Koddenbrock2026DeepBench">Copy</button>
         <pre>@inproceedings{Koddenbrock2026DeepBench,
@@ -112,6 +119,10 @@ footer a { color: var(--accent); }
   note      = {Preprint: arXiv:2506.23663}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Koddenbrock2026DeepBench" hidden>
+        <blockquote>“This research was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) via the Project ApplFM ( 528483508 ) and the Institut für angewandte Forschung Berlin (IFAF, Berlin Institute for Applied Research) via Project TrustAdHocAI (TAHAI).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2506.23663">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -122,7 +133,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Synthetic data enables human-grade microtubule analysis with foundation models for segmentation</div>
       <div class="pauthors">Mario Koddenbrock, Justus Westerhoff, Dominik Fachet, <strong>Simone Reber</strong>, <strong>Felix A. Gers</strong>, <strong>Erik Rodner</strong></div>
       <div class="pvenue">PLOS Computational Biology 22(5):e1013901</div>
-      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pcbi.1013901">DOI</a><button class="bibbtn" data-key="Koddenbrock2026Microtubule">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pcbi.1013901">DOI</a> · <a href="https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1013901&type=printable">PDF</a><button class="bibbtn togglebtn" data-target="bib-Koddenbrock2026Microtubule">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Koddenbrock2026Microtubule">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Koddenbrock2026Microtubule" hidden>
         <button class="copybtn" data-key="Koddenbrock2026Microtubule">Copy</button>
         <pre>@article{Koddenbrock2026Microtubule,
@@ -136,6 +147,10 @@ footer a { color: var(--accent); }
   doi     = {10.1371/journal.pcbi.1013901}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Koddenbrock2026Microtubule" hidden>
+        <blockquote>“Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://doi.org/10.1371/journal.pcbi.1013901">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -146,7 +161,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">RamanBench: A Large-Scale Benchmark for Machine Learning on Raman Spectroscopy</div>
       <div class="pauthors">Mario Koddenbrock, Christoph Lange, Robin Legner, Martin Jäger, Martin Kögler, Mariano N. Cruz Bournazou, Peter Neubauer, <strong>Felix Biessmann</strong>, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2605.02003</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2605.02003">arXiv</a><button class="bibbtn" data-key="Koddenbrock2026RamanBench">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2605.02003">arXiv</a> · <a href="https://arxiv.org/pdf/2605.02003">PDF</a><button class="bibbtn togglebtn" data-target="bib-Koddenbrock2026RamanBench">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Koddenbrock2026RamanBench">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Koddenbrock2026RamanBench" hidden>
         <button class="copybtn" data-key="Koddenbrock2026RamanBench">Copy</button>
         <pre>@misc{Koddenbrock2026RamanBench,
@@ -156,6 +171,10 @@ footer a { color: var(--accent); }
   eprint        = {2605.02003},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Koddenbrock2026RamanBench" hidden>
+        <blockquote>“Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – FIP-12 – Project-ID 528483508 and DFG’s project MEDEA (Grant No.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2605.02003">source</a>).</div>
       </div>
     </div>
   </div>
@@ -167,7 +186,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">ConceptTracer: Interactive Analysis of Concept Saliency and Selectivity in Neural Representations</div>
       <div class="pauthors">Ricardo Knauer, Andre Beinrucker, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2604.07019</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2604.07019">arXiv</a><button class="bibbtn" data-key="Knauer2026ConceptTracer">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2604.07019">arXiv</a> · <a href="https://arxiv.org/pdf/2604.07019">PDF</a><button class="bibbtn togglebtn" data-target="bib-Knauer2026ConceptTracer">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Knauer2026ConceptTracer">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Knauer2026ConceptTracer" hidden>
         <button class="copybtn" data-key="Knauer2026ConceptTracer">Copy</button>
         <pre>@misc{Knauer2026ConceptTracer,
@@ -179,6 +198,10 @@ footer a { color: var(--accent); }
   note          = {Late-breaking work, Demos and Doctoral Consortium at the 4th World Conference on eXplainable Artificial Intelligence (xAI 2026), Fortaleza, Brazil}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Knauer2026ConceptTracer" hidden>
+        <blockquote>“Research Foundation, project: Berlin Initiative for Applied Foundation Model Research, project number: 528483508).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2604.07019">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -189,7 +212,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Intelligence without intuition: a mixed-methods pilot study on reasoning models in musculoskeletal physiotherapy for low-back pain</div>
       <div class="pauthors">Ricardo Knauer, Matthias Kalmring, <strong>Erik Rodner</strong></div>
       <div class="pvenue">Frontiers in Digital Health 8:1789412</div>
-      <div class="pmeta"><a href="https://doi.org/10.3389/fdgth.2026.1789412">DOI</a><button class="bibbtn" data-key="Knauer2026Physiotherapy">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.3389/fdgth.2026.1789412">DOI</a> · <a href="https://www.frontiersin.org/articles/10.3389/fdgth.2026.1789412/pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Knauer2026Physiotherapy">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Knauer2026Physiotherapy">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Knauer2026Physiotherapy" hidden>
         <button class="copybtn" data-key="Knauer2026Physiotherapy">Copy</button>
         <pre>@article{Knauer2026Physiotherapy,
@@ -202,6 +225,10 @@ footer a { color: var(--accent); }
   doi     = {10.3389/fdgth.2026.1789412}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Knauer2026Physiotherapy" hidden>
+        <blockquote>“Research Foundation, project number: 528483508).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://www.frontiersin.org/articles/10.3389/fdgth.2026.1789412/full">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -212,7 +239,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Embedding World Knowledge into Tabular Models: Towards Best Practices for Embedding Pipeline Design</div>
       <div class="pauthors">Oksana Kolomenko, Ricardo Knauer, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2603.17737</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2603.17737">arXiv</a><button class="bibbtn" data-key="Kolomenko2026Embedding">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2603.17737">arXiv</a> · <a href="https://arxiv.org/pdf/2603.17737">PDF</a><button class="bibbtn togglebtn" data-target="bib-Kolomenko2026Embedding">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Kolomenko2026Embedding">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Kolomenko2026Embedding" hidden>
         <button class="copybtn" data-key="Kolomenko2026Embedding">Copy</button>
         <pre>@misc{Kolomenko2026Embedding,
@@ -222,6 +249,10 @@ footer a { color: var(--accent); }
   eprint        = {2603.17737},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Kolomenko2026Embedding" hidden>
+        <blockquote>“This research was funded by the Bundesministerium für Bildung und Forschung (BMBF, project number: 16DHBKI071) and the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, project number: 528483508).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2603.17737">source</a>).</div>
       </div>
     </div>
   </div>
@@ -233,7 +264,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Domain-Specific Robustness Evaluation of Vision-Language Models</div>
       <div class="pauthors">Mario Koddenbrock, Rudolf Hoffmann, David Brodmann, <strong>Erik Rodner</strong></div>
       <div class="pvenue">SSRN preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5349659">DOI</a><button class="bibbtn" data-key="Koddenbrock2025DomainRobustnessSSRN">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5349659">DOI</a><button class="bibbtn togglebtn" data-target="bib-Koddenbrock2025DomainRobustnessSSRN">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Koddenbrock2025DomainRobustnessSSRN">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Koddenbrock2025DomainRobustnessSSRN" hidden>
         <button class="copybtn" data-key="Koddenbrock2025DomainRobustnessSSRN">Copy</button>
         <pre>@misc{Koddenbrock2025DomainRobustnessSSRN,
@@ -243,6 +274,11 @@ footer a { color: var(--accent); }
   year         = {2025},
   doi          = {10.2139/ssrn.5349659}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Koddenbrock2025DomainRobustnessSSRN" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
       </div>
     </div>
   </div>
@@ -254,7 +290,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Robust Weight Imprinting: Insights from Neural Collapse and Proxy-Based Aggregation</div>
       <div class="pauthors">Justus Westerhoff, Golzar Atefi, Mario Koddenbrock, Alexei Figueroa, <strong>Alexander Löser</strong>, <strong>Erik Rodner</strong>, <strong>Felix A. Gers</strong></div>
       <div class="pvenue">Transactions on Machine Learning Research</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2503.14572">arXiv</a><button class="bibbtn" data-key="Westerhoff2025WeightImprinting">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2503.14572">arXiv</a> · <a href="https://arxiv.org/pdf/2503.14572">PDF</a><button class="bibbtn togglebtn" data-target="bib-Westerhoff2025WeightImprinting">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Westerhoff2025WeightImprinting">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Westerhoff2025WeightImprinting" hidden>
         <button class="copybtn" data-key="Westerhoff2025WeightImprinting">Copy</button>
         <pre>@article{Westerhoff2025WeightImprinting,
@@ -266,6 +302,10 @@ footer a { color: var(--accent); }
   note    = {Preprint: arXiv:2503.14572}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Westerhoff2025WeightImprinting" hidden>
+        <blockquote>“Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – FIP-12 – Project-ID 528483508, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2503.14572">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -276,7 +316,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">SCAM: A Real-World Typographic Robustness Evaluation for Multimodal Foundation Models</div>
       <div class="pauthors">Justus Westerhoff, Erblina Purelku, Jakob Hackstein, Jonas Loos, Leo Pinetzki, <strong>Erik Rodner</strong>, Lorenz Hufe</div>
       <div class="pvenue">arXiv:2504.04893</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2504.04893">arXiv</a><button class="bibbtn" data-key="Westerhoff2025SCAM">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2504.04893">arXiv</a> · <a href="https://arxiv.org/pdf/2504.04893">PDF</a><button class="bibbtn togglebtn" data-target="bib-Westerhoff2025SCAM">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Westerhoff2025SCAM">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Westerhoff2025SCAM" hidden>
         <button class="copybtn" data-key="Westerhoff2025SCAM">Copy</button>
         <pre>@misc{Westerhoff2025SCAM,
@@ -286,6 +326,10 @@ footer a { color: var(--accent); }
   eprint        = {2504.04893},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Westerhoff2025SCAM" hidden>
+        <blockquote>“Our work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2504.04893">source</a>).</div>
       </div>
     </div>
   </div>
@@ -297,7 +341,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">In Search of Grandmother Cells: Tracing Interpretable Neurons in Tabular Representations</div>
       <div class="pauthors">Ricardo Knauer, <strong>Erik Rodner</strong></div>
       <div class="pvenue">EurIPS 2025 Workshop on AI for Tabular Data</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2601.03657">arXiv</a><button class="bibbtn" data-key="Knauer2025GrandmotherCells">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2601.03657">arXiv</a> · <a href="https://arxiv.org/pdf/2601.03657">PDF</a><button class="bibbtn togglebtn" data-target="bib-Knauer2025GrandmotherCells">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Knauer2025GrandmotherCells">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Knauer2025GrandmotherCells" hidden>
         <button class="copybtn" data-key="Knauer2025GrandmotherCells">Copy</button>
         <pre>@inproceedings{Knauer2025GrandmotherCells,
@@ -307,6 +351,10 @@ footer a { color: var(--accent); }
   year      = {2025},
   note      = {Preprint: arXiv:2601.03657}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Knauer2025GrandmotherCells" hidden>
+        <blockquote>“This research was funded by the Bundesministerium für Bildung und Forschung (BMBF, project number: 16DHBKI071) and the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, project number: 528483508).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2601.03657">source</a>).</div>
       </div>
     </div>
   </div>
@@ -318,7 +366,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">&#x27;Oh LLM, I&#x27;m Asking Thee, Please Give Me a Decision Tree&#x27;: Zero-Shot Decision Tree Induction and Embedding with Large Language Models</div>
       <div class="pauthors">Ricardo Knauer, Mario Koddenbrock, Raphael Wallsberger, Nicholas M. Brisson, Georg N. Duda, Deborah Falla, David W. Evans, <strong>Erik Rodner</strong></div>
       <div class="pvenue">Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD &#x27;25), pp. 1196–1206</div>
-      <div class="pmeta"><a href="https://doi.org/10.1145/3711896.3736818">DOI</a><button class="bibbtn" data-key="Knauer2025DecisionTree">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1145/3711896.3736818">DOI</a> · <a href="https://arxiv.org/abs/2409.18594">arXiv</a> · <a href="https://arxiv.org/pdf/2409.18594">PDF</a><button class="bibbtn togglebtn" data-target="bib-Knauer2025DecisionTree">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Knauer2025DecisionTree">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Knauer2025DecisionTree" hidden>
         <button class="copybtn" data-key="Knauer2025DecisionTree">Copy</button>
         <pre>@inproceedings{Knauer2025DecisionTree,
@@ -328,8 +376,13 @@ footer a { color: var(--accent); }
   pages     = {1196--1206},
   publisher = {ACM},
   year      = {2025},
-  doi       = {10.1145/3711896.3736818}
+  doi       = {10.1145/3711896.3736818},
+  note      = {Preprint: arXiv:2409.18594}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Knauer2025DecisionTree" hidden>
+        <blockquote>“The work in this article was funded by the Bundesministerium für Bildung und Forschung (16DHBKI071), the Deutsche Forschungsgemeinschaft (CRC 1444, BR 6698/1-1, 528483508), the European Research Council (101054501), and the National Institute for Health Research (501100000272).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2409.18594">source</a>).</div>
       </div>
     </div>
   </div>
@@ -341,7 +394,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Is Visual in-Context Learning for Compositional Medical Tasks within Reach?</div>
       <div class="pauthors">Simon Reiß, Zdravko Marinov, Alexander Jaus, Constantin Seibold, M. Saquib Sarfraz, <strong>Erik Rodner</strong>, Rainer Stiefelhagen</div>
       <div class="pvenue">2025 IEEE/CVF International Conference on Computer Vision (ICCV), pp. 2642–2652</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/ICCV51701.2025.00254">DOI</a> · <a href="https://arxiv.org/abs/2507.00868">arXiv</a><button class="bibbtn" data-key="Reiss2025VisualICL">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/ICCV51701.2025.00254">DOI</a> · <a href="https://arxiv.org/abs/2507.00868">arXiv</a> · <a href="https://arxiv.org/pdf/2507.00868">PDF</a><button class="bibbtn togglebtn" data-target="bib-Reiss2025VisualICL">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Reiss2025VisualICL">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Reiss2025VisualICL" hidden>
         <button class="copybtn" data-key="Reiss2025VisualICL">Copy</button>
         <pre>@inproceedings{Reiss2025VisualICL,
@@ -355,6 +408,10 @@ footer a { color: var(--accent); }
   note      = {Preprint: arXiv:2507.00868}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Reiss2025VisualICL" hidden>
+        <blockquote>“This research was also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) via the Project ApplFM (528483508).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2507.00868">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -365,7 +422,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Feedback-driven object detection and iterative model improvement</div>
       <div class="pauthors">Sönke Tenckhoff, Mario Koddenbrock, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2411.19835</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2411.19835">arXiv</a><button class="bibbtn" data-key="Tenckhoff2024FeedbackDetection">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2411.19835">arXiv</a> · <a href="https://arxiv.org/pdf/2411.19835">PDF</a><button class="bibbtn togglebtn" data-target="bib-Tenckhoff2024FeedbackDetection">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Tenckhoff2024FeedbackDetection">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Tenckhoff2024FeedbackDetection" hidden>
         <button class="copybtn" data-key="Tenckhoff2024FeedbackDetection">Copy</button>
         <pre>@misc{Tenckhoff2024FeedbackDetection,
@@ -375,6 +432,10 @@ footer a { color: var(--accent); }
   eprint        = {2411.19835},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Tenckhoff2024FeedbackDetection" hidden>
+        <blockquote>“Acknowledgment This research was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – Project Number 528483508 .”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2411.19835">source</a>).</div>
       </div>
     </div>
   </div>
@@ -386,7 +447,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Detection of breast cancer using machine learning on time-series diffuse optical transillumination data</div>
       <div class="pauthors">Nils Harnischmacher, <strong>Erik Rodner</strong>, Christoph H. Schmitz</div>
       <div class="pvenue">Journal of Biomedical Optics 29(11):115001</div>
-      <div class="pmeta"><a href="https://doi.org/10.1117/1.JBO.29.11.115001">DOI</a><button class="bibbtn" data-key="Harnischmacher2024BreastCancer">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1117/1.JBO.29.11.115001">DOI</a><button class="bibbtn togglebtn" data-target="bib-Harnischmacher2024BreastCancer">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Harnischmacher2024BreastCancer">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Harnischmacher2024BreastCancer" hidden>
         <button class="copybtn" data-key="Harnischmacher2024BreastCancer">Copy</button>
         <pre>@article{Harnischmacher2024BreastCancer,
@@ -400,6 +461,11 @@ footer a { color: var(--accent); }
   doi     = {10.1117/1.JBO.29.11.115001}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Harnischmacher2024BreastCancer" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g1">Löser / Gers group (DATEXIS, BHT Berlin)</h2>
@@ -410,7 +476,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Robust Conformal Prediction for Infrequent Classes</div>
       <div class="pauthors">Jens-Michalis Papaioannou, Sebastian Jäger, Alexei Figueroa, David Stutz, Betty van Aken, Keno Bressem, Wolfgang Nejdl, <strong>Felix Gers</strong>, <strong>Alexander Löser</strong>, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">Transactions on Machine Learning Research</div>
-      <div class="pmeta"><a href="https://openreview.net/forum?id=nJ4p8rh3Ig">link</a><button class="bibbtn" data-key="Papaioannou2026ConformalPrediction">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://openreview.net/forum?id=nJ4p8rh3Ig">link</a> · <a href="https://openreview.net/pdf?id=nJ4p8rh3Ig">PDF</a><button class="bibbtn togglebtn" data-target="bib-Papaioannou2026ConformalPrediction">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Papaioannou2026ConformalPrediction">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Papaioannou2026ConformalPrediction" hidden>
         <button class="copybtn" data-key="Papaioannou2026ConformalPrediction">Copy</button>
         <pre>@article{Papaioannou2026ConformalPrediction,
@@ -422,6 +488,10 @@ footer a { color: var(--accent); }
   url     = {https://openreview.net/forum?id=nJ4p8rh3Ig}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Papaioannou2026ConformalPrediction" hidden>
+        <blockquote>“This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://openreview.net/pdf?id=nJ4p8rh3Ig">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -432,7 +502,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">CliniBench: A Clinical Outcome Prediction Benchmark for Generative and Encoder-Based Language Models</div>
       <div class="pauthors">Paul Grundmann, Jan Frick, Dennis Fast, Thomas Steffek, <strong>Felix Gers</strong>, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 5360–5378</div>
-      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.eacl-long.247">DOI</a><button class="bibbtn" data-key="Grundmann2026CliniBench">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.eacl-long.247">DOI</a> · <a href="https://arxiv.org/abs/2509.26136">arXiv</a> · <a href="https://arxiv.org/pdf/2509.26136">PDF</a><button class="bibbtn togglebtn" data-target="bib-Grundmann2026CliniBench">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Grundmann2026CliniBench">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Grundmann2026CliniBench" hidden>
         <button class="copybtn" data-key="Grundmann2026CliniBench">Copy</button>
         <pre>@inproceedings{Grundmann2026CliniBench,
@@ -442,8 +512,13 @@ footer a { color: var(--accent); }
   pages     = {5360--5378},
   publisher = {Association for Computational Linguistics},
   year      = {2026},
-  doi       = {10.18653/v1/2026.eacl-long.247}
+  doi       = {10.18653/v1/2026.eacl-long.247},
+  note      = {Preprint: arXiv:2509.26136}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Grundmann2026CliniBench" hidden>
+        <blockquote>“This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) ProjectID 528483508- FIP 12, as well as the European Union under the grant project 101079894 (COMFORT- Improving Urologic Cancer Care with Artificial Intelligence Solutions), as well as by BMWe SOOFI, Grant Agreement 13IPC040D.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2509.26136v2">source</a>).</div>
       </div>
     </div>
   </div>
@@ -455,7 +530,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">DeepICD-R1: Medical Reasoning through Hierarchical Rewards and Unsupervised Distillation</div>
       <div class="pauthors">Tom Röhr, Thomas Maximilian Josef Steffek, Roman Teucher, Keno Bressem, Alexei Figueroa, Paul Grundmann, Peter Troeger, <strong>Felix Alexander Gers</strong>, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026), pp. 10764–10775</div>
-      <div class="pmeta"><a href="https://doi.org/10.63317/5ntn3gnmv9cy">DOI</a><button class="bibbtn" data-key="Roehr2026DeepICD">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.63317/5ntn3gnmv9cy">DOI</a><button class="bibbtn togglebtn" data-target="bib-Roehr2026DeepICD">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Roehr2026DeepICD">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Roehr2026DeepICD" hidden>
         <button class="copybtn" data-key="Roehr2026DeepICD">Copy</button>
         <pre>@inproceedings{Roehr2026DeepICD,
@@ -468,6 +543,11 @@ footer a { color: var(--accent); }
   doi       = {10.63317/5ntn3gnmv9cy}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Roehr2026DeepICD" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -478,7 +558,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Rethinking the Idiomaticity Decomposability Hypothesis: Evidence from Distributional Learning</div>
       <div class="pauthors">Maggie Mi, Golzar Atefi, Atsuki Yamaguchi, <strong>Felix Gers</strong>, Aline Villavicencio, Nafise Sadat Moosavi</div>
       <div class="pvenue">Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 34208–34229</div>
-      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.acl-long.1579">DOI</a><button class="bibbtn" data-key="Mi2026Idiomaticity">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.acl-long.1579">DOI</a> · <a href="https://arxiv.org/abs/2606.03817">arXiv</a> · <a href="https://arxiv.org/pdf/2606.03817">PDF</a><button class="bibbtn togglebtn" data-target="bib-Mi2026Idiomaticity">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Mi2026Idiomaticity">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Mi2026Idiomaticity" hidden>
         <button class="copybtn" data-key="Mi2026Idiomaticity">Copy</button>
         <pre>@inproceedings{Mi2026Idiomaticity,
@@ -488,8 +568,13 @@ footer a { color: var(--accent); }
   pages     = {34208--34229},
   publisher = {Association for Computational Linguistics},
   year      = {2026},
-  doi       = {10.18653/v1/2026.acl-long.1579}
+  doi       = {10.18653/v1/2026.acl-long.1579},
+  note      = {Preprint: arXiv:2606.03817}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Mi2026Idiomaticity" hidden>
+        <blockquote>“GA is supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – FIP-12 – [Project-ID 528483508], and the European Union [grant number 101079894].”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2606.03817v1">source</a>).</div>
       </div>
     </div>
   </div>
@@ -501,7 +586,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Same Meaning, Different Scores: Lexical and Syntactic Sensitivity in LLM Evaluation</div>
       <div class="pauthors">Bogdan Kostić, Conor Fallon, Julian Risch, <strong>Alexander Löser</strong></div>
       <div class="pvenue">arXiv:2602.17316</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2602.17316">arXiv</a><button class="bibbtn" data-key="Kostic2026SameMeaning">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2602.17316">arXiv</a> · <a href="https://arxiv.org/pdf/2602.17316">PDF</a><button class="bibbtn togglebtn" data-target="bib-Kostic2026SameMeaning">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Kostic2026SameMeaning">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Kostic2026SameMeaning" hidden>
         <button class="copybtn" data-key="Kostic2026SameMeaning">Copy</button>
         <pre>@misc{Kostic2026SameMeaning,
@@ -511,6 +596,10 @@ footer a { color: var(--accent); }
   eprint        = {2602.17316},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Kostic2026SameMeaning" hidden>
+        <blockquote>“This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 – FIP 12 , as well as the European Union under the grant project 101079894 ( COMFORT – Improving Urologic Cancer Care with Artificial Intelligence Solutions).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2602.17316">source</a>).</div>
       </div>
     </div>
   </div>
@@ -522,7 +611,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">ReasonXL: Shifting LLM Reasoning Language Without Sacrificing Performance</div>
       <div class="pauthors">Daniil Gurgurov, Tom Röhr, Sebastian von Rohrscheidt, Josef van Genabith, <strong>Alexander Löser</strong>, Simon Ostermann</div>
       <div class="pvenue">arXiv:2604.12378</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2604.12378">arXiv</a><button class="bibbtn" data-key="Gurgurov2026ReasonXL">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2604.12378">arXiv</a> · <a href="https://arxiv.org/pdf/2604.12378">PDF</a><button class="bibbtn togglebtn" data-target="bib-Gurgurov2026ReasonXL">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Gurgurov2026ReasonXL">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Gurgurov2026ReasonXL" hidden>
         <button class="copybtn" data-key="Gurgurov2026ReasonXL">Copy</button>
         <pre>@misc{Gurgurov2026ReasonXL,
@@ -532,6 +621,10 @@ footer a { color: var(--accent); }
   eprint        = {2604.12378},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Gurgurov2026ReasonXL" hidden>
+        <blockquote>“Research (BMBF) under the project AI4SCM (01—S23015A), the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12 and the European Union under the grant project COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions (101079894).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2604.12378">source</a>).</div>
       </div>
     </div>
   </div>
@@ -543,7 +636,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">SPONGE: Competing Sparse Language Representations for Effective Cross-Lingual Knowledge Transfer in Healthcare</div>
       <div class="pauthors">Jens-Michalis Papaioannou, Alexei Figueroa, Conor Fallon, Anna Capilla, Alexandra Bekiaridou, Stavros Zanos, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Transactions on Machine Learning Research</div>
-      <div class="pmeta"><a href="https://openreview.net/forum?id=OevFdPgk3h">link</a><button class="bibbtn" data-key="Papaioannou2025SPONGE">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://openreview.net/forum?id=OevFdPgk3h">link</a> · <a href="https://openreview.net/pdf?id=OevFdPgk3h">PDF</a><button class="bibbtn togglebtn" data-target="bib-Papaioannou2025SPONGE">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Papaioannou2025SPONGE">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Papaioannou2025SPONGE" hidden>
         <button class="copybtn" data-key="Papaioannou2025SPONGE">Copy</button>
         <pre>@article{Papaioannou2025SPONGE,
@@ -555,6 +648,10 @@ footer a { color: var(--accent); }
   url     = {https://openreview.net/forum?id=OevFdPgk3h}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Papaioannou2025SPONGE" hidden>
+        <blockquote>“This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://openreview.net/pdf?id=OevFdPgk3h">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -565,7 +662,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Evaluating Financial Literacy of Large Language Models through Domain Specific Languages for Plain Text Accounting</div>
       <div class="pauthors">Alexei Figueroa, Paul Grundmann, Julius Freidank, <strong>Alexander Löser</strong>, Wolfgang Nejdl</div>
       <div class="pvenue">Proceedings of the Joint Workshop of the 9th Financial Technology and Natural Language Processing (FinNLP), the 6th Financial Narrative Processing (FNP), and the 1st Workshop on Large Language Models for Finance and Legal (LLMFinLegal), pp. 63–75</div>
-      <div class="pmeta"><a href="https://aclanthology.org/2025.finnlp-1.6/">link</a><button class="bibbtn" data-key="Figueroa2025FinancialLiteracy">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://aclanthology.org/2025.finnlp-1.6/">link</a> · <a href="https://aclanthology.org/2025.finnlp-1.6.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Figueroa2025FinancialLiteracy">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Figueroa2025FinancialLiteracy">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Figueroa2025FinancialLiteracy" hidden>
         <button class="copybtn" data-key="Figueroa2025FinancialLiteracy">Copy</button>
         <pre>@inproceedings{Figueroa2025FinancialLiteracy,
@@ -579,6 +676,10 @@ footer a { color: var(--accent); }
   url       = {https://aclanthology.org/2025.finnlp-1.6/}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Figueroa2025FinancialLiteracy" hidden>
+        <blockquote>“This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://aclanthology.org/2025.finnlp-1.6.pdf">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -589,7 +690,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">“Where does it hurt?” – Dataset and Study on Physician Intent Trajectories in Doctor Patient Dialogues</div>
       <div class="pauthors">Tom Röhr, Soumyadeep Roy, Fares Al Mohamad, Jens-Michalis Papaioannou, Wolfgang Nejdl, <strong>Felix Gers</strong>, <strong>Alexander Löser</strong></div>
       <div class="pvenue">ECAI 2025: 28th European Conference on Artificial Intelligence</div>
-      <div class="pmeta"><a href="https://doi.org/10.3233/FAIA251359">DOI</a><button class="bibbtn" data-key="Roehr2025WhereDoesItHurt">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.3233/FAIA251359">DOI</a> · <a href="https://arxiv.org/abs/2508.19077">arXiv</a> · <a href="https://arxiv.org/pdf/2508.19077">PDF</a><button class="bibbtn togglebtn" data-target="bib-Roehr2025WhereDoesItHurt">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Roehr2025WhereDoesItHurt">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Roehr2025WhereDoesItHurt" hidden>
         <button class="copybtn" data-key="Roehr2025WhereDoesItHurt">Copy</button>
         <pre>@inproceedings{Roehr2025WhereDoesItHurt,
@@ -599,8 +700,13 @@ footer a { color: var(--accent); }
   series    = {Frontiers in Artificial Intelligence and Applications},
   publisher = {IOS Press},
   year      = {2025},
-  doi       = {10.3233/FAIA251359}
+  doi       = {10.3233/FAIA251359},
+  note      = {Preprint: arXiv:2508.19077}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Roehr2025WhereDoesItHurt" hidden>
+        <blockquote>“This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2508.19077v1">source</a>).</div>
       </div>
     </div>
   </div>
@@ -612,7 +718,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Comply: Learning Sentences with Complex Weights inspired by Fruit Fly Olfaction</div>
       <div class="pauthors">Alexei Figueroa, Justus Westerhoff, Golzar Atefi, Dennis Fast, Benjamin Winter, <strong>Felix Alexander Gers</strong>, <strong>Alexander Löser</strong>, Wolfgang Nejdl</div>
       <div class="pvenue">2025 Neuro Inspired Computational Elements (NICE), pp. 1–10</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/NICE65350.2025.11064982">DOI</a><button class="bibbtn" data-key="Figueroa2025Comply">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/NICE65350.2025.11064982">DOI</a> · <a href="https://arxiv.org/abs/2502.01706">arXiv</a> · <a href="https://arxiv.org/pdf/2502.01706">PDF</a><button class="bibbtn togglebtn" data-target="bib-Figueroa2025Comply">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Figueroa2025Comply">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Figueroa2025Comply" hidden>
         <button class="copybtn" data-key="Figueroa2025Comply">Copy</button>
         <pre>@inproceedings{Figueroa2025Comply,
@@ -622,8 +728,13 @@ footer a { color: var(--accent); }
   pages     = {1--10},
   publisher = {IEEE},
   year      = {2025},
-  doi       = {10.1109/NICE65350.2025.11064982}
+  doi       = {10.1109/NICE65350.2025.11064982},
+  note      = {Preprint: arXiv:2502.01706}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Figueroa2025Comply" hidden>
+        <blockquote>“This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2502.01706v3">source</a>).</div>
       </div>
     </div>
   </div>
@@ -635,7 +746,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Job Interview Training with RAG-LLM: An Experimental Study with the Furhat Robot</div>
       <div class="pauthors">Ilona Buchem, Robin Bedemann, <strong>Felix Gers</strong></div>
       <div class="pvenue">Artificial Intelligence in Education (AIED 2025), pp. 90–104</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-98417-4_7">DOI</a><button class="bibbtn" data-key="Buchem2025Furhat">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-98417-4_7">DOI</a><button class="bibbtn togglebtn" data-target="bib-Buchem2025Furhat">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Buchem2025Furhat">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Buchem2025Furhat" hidden>
         <button class="copybtn" data-key="Buchem2025Furhat">Copy</button>
         <pre>@inproceedings{Buchem2025Furhat,
@@ -649,6 +760,11 @@ footer a { color: var(--accent); }
   doi       = {10.1007/978-3-031-98417-4_7}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Buchem2025Furhat" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -659,7 +775,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Revisiting Clinical Outcome Prediction for MIMIC-IV</div>
       <div class="pauthors">Tom Röhr, Alexei Figueroa, Jens-Michalis Papaioannou, Conor Fallon, Keno Bressem, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Proceedings of the 6th Clinical Natural Language Processing Workshop, pp. 208–217</div>
-      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2024.clinicalnlp-1.18">DOI</a><button class="bibbtn" data-key="Roehr2024MIMIC">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2024.clinicalnlp-1.18">DOI</a><button class="bibbtn togglebtn" data-target="bib-Roehr2024MIMIC">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Roehr2024MIMIC">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Roehr2024MIMIC" hidden>
         <button class="copybtn" data-key="Roehr2024MIMIC">Copy</button>
         <pre>@inproceedings{Roehr2024MIMIC,
@@ -672,6 +788,10 @@ footer a { color: var(--accent); }
   doi       = {10.18653/v1/2024.clinicalnlp-1.18}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Roehr2024MIMIC" hidden>
+        <blockquote>“This work is also funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12, as well as the European Union under the grant project 101079894 (COMFORT - Improving Urologic Cancer Care with Artificial Intelligence Solutions).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://aclanthology.org/2024.clinicalnlp-1.18.pdf">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -682,7 +802,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Boosting Long-Tail Data Classification with Sparse Prototypical Networks</div>
       <div class="pauthors">Alexei Figueroa, Jens-Michalis Papaioannou, Conor Fallon, Alexandra Bekiaridou, Keno Bressem, Stavros Zanos, <strong>Felix Gers</strong>, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Machine Learning and Knowledge Discovery in Databases (ECML PKDD 2024), pp. 434–449</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-70368-3_26">DOI</a><button class="bibbtn" data-key="Figueroa2024LongTail">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-70368-3_26">DOI</a><button class="bibbtn togglebtn" data-target="bib-Figueroa2024LongTail">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Figueroa2024LongTail">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Figueroa2024LongTail" hidden>
         <button class="copybtn" data-key="Figueroa2024LongTail">Copy</button>
         <pre>@inproceedings{Figueroa2024LongTail,
@@ -696,6 +816,11 @@ footer a { color: var(--accent); }
   doi       = {10.1007/978-3-031-70368-3_26}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Figueroa2024LongTail" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -706,7 +831,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Autonomous medical evaluation for guideline adherence of large language models</div>
       <div class="pauthors">Dennis Fast, Lisa C. Adams, Felix Busch, Conor Fallon, Marc Huppertz, Robert Siepmann, Philipp Prucker, Nadine Bayerl, Daniel Truhn, Marcus Makowski, <strong>Alexander Löser</strong>, Keno K. Bressem</div>
       <div class="pvenue">npj Digital Medicine 7:358</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41746-024-01356-6">DOI</a><button class="bibbtn" data-key="Fast2024AMEGA">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41746-024-01356-6">DOI</a> · <a href="https://www.nature.com/articles/s41746-024-01356-6.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Fast2024AMEGA">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Fast2024AMEGA">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Fast2024AMEGA" hidden>
         <button class="copybtn" data-key="Fast2024AMEGA">Copy</button>
         <pre>@article{Fast2024AMEGA,
@@ -719,6 +844,10 @@ footer a { color: var(--accent); }
   doi     = {10.1038/s41746-024-01356-6}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Fast2024AMEGA" hidden>
+        <blockquote>“Also, DATEXIS’ work is funded by the German Federal Ministry of Education and Research (BMBF) under the grant agreement 16SV8857 (KIP-SDM) and by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Project-ID 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://www.nature.com/articles/s41746-024-01356-6">source</a>).</div>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g2">Biessmann group (BHT Berlin)</h2>
@@ -729,7 +858,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">SoilNet: A multimodal multitask model for hierarchical classification of soil horizons</div>
       <div class="pauthors">Vipin Singh, Teodor Chiaburu, Einar Eberhardt, Stefan Broda, Joey Prüssing, Frank Haußer, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">Geoderma 466:117684</div>
-      <div class="pmeta"><a href="https://doi.org/10.1016/j.geoderma.2026.117684">DOI</a> · <a href="https://arxiv.org/abs/2508.03785">arXiv</a><button class="bibbtn" data-key="Singh2026SoilNet">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1016/j.geoderma.2026.117684">DOI</a> · <a href="https://arxiv.org/abs/2508.03785">arXiv</a> · <a href="https://arxiv.org/pdf/2508.03785">PDF</a><button class="bibbtn togglebtn" data-target="bib-Singh2026SoilNet">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Singh2026SoilNet">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Singh2026SoilNet" hidden>
         <button class="copybtn" data-key="Singh2026SoilNet">Copy</button>
         <pre>@article{Singh2026SoilNet,
@@ -743,6 +872,10 @@ footer a { color: var(--accent); }
   note    = {Preprint: arXiv:2508.03785}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Singh2026SoilNet" hidden>
+        <blockquote>“This research was supported by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2508.03785">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -753,7 +886,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">A Resilient Solution for Sewer Overflow Monitoring across Cloud and Edge</div>
       <div class="pauthors">Vipin Singh, Tianheng Ling, Peter Ghaly, Felix Grimmeisen, Gregor Schiele, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2605.10592</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2605.10592">arXiv</a><button class="bibbtn" data-key="Singh2026SewerEdge">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2605.10592">arXiv</a> · <a href="https://arxiv.org/pdf/2605.10592">PDF</a><button class="bibbtn togglebtn" data-target="bib-Singh2026SewerEdge">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Singh2026SewerEdge">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Singh2026SewerEdge" hidden>
         <button class="copybtn" data-key="Singh2026SewerEdge">Copy</button>
         <pre>@misc{Singh2026SewerEdge,
@@ -763,6 +896,10 @@ footer a { color: var(--accent); }
   eprint        = {2605.10592},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Singh2026SewerEdge" hidden>
+        <blockquote>“Acknowledgments The authors acknowledge financial support from the Federal Ministry of Research, Technology and Space of Germany for the RIWWER project (Grant Nos. 01MD22007H, 01MD22007C) and from the German Research Foundation (DFG) under Project No. 528483508 (FIP 12).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2605.10592">source</a>).</div>
       </div>
     </div>
   </div>
@@ -774,7 +911,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Redakto – The Incognito Tab for LLMs</div>
       <div class="pauthors">Saurav Kumar Saha, Tom Röhr, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">arXiv:2608.18260</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18260">arXiv</a><button class="bibbtn" data-key="Saha2026Redakto">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18260">arXiv</a> · <a href="https://arxiv.org/pdf/2608.18260">PDF</a><button class="bibbtn togglebtn" data-target="bib-Saha2026Redakto">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Saha2026Redakto">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Saha2026Redakto" hidden>
         <button class="copybtn" data-key="Saha2026Redakto">Copy</button>
         <pre>@misc{Saha2026Redakto,
@@ -784,6 +921,10 @@ footer a { color: var(--accent); }
   eprint        = {2608.18260},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Saha2026Redakto" hidden>
+        <blockquote>“This research was supported by the German Federal Ministry of Research, Technology and Space grant numbers 16SV8857, by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2608.18260">source</a>).</div>
       </div>
     </div>
   </div>
@@ -795,7 +936,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Accuracy and Robustness of Model Cascades Under Data Perturbations</div>
       <div class="pauthors">Pallavi Mitra, Jai Kushwaha, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2608.17711</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2608.17711">arXiv</a><button class="bibbtn" data-key="Mitra2026Cascades">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2608.17711">arXiv</a> · <a href="https://arxiv.org/pdf/2608.17711">PDF</a><button class="bibbtn togglebtn" data-target="bib-Mitra2026Cascades">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Mitra2026Cascades">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Mitra2026Cascades" hidden>
         <button class="copybtn" data-key="Mitra2026Cascades">Copy</button>
         <pre>@misc{Mitra2026Cascades,
@@ -805,6 +946,10 @@ footer a { color: var(--accent); }
   eprint        = {2608.17711},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Mitra2026Cascades" hidden>
+        <blockquote>“This research was also supported by the German Research Foundation (DFG), project number 528483508 – FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2608.17711">source</a>).</div>
       </div>
     </div>
   </div>
@@ -816,7 +961,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Global Crises and National Policies: A Large Scale Analysis of Political Content in German Language Online Media</div>
       <div class="pauthors">Yara Döring, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">arXiv:2608.18268</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18268">arXiv</a><button class="bibbtn" data-key="Doering2026GlobalCrises">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18268">arXiv</a> · <a href="https://arxiv.org/pdf/2608.18268">PDF</a><button class="bibbtn togglebtn" data-target="bib-Doering2026GlobalCrises">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Doering2026GlobalCrises">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Doering2026GlobalCrises" hidden>
         <button class="copybtn" data-key="Doering2026GlobalCrises">Copy</button>
         <pre>@misc{Doering2026GlobalCrises,
@@ -826,6 +971,10 @@ footer a { color: var(--accent); }
   eprint        = {2608.18268},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Doering2026GlobalCrises" hidden>
+        <blockquote>“This research was supported by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2608.18268">source</a>).</div>
       </div>
     </div>
   </div>
@@ -837,7 +986,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Evaluating the quality of tabular synthetic data in health care</div>
       <div class="pauthors">Ivana Nanevski, Maryam Mohebi, Sebastian Jäger, Karen Otte, Fabian Prasser, Matthias Schulte-Althoff, Daniel Fürstenau, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">PLOS Digital Health 5(7):e0001522</div>
-      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pdig.0001522">DOI</a><button class="bibbtn" data-key="Nanevski2026SyntheticData">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pdig.0001522">DOI</a> · <a href="https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001522&type=printable">PDF</a><button class="bibbtn togglebtn" data-target="bib-Nanevski2026SyntheticData">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Nanevski2026SyntheticData">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Nanevski2026SyntheticData" hidden>
         <button class="copybtn" data-key="Nanevski2026SyntheticData">Copy</button>
         <pre>@article{Nanevski2026SyntheticData,
@@ -851,6 +1000,10 @@ footer a { color: var(--accent); }
   doi     = {10.1371/journal.pdig.0001522}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Nanevski2026SyntheticData" hidden>
+        <blockquote>“Research Foundation (DFG) ( https://www.dfg.de/en )- Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://doi.org/10.1371/journal.pdig.0001522">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -861,7 +1014,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Anonymized but Useful Synthetic Tabular Health Data for AI based Fall Risk Assessment</div>
       <div class="pauthors">Ivana Nanevski, Sebastian Jäger, Maryam Mohebi, Matthias Schulte-Althoff, Jörg Pohle, Nicholas Chandler, Rahel Gubser, Alessia Nowak, Fabian Prasser, Daniel Fürstenau, Felix Balzer, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">Scientific Data 13:1089</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41597-026-07910-z">DOI</a><button class="bibbtn" data-key="Nanevski2026FallRisk">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41597-026-07910-z">DOI</a> · <a href="https://www.nature.com/articles/s41597-026-07910-z.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Nanevski2026FallRisk">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Nanevski2026FallRisk">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Nanevski2026FallRisk" hidden>
         <button class="copybtn" data-key="Nanevski2026FallRisk">Copy</button>
         <pre>@article{Nanevski2026FallRisk,
@@ -874,6 +1027,10 @@ footer a { color: var(--accent); }
   doi     = {10.1038/s41597-026-07910-z}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Nanevski2026FallRisk" hidden>
+        <blockquote>“This research was supported by the German Federal Ministry of Research, Technology and Space grant numbers 16SV8856, 16SV8835 and 16SV8858, by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://www.nature.com/articles/s41597-026-07910-z">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -884,7 +1041,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Readiness Assessment for AI in Nursing Care Projects: Multimethods Study</div>
       <div class="pauthors">Kathrin Seibert, Dominik Domhoff, Janissa Altona, Sebastian Jäger, <strong>Felix Bießmann</strong>, Alessia Nowak, Rahel Gubser, Matthias Schulte-Althoff, Daniel Fürstenau, Jörg Pohle, Lea Bergmann, David Walter, Kathi Beier, Dagmar Borchers, Karin Wolf-Ostermann</div>
       <div class="pvenue">JMIR Nursing 9:e84148</div>
-      <div class="pmeta"><a href="https://doi.org/10.2196/84148">DOI</a><button class="bibbtn" data-key="Seibert2026AINCRA">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.2196/84148">DOI</a><button class="bibbtn togglebtn" data-target="bib-Seibert2026AINCRA">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Seibert2026AINCRA">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Seibert2026AINCRA" hidden>
         <button class="copybtn" data-key="Seibert2026AINCRA">Copy</button>
         <pre>@article{Seibert2026AINCRA,
@@ -897,6 +1054,11 @@ footer a { color: var(--accent); }
   doi     = {10.2196/84148}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Seibert2026AINCRA" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -907,7 +1069,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Uncertainty-Guided Expert-AI Collaboration for Efficient Soil Horizon Annotation</div>
       <div class="pauthors">Teodor Chiaburu, Vipin Singh, Frank Haußer, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">arXiv:2509.24873</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2509.24873">arXiv</a><button class="bibbtn" data-key="Chiaburu2025SoilAnnotation">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2509.24873">arXiv</a> · <a href="https://arxiv.org/pdf/2509.24873">PDF</a><button class="bibbtn togglebtn" data-target="bib-Chiaburu2025SoilAnnotation">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Chiaburu2025SoilAnnotation">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Chiaburu2025SoilAnnotation" hidden>
         <button class="copybtn" data-key="Chiaburu2025SoilAnnotation">Copy</button>
         <pre>@misc{Chiaburu2025SoilAnnotation,
@@ -917,6 +1079,10 @@ footer a { color: var(--accent); }
   eprint        = {2509.24873},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Chiaburu2025SoilAnnotation" hidden>
+        <blockquote>“This research was also supported by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2509.24873">source</a>).</div>
       </div>
     </div>
   </div>
@@ -928,7 +1094,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Uncertainty Propagation in XAI: A Comparison of Analytical and Empirical Estimators</div>
       <div class="pauthors">Teodor Chiaburu, <strong>Felix Bießmann</strong>, Frank Haußer</div>
       <div class="pvenue">Explainable Artificial Intelligence (World Conference on Explainable Artificial Intelligence 2025), pp. 390–411</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-08333-3_18">DOI</a><button class="bibbtn" data-key="Chiaburu2025UncertaintyXAI">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-08333-3_18">DOI</a> · <a href="https://arxiv.org/abs/2504.03736">arXiv</a> · <a href="https://arxiv.org/pdf/2504.03736">PDF</a><button class="bibbtn togglebtn" data-target="bib-Chiaburu2025UncertaintyXAI">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Chiaburu2025UncertaintyXAI">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Chiaburu2025UncertaintyXAI" hidden>
         <button class="copybtn" data-key="Chiaburu2025UncertaintyXAI">Copy</button>
         <pre>@inproceedings{Chiaburu2025UncertaintyXAI,
@@ -939,8 +1105,13 @@ footer a { color: var(--accent); }
   pages     = {390--411},
   publisher = {Springer Nature Switzerland},
   year      = {2025},
-  doi       = {10.1007/978-3-032-08333-3_18}
+  doi       = {10.1007/978-3-032-08333-3_18},
+  note      = {Preprint: arXiv:2504.03736}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Chiaburu2025UncertaintyXAI" hidden>
+        <blockquote>“ER project (with the project number 01MD22007H, 01MD22007C), the German Federal Ministry of Education and Research grant number 16SV8856 and 16SV8835, by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2504.03736v1">source</a>).</div>
       </div>
     </div>
   </div>
@@ -952,7 +1123,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">End-to-end Pseudonymization of German Texts with Deep Learning – An Empirical Comparison of Classical and Modern Approaches</div>
       <div class="pauthors">Saurav Kumar Saha, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">Proceedings of the 1st International Conference on AI in Medicine and Healthcare (AiMH 2025)</div>
-      <div class="pmeta"><button class="bibbtn" data-key="Saha2025Pseudonymization">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><button class="bibbtn togglebtn" data-target="bib-Saha2025Pseudonymization">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Saha2025Pseudonymization">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Saha2025Pseudonymization" hidden>
         <button class="copybtn" data-key="Saha2025Pseudonymization">Copy</button>
         <pre>@inproceedings{Saha2025Pseudonymization,
@@ -962,6 +1133,11 @@ footer a { color: var(--accent); }
   address   = {Innsbruck, Austria},
   year      = {2025}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Saha2025Pseudonymization" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
       </div>
     </div>
   </div>
@@ -973,7 +1149,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">MechDetect: Detecting Data-Dependent Errors</div>
       <div class="pauthors">Philipp Jung, Nicholas Chandler, Sebastian Jäger, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">2025 International Conference on Data Science and Intelligent Systems (DSIS), pp. 1–7</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/DSIS67228.2025.11390600">DOI</a><button class="bibbtn" data-key="Jung2025MechDetect">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/DSIS67228.2025.11390600">DOI</a> · <a href="https://arxiv.org/abs/2512.04138">arXiv</a> · <a href="https://arxiv.org/pdf/2512.04138">PDF</a><button class="bibbtn togglebtn" data-target="bib-Jung2025MechDetect">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Jung2025MechDetect">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Jung2025MechDetect" hidden>
         <button class="copybtn" data-key="Jung2025MechDetect">Copy</button>
         <pre>@inproceedings{Jung2025MechDetect,
@@ -983,8 +1159,13 @@ footer a { color: var(--accent); }
   pages     = {1--7},
   publisher = {IEEE},
   year      = {2025},
-  doi       = {10.1109/DSIS67228.2025.11390600}
+  doi       = {10.1109/DSIS67228.2025.11390600},
+  note      = {Preprint: arXiv:2512.04138}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Jung2025MechDetect" hidden>
+        <blockquote>“16SV8835, by the Federal Ministry for Economic Affairs and Climate Action of Germany for the RIWWER project (Project number: 01MD22007H, 01MD22007C), by the Einstein Center Digital Future, Berlin, and by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2512.04138v1">source</a>).</div>
       </div>
     </div>
   </div>
@@ -996,7 +1177,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Towards Realistic Error Models for Tabular Data</div>
       <div class="pauthors">Philipp Jung, Sebastian Jäger, Nicholas Chandler, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">ACM Journal of Data and Information Quality 17(4):1–27</div>
-      <div class="pmeta"><a href="https://doi.org/10.1145/3774914">DOI</a><button class="bibbtn" data-key="Jung2025ErrorModels">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1145/3774914">DOI</a><button class="bibbtn togglebtn" data-target="bib-Jung2025ErrorModels">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Jung2025ErrorModels">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Jung2025ErrorModels" hidden>
         <button class="copybtn" data-key="Jung2025ErrorModels">Copy</button>
         <pre>@article{Jung2025ErrorModels,
@@ -1010,6 +1191,11 @@ footer a { color: var(--accent); }
   doi     = {10.1145/3774914}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Jung2025ErrorModels" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1020,7 +1206,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Advancing Blood Sample Analysis: Incorporating Expert Opinions and Explainable AI in Multi-label Disease Prediction</div>
       <div class="pauthors">Sultan Orynbay, Inabat Akanova, Diana Turmakhan, Natalya Lim, <strong>Felix Biessmann</strong>, Siamac Fazli</div>
       <div class="pvenue">Intelligent Systems and Applications (IntelliSys 2025), pp. 130–146</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-07109-5_10">DOI</a><button class="bibbtn" data-key="Orynbay2025BloodSample">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-07109-5_10">DOI</a><button class="bibbtn togglebtn" data-target="bib-Orynbay2025BloodSample">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Orynbay2025BloodSample">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Orynbay2025BloodSample" hidden>
         <button class="copybtn" data-key="Orynbay2025BloodSample">Copy</button>
         <pre>@inproceedings{Orynbay2025BloodSample,
@@ -1034,6 +1220,11 @@ footer a { color: var(--accent); }
   doi       = {10.1007/978-3-032-07109-5_10}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Orynbay2025BloodSample" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1044,7 +1235,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Data-driven Modeling of Combined Sewer Systems for Urban Sustainability: An Empirical Evaluation</div>
       <div class="pauthors">Vipin Singh, Tianheng Ling, Teodor Chiaburu, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2408.11619</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2408.11619">arXiv</a><button class="bibbtn" data-key="Singh2024SewerModeling">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2408.11619">arXiv</a> · <a href="https://arxiv.org/pdf/2408.11619">PDF</a><button class="bibbtn togglebtn" data-target="bib-Singh2024SewerModeling">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Singh2024SewerModeling">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Singh2024SewerModeling" hidden>
         <button class="copybtn" data-key="Singh2024SewerModeling">Copy</button>
         <pre>@misc{Singh2024SewerModeling,
@@ -1054,6 +1245,10 @@ footer a { color: var(--accent); }
   eprint        = {2408.11619},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Singh2024SewerModeling" hidden>
+        <blockquote>“Research Foundation (Project number: 528483508 - FIP 12).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2408.11619">source</a>).</div>
       </div>
     </div>
   </div>
@@ -1065,7 +1260,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">TinyChirp: Bird Song Recognition Using TinyML Models on Low-power Wireless Acoustic Sensors</div>
       <div class="pauthors">Zhaolan Huang, Adrien Tousnakhoff, Polina Kozyr, Roman Rehausen, <strong>Felix Bießmann</strong>, Robert Lachlan, Cédric Adjih, Emmanuel Baccelli</div>
       <div class="pvenue">2024 IEEE 5th International Symposium on the Internet of Sounds (IS2), pp. 1–10</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/IS262782.2024.10704131">DOI</a><button class="bibbtn" data-key="Huang2024TinyChirp">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/IS262782.2024.10704131">DOI</a> · <a href="https://arxiv.org/abs/2407.21453">arXiv</a> · <a href="https://arxiv.org/pdf/2407.21453">PDF</a><button class="bibbtn togglebtn" data-target="bib-Huang2024TinyChirp">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Huang2024TinyChirp">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Huang2024TinyChirp" hidden>
         <button class="copybtn" data-key="Huang2024TinyChirp">Copy</button>
         <pre>@inproceedings{Huang2024TinyChirp,
@@ -1075,8 +1270,13 @@ footer a { color: var(--accent); }
   pages     = {1--10},
   publisher = {IEEE},
   year      = {2024},
-  doi       = {10.1109/IS262782.2024.10704131}
+  doi       = {10.1109/IS262782.2024.10704131},
+  note      = {Preprint: arXiv:2407.21453}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Huang2024TinyChirp" hidden>
+        <blockquote>“Felix Bießmann received support from the Einstein Center Digital Future, Berlin, the German Research Foundation (DFG) (528483508 - FIP 12), the Federal Ministry of Economic Affairs and Climate Action (RIWWER 01MD22007H), the German Federal Ministry of the Environment (GCA 67KI2022A) and the German Federal Ministry of Education and Research (KIP-SDM 16SV8856).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2407.21453">source</a>).</div>
       </div>
     </div>
   </div>
@@ -1088,7 +1288,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Towards Transnational Fairness in Machine Learning: A Case Study in Disaster Response Systems</div>
       <div class="pauthors">Cem Kozcuer, Anne Mollen, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">Minds and Machines 34(2):11</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/s11023-024-09663-3">DOI</a><button class="bibbtn" data-key="Kozcuer2024Fairness">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/s11023-024-09663-3">DOI</a> · <a href="https://link.springer.com/content/pdf/10.1007/s11023-024-09663-3.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Kozcuer2024Fairness">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Kozcuer2024Fairness">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Kozcuer2024Fairness" hidden>
         <button class="copybtn" data-key="Kozcuer2024Fairness">Copy</button>
         <pre>@article{Kozcuer2024Fairness,
@@ -1102,6 +1302,10 @@ footer a { color: var(--accent); }
   doi     = {10.1007/s11023-024-09663-3}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Kozcuer2024Fairness" hidden>
+        <blockquote>“This research is also funded by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://link.springer.com/article/10.1007/s11023-024-09663-3">source</a>).</div>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g3">Hildebrand group (BHT Berlin)</h2>
@@ -1112,7 +1316,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Generating Synthetic Satellite Imagery for Rare Objects: An Empirical Comparison of Models and Metrics</div>
       <div class="pauthors">Tuong Vy Nguyen, Johannes Hoster, Alexander Glaser, <strong>Kristian Hildebrand</strong>, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2409.01138</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2409.01138">arXiv</a><button class="bibbtn" data-key="Nguyen2024SatelliteImagery">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2409.01138">arXiv</a> · <a href="https://arxiv.org/pdf/2409.01138">PDF</a><button class="bibbtn togglebtn" data-target="bib-Nguyen2024SatelliteImagery">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Nguyen2024SatelliteImagery">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Nguyen2024SatelliteImagery" hidden>
         <button class="copybtn" data-key="Nguyen2024SatelliteImagery">Copy</button>
         <pre>@misc{Nguyen2024SatelliteImagery,
@@ -1122,6 +1326,10 @@ footer a { color: var(--accent); }
   eprint        = {2409.01138},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Nguyen2024SatelliteImagery" hidden>
+        <blockquote>“Felix Bießmann received funding from the Einstein Center Digital Future, Berlin and the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2409.01138">source</a>).</div>
       </div>
     </div>
   </div>
@@ -1133,7 +1341,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">The Influence of Faulty Labels in Data Sets on Human Pose Estimation</div>
       <div class="pauthors">Arnold Schwarz, Levente Hernadi, <strong>Felix Bießmann</strong>, <strong>Kristian Hildebrand</strong></div>
       <div class="pvenue">arXiv:2409.03887</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2409.03887">arXiv</a><button class="bibbtn" data-key="Schwarz2024FaultyLabels">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2409.03887">arXiv</a> · <a href="https://arxiv.org/pdf/2409.03887">PDF</a><button class="bibbtn togglebtn" data-target="bib-Schwarz2024FaultyLabels">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Schwarz2024FaultyLabels">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Schwarz2024FaultyLabels" hidden>
         <button class="copybtn" data-key="Schwarz2024FaultyLabels">Copy</button>
         <pre>@misc{Schwarz2024FaultyLabels,
@@ -1143,6 +1351,10 @@ footer a { color: var(--accent); }
   eprint        = {2409.03887},
   archivePrefix = {arXiv}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Schwarz2024FaultyLabels" hidden>
+        <blockquote>“This research is funded by the German Research Foundation (DFG) - Project number: 528483508 - FIP 12.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://arxiv.org/abs/2409.03887">source</a>).</div>
       </div>
     </div>
   </div>
@@ -1154,7 +1366,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Lagrangian Neural Network-Based Control: Improving Robotic Trajectory Tracking via Linearized Feedback</div>
       <div class="pauthors">Manuel Weiss, Alexander Pawluchin, Jan-Hendrik Ewering, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">IEEE Robotics and Automation Letters 11(3):2546–2553</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2026.3653326">DOI</a><button class="bibbtn" data-key="Weiss2026LNNControl">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2026.3653326">DOI</a><button class="bibbtn togglebtn" data-target="bib-Weiss2026LNNControl">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Weiss2026LNNControl">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Weiss2026LNNControl" hidden>
         <button class="copybtn" data-key="Weiss2026LNNControl">Copy</button>
         <pre>@article{Weiss2026LNNControl,
@@ -1168,6 +1380,11 @@ footer a { color: var(--accent); }
   doi     = {10.1109/LRA.2026.3653326}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Weiss2026LNNControl" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1178,7 +1395,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Learning by doing: Online Learning to Compensate Gravity with a Computed Torque Controller using Lagrangian Neural Networks</div>
       <div class="pauthors">Manuel Weiss, Alexander Pawluchin, Arnold Schwarz, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">2025 11th International Conference on Control, Decision and Information Technologies (CoDIT), pp. 272–277</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/CoDIT66093.2025.11321475">DOI</a><button class="bibbtn" data-key="Weiss2025LearningByDoing">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/CoDIT66093.2025.11321475">DOI</a><button class="bibbtn togglebtn" data-target="bib-Weiss2025LearningByDoing">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Weiss2025LearningByDoing">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Weiss2025LearningByDoing" hidden>
         <button class="copybtn" data-key="Weiss2025LearningByDoing">Copy</button>
         <pre>@inproceedings{Weiss2025LearningByDoing,
@@ -1191,6 +1408,11 @@ footer a { color: var(--accent); }
   doi       = {10.1109/CoDIT66093.2025.11321475}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Weiss2025LearningByDoing" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1201,7 +1423,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Achieving Velocity Tracking Despite Model Uncertainty for a Quadruped Robot with a PD-ILC Controller</div>
       <div class="pauthors">Manuel Weiss, Andrew Stirling, Alexander Pawluchin, Dustin Lehmann, Yannis Hannemann, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">2024 European Control Conference (ECC), pp. 134–140</div>
-      <div class="pmeta"><a href="https://doi.org/10.23919/ECC64448.2024.10590932">DOI</a><button class="bibbtn" data-key="Weiss2024PDILC">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.23919/ECC64448.2024.10590932">DOI</a><button class="bibbtn togglebtn" data-target="bib-Weiss2024PDILC">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Weiss2024PDILC">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Weiss2024PDILC" hidden>
         <button class="copybtn" data-key="Weiss2024PDILC">Copy</button>
         <pre>@inproceedings{Weiss2024PDILC,
@@ -1214,6 +1436,11 @@ footer a { color: var(--accent); }
   doi       = {10.23919/ECC64448.2024.10590932}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Weiss2024PDILC" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1224,7 +1451,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Learning of a Rapid Prototyping Gait Library for a Quadruped Robot Using PD-ILC and Gaussian Processes</div>
       <div class="pauthors">Manuel Weiss, Alexander Pawluchin, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">2024 18th International Conference on Control, Automation, Robotics and Vision (ICARCV), pp. 1213–1218</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/ICARCV63323.2024.10821620">DOI</a><button class="bibbtn" data-key="Weiss2024GaitLibrary">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/ICARCV63323.2024.10821620">DOI</a><button class="bibbtn togglebtn" data-target="bib-Weiss2024GaitLibrary">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Weiss2024GaitLibrary">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Weiss2024GaitLibrary" hidden>
         <button class="copybtn" data-key="Weiss2024GaitLibrary">Copy</button>
         <pre>@inproceedings{Weiss2024GaitLibrary,
@@ -1237,6 +1464,11 @@ footer a { color: var(--accent); }
   doi       = {10.1109/ICARCV63323.2024.10821620}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Weiss2024GaitLibrary" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g5">Höppner group (robotics, BHT Berlin)</h2>
@@ -1247,7 +1479,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Variable Stiffness Actuation via 3D-Printed Nonlinear Torsional Springs</div>
       <div class="pauthors"><strong>Hannes Höppner</strong>, Annika Kirner, Joshua Göttlich, Linnéa Jakob, Alexander Dietrich, Christian Ott</div>
       <div class="pvenue">IEEE Robotics and Automation Letters 10(5):4324–4331</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2025.3549658">DOI</a><button class="bibbtn" data-key="Hoeppner2025TorsionalSprings">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2025.3549658">DOI</a><button class="bibbtn togglebtn" data-target="bib-Hoeppner2025TorsionalSprings">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Hoeppner2025TorsionalSprings">Proof</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
       <div class="bibbox" id="bib-Hoeppner2025TorsionalSprings" hidden>
         <button class="copybtn" data-key="Hoeppner2025TorsionalSprings">Copy</button>
         <pre>@article{Hoeppner2025TorsionalSprings,
@@ -1261,6 +1493,10 @@ footer a { color: var(--accent); }
   doi     = {10.1109/LRA.2025.3549658}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Hoeppner2025TorsionalSprings" hidden>
+        <blockquote>“This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - project number 528483508.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://doi.org/10.1109/LRA.2025.3549658">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1271,7 +1507,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">VSB – Variable Stiffness Based on Bowden Cables: A Simple Mechanism for Soft Robotic Hands</div>
       <div class="pauthors">Steffen Puhlmann, Alin Albu-Schäffer, <strong>Hannes Höppner</strong></div>
       <div class="pvenue">2025 IEEE International Conference on Robotics and Automation (ICRA), pp. 5556–5562</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/ICRA55743.2025.11127353">DOI</a><button class="bibbtn" data-key="Puhlmann2025VSB">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/ICRA55743.2025.11127353">DOI</a><button class="bibbtn togglebtn" data-target="bib-Puhlmann2025VSB">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Puhlmann2025VSB">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Puhlmann2025VSB" hidden>
         <button class="copybtn" data-key="Puhlmann2025VSB">Copy</button>
         <pre>@inproceedings{Puhlmann2025VSB,
@@ -1284,6 +1520,11 @@ footer a { color: var(--accent); }
   doi       = {10.1109/ICRA55743.2025.11127353}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Puhlmann2025VSB" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1294,7 +1535,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Programming Passive Fingertip Deformation for Improved Grasping and Manipulation</div>
       <div class="pauthors">Steffen Puhlmann, Lion-Constantin Weber, <strong>Hannes Höppner</strong></div>
       <div class="pvenue">2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 9175–9181</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/IROS58592.2024.10801459">DOI</a><button class="bibbtn" data-key="Puhlmann2024Fingertip">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/IROS58592.2024.10801459">DOI</a><button class="bibbtn togglebtn" data-target="bib-Puhlmann2024Fingertip">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Puhlmann2024Fingertip">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Puhlmann2024Fingertip" hidden>
         <button class="copybtn" data-key="Puhlmann2024Fingertip">Copy</button>
         <pre>@inproceedings{Puhlmann2024Fingertip,
@@ -1307,6 +1548,11 @@ footer a { color: var(--accent); }
   doi       = {10.1109/IROS58592.2024.10801459}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Puhlmann2024Fingertip" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g6">Reber group (BHT Berlin)</h2>
@@ -1317,7 +1563,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Adaptations in Plasmodium tubulin determine distinct microtubule architectures, mechanics and drug susceptibility</div>
       <div class="pauthors">Mamata Bangera, Jiangbo Wu, Daniel Beckett, Dominik Fachet, Josie L. Ferreira, Gregory A. Voth, <strong>Simone Reber</strong>, Carolyn A. Moores</div>
       <div class="pvenue">Nature Communications 17:2275</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-026-70181-0">DOI</a><button class="bibbtn" data-key="Bangera2026Plasmodium">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-026-70181-0">DOI</a> · <a href="https://www.nature.com/articles/s41467-026-70181-0.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Bangera2026Plasmodium">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Bangera2026Plasmodium">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Bangera2026Plasmodium" hidden>
         <button class="copybtn" data-key="Bangera2026Plasmodium">Copy</button>
         <pre>@article{Bangera2026Plasmodium,
@@ -1330,6 +1576,10 @@ footer a { color: var(--accent); }
   doi     = {10.1038/s41467-026-70181-0}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Bangera2026Plasmodium" hidden>
+        <blockquote>“This work was supported in part by the Max Planck Society and the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, Project-ID 528483508 – FIP 12 and RE 3925/6-1) to S.R.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://www.nature.com/articles/s41467-026-70181-0">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1340,7 +1590,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Weak interactions drive selective proteome demixing and tune the differential response to environmental perturbations</div>
       <div class="pauthors">Guido Narduzzi, Federico Zucca, Leo Willig, Ludovic Gillet, Ino Karemaker, Aleksander A. Rebane, Alba Tomas Sitjes, Leon Young, Moritz Becker, <strong>Simone Reber</strong>, Thomas Michaels, Paola Picotti, Gabriel E. Neurohr</div>
       <div class="pvenue">bioRxiv preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.64898/2026.07.22.739830">DOI</a><button class="bibbtn" data-key="Narduzzi2026Demixing">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.64898/2026.07.22.739830">DOI</a> · <a href="https://www.biorxiv.org/content/10.64898/2026.07.22.739830v1.full.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Narduzzi2026Demixing">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Narduzzi2026Demixing">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Narduzzi2026Demixing" hidden>
         <button class="copybtn" data-key="Narduzzi2026Demixing">Copy</button>
         <pre>@misc{Narduzzi2026Demixing,
@@ -1350,6 +1600,10 @@ footer a { color: var(--accent); }
   year         = {2026},
   doi          = {10.64898/2026.07.22.739830}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Narduzzi2026Demixing" hidden>
+        <blockquote>“Footnotes Figure numbers in the text were corrected Funder Information Declared Boehringer Ingelheim Fonds, https://ror.org/00dkye506 European Commission , 101154995 Max Planck Society, https://ror.org/01hhn8329 Deutsche Forschungsgemeinschaft , 528483508 ETH Zurich , 310030_212660 Swiss National Science Foundation, https://ror.org/00yjd3n13 , PCEFP3_187003 Copyright The copyright holder for this preprint is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://doi.org/10.64898/2026.07.22.739830">source</a>).</div>
       </div>
     </div>
   </div>
@@ -1361,7 +1615,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Inhomogeneous Tau polymerization, core–shell organization, and seed formation during Tau condensate aging</div>
       <div class="pauthors">Maximilian Franck, Abin Biswas, Pin-Lian Jiang, Martin Fernandez-Campo, Satabdee Mohapatra, Rithika Sankar, Alvaro Dominguez-Baquero, Leandre Ravatt, Boglarka K. Nagy-Herczeg, Ozan Kantar, Janine Hochmair, Thorsten Mielke, Lisa Diez, Fan Liu, Michael Krieg, <strong>Simone Reber</strong>, Susanne Wegmann</div>
       <div class="pvenue">bioRxiv preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.64898/2026.03.18.711671">DOI</a><button class="bibbtn" data-key="Franck2026Tau">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.64898/2026.03.18.711671">DOI</a> · <a href="https://www.biorxiv.org/content/10.64898/2026.03.18.711671v1.full.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Franck2026Tau">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Franck2026Tau">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Franck2026Tau" hidden>
         <button class="copybtn" data-key="Franck2026Tau">Copy</button>
         <pre>@misc{Franck2026Tau,
@@ -1371,6 +1625,10 @@ footer a { color: var(--accent); }
   year         = {2026},
   doi          = {10.64898/2026.03.18.711671}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Franck2026Tau" hidden>
+        <blockquote>“Funder Information Declared Deutsche Forschungsgemeinschaft , 19138680 , 506373047 , 545039200 , 528483508 – FIP 12 Hertie Foundation, https://ror.org/03ak9vt35 , P1200002 Copyright The copyright holder for this preprint is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://doi.org/10.64898/2026.03.18.711671">source</a>).</div>
       </div>
     </div>
   </div>
@@ -1382,7 +1640,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Conserved nucleocytoplasmic density homeostasis drives cellular organization across eukaryotes</div>
       <div class="pauthors">Abin Biswas, Omar Muñoz, Kyoohyun Kim, Carsten Hoege, Benjamin M. Lorton, Rainer Nikolay, Matthew L. Kraushar, David Shechter, Jochen Guck, Vasily Zaburdaev, <strong>Simone Reber</strong></div>
       <div class="pvenue">Nature Communications 16:7597</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-025-62605-0">DOI</a><button class="bibbtn" data-key="Biswas2025Density">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-025-62605-0">DOI</a> · <a href="https://www.nature.com/articles/s41467-025-62605-0.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Biswas2025Density">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Biswas2025Density">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Biswas2025Density" hidden>
         <button class="copybtn" data-key="Biswas2025Density">Copy</button>
         <pre>@article{Biswas2025Density,
@@ -1395,6 +1653,10 @@ footer a { color: var(--accent); }
   doi     = {10.1038/s41467-025-62605-0}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Biswas2025Density" hidden>
+        <blockquote>“Download references Acknowledgements The authors acknowledge funding from the DFG (RE 3925/1-1 and 528483508 – FIP 12 to S.R., SPP2191 KR 5755/1-1 to M.L.K.”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://www.nature.com/articles/s41467-025-62605-0">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1405,7 +1667,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Cell state-specific cytoplasmic density controls spindle architecture and scaling</div>
       <div class="pauthors">Tobias Kletter, Omar Muñoz, Sebastian Reusch, Abin Biswas, Aliaksandr Halavatyi, Beate Neumann, Benno Kuropka, Vasily Zaburdaev, <strong>Simone Reber</strong></div>
       <div class="pvenue">Nature Cell Biology 27:959–971</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41556-025-01678-x">DOI</a><button class="bibbtn" data-key="Kletter2025Spindle">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41556-025-01678-x">DOI</a> · <a href="https://www.nature.com/articles/s41556-025-01678-x.pdf">PDF</a><button class="bibbtn togglebtn" data-target="bib-Kletter2025Spindle">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Kletter2025Spindle">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Kletter2025Spindle" hidden>
         <button class="copybtn" data-key="Kletter2025Spindle">Copy</button>
         <pre>@article{Kletter2025Spindle,
@@ -1418,6 +1680,10 @@ footer a { color: var(--accent); }
   doi     = {10.1038/s41556-025-01678-x}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Kletter2025Spindle" hidden>
+        <blockquote>“For funding, the authors acknowledge the Max Planck Society (to O.M. and S.R.), the Horizon 2020 Framework Programme of the European Union (iNEXT grant 653706, project PID 3503 to S.R.) and the Deutsche Forschungsgemeinschaft Project-ID 528483508 – FIP 12 (to S.R.).”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text (<a href="https://www.nature.com/articles/s41556-025-01678-x">source</a>).</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1428,7 +1694,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">2-Naphthyl tetrazoles are tubulin polymerization inhibitors with potent antiproliferative and apoptotic induction activities with distinct mechanisms</div>
       <div class="pauthors">Miguel Marín, Laura Gallego-Yerga, Dominik Fachet, Raúl Fuentes-Martín, Silvia González-Pelayo, <strong>Simone Reber</strong>, Rafael Pelaez</div>
       <div class="pvenue">SSRN preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5510720">DOI</a><button class="bibbtn" data-key="Marin2025Naphthyl">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5510720">DOI</a><button class="bibbtn togglebtn" data-target="bib-Marin2025Naphthyl">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Marin2025Naphthyl">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Marin2025Naphthyl" hidden>
         <button class="copybtn" data-key="Marin2025Naphthyl">Copy</button>
         <pre>@misc{Marin2025Naphthyl,
@@ -1438,6 +1704,11 @@ footer a { color: var(--accent); }
   year         = {2025},
   doi          = {10.2139/ssrn.5510720}
 }</pre>
+      </div>
+      <div class="proofbox" id="proof-Marin2025Naphthyl" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
       </div>
     </div>
   </div>
@@ -1449,7 +1720,7 @@ footer a { color: var(--accent); }
       <div class="ptitle">Crucial Gram-positive type IV secretion system protein TraF is a structural homolog of type VII secretion system protein EssB/YukC</div>
       <div class="pauthors">Kirill Kuhlmann, Amrutha Stallinger, Claudia Michaelis, Tamara Margot Ismael Berger, Verena Kohler, Bernd Gesslbauer, Tea Pavkov-Keller, <strong>Elisabeth Grohmann</strong>, Walter Keller</div>
       <div class="pvenue">microLife 7:uqag009</div>
-      <div class="pmeta"><a href="https://doi.org/10.1093/femsml/uqag009">DOI</a><button class="bibbtn" data-key="Kuhlmann2026TraF">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1093/femsml/uqag009">DOI</a><button class="bibbtn togglebtn" data-target="bib-Kuhlmann2026TraF">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-Kuhlmann2026TraF">Proof</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
       <div class="bibbox" id="bib-Kuhlmann2026TraF" hidden>
         <button class="copybtn" data-key="Kuhlmann2026TraF">Copy</button>
         <pre>@article{Kuhlmann2026TraF,
@@ -1462,6 +1733,11 @@ footer a { color: var(--accent); }
   doi     = {10.1093/femsml/uqag009}
 }</pre>
       </div>
+      <div class="proofbox" id="proof-Kuhlmann2026TraF" hidden>
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="https://scholar.google.com/scholar?q=%22528483508%22">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>
+      </div>
     </div>
   </div>
 </article>
@@ -1469,9 +1745,9 @@ footer a { color: var(--accent); }
 by <code>generate_site.py</code>.</footer>
 </div>
 <script>
-document.querySelectorAll('.bibbtn').forEach(btn => {
+document.querySelectorAll('.togglebtn').forEach(btn => {
   btn.addEventListener('click', () => {
-    const box = document.getElementById('bib-' + btn.dataset.key);
+    const box = document.getElementById(btn.dataset.target);
     box.hidden = !box.hidden;
     btn.classList.toggle('open', !box.hidden);
   });

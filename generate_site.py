@@ -4,12 +4,15 @@
 Usage: python3 generate_site.py
 """
 import html
+import json
 import re
 from datetime import date
 from pathlib import Path
 
 BIB = Path(__file__).parent / "applfm.bib"
 OUT = Path(__file__).parent / "index.html"
+PROOFS = Path(__file__).parent / "proofs.json"
+SCHOLAR_URL = "https://scholar.google.com/scholar?q=%22528483508%22"
 
 PIS = [
     "Kristian Hildebrand", "Ivo Boblan", "Hannes Höppner", "Alexander Löser",
@@ -117,24 +120,48 @@ def venue_of(e) -> str:
     return ", ".join(bits)
 
 
-def links_of(e) -> str:
+def arxiv_id(e):
+    f = e["fields"]
+    if f.get("eprint"):
+        return f["eprint"]
+    m = re.search(r"arXiv:([\d.]+)", f.get("note", ""))
+    return m.group(1) if m else None
+
+
+def pdf_url(e, proof) -> str:
+    if proof.get("pdf"):
+        return proof["pdf"]
+    aid = arxiv_id(e)
+    if aid:
+        return f"https://arxiv.org/pdf/{aid}"
+    u = e["fields"].get("url", "")
+    if "aclanthology" in u:
+        return u.rstrip("/") + ".pdf"
+    m = re.search(r"openreview\.net/forum\?id=(\S+)", u)
+    if m:
+        return f"https://openreview.net/pdf?id={m.group(1)}"
+    return ""
+
+
+def links_of(e, proof) -> str:
     f = e["fields"]
     out = []
     if f.get("doi"):
         out.append(f'<a href="https://doi.org/{f["doi"]}">DOI</a>')
-    if f.get("eprint"):
-        out.append(f'<a href="https://arxiv.org/abs/{f["eprint"]}">arXiv</a>')
+    aid = arxiv_id(e)
+    if aid:
+        out.append(f'<a href="https://arxiv.org/abs/{aid}">arXiv</a>')
     if f.get("url"):
         out.append(f'<a href="{f["url"]}">link</a>')
-    note = f.get("note", "")
-    m = re.search(r"arXiv:([\d.]+)", note)
-    if m and not f.get("eprint"):
-        out.append(f'<a href="https://arxiv.org/abs/{m.group(1)}">arXiv</a>')
+    pu = pdf_url(e, proof)
+    if pu:
+        out.append(f'<a href="{pu}">PDF</a>')
     return " · ".join(out)
 
 
 def main():
     groups = parse_bib(BIB.read_text())
+    proofs = json.loads(PROOFS.read_text()) if PROOFS.exists() else {}
     total = sum(len(g["entries"]) for g in groups)
     today = date.today().isoformat()
 
@@ -149,11 +176,23 @@ def main():
         entries = sorted(g["entries"], key=lambda e: -int(e["fields"].get("year", "0")))
         for e in entries:
             f = e["fields"]
+            proof = proofs.get(e["key"], {})
             title = delatex(f.get("title", e["key"]))
             year = f.get("year", "")
             vtag = ("verified in paper text" if e["verified"] == "direct"
                     else "verified via Scholar full-text index")
             vclass = e["verified"]
+            if proof.get("quote"):
+                src = proof.get("source") or ""
+                srclink = (f'<a href="{src}">source</a>' if src.startswith("http") else html.escape(src))
+                proofbox = f"""
+        <blockquote>“{html.escape(proof['quote'])}”</blockquote>
+        <div class="proofsrc">Quoted from the paper's full text ({srclink}).</div>"""
+            else:
+                proofbox = f"""
+        <div class="proofsrc">The paper's full text matches the DFG Project-ID
+        <code>528483508</code> in <a href="{SCHOLAR_URL}">Google Scholar's full-text index</a>;
+        the full text itself is not freely accessible for direct quotation.</div>"""
             cards.append(f"""
 <article class="pub" data-group="g{gi}">
   <div class="pubrow">
@@ -162,10 +201,12 @@ def main():
       <div class="ptitle">{html.escape(title)}</div>
       <div class="pauthors">{fmt_authors(f.get('author', ''))}</div>
       <div class="pvenue">{html.escape(venue_of(e))}</div>
-      <div class="pmeta">{links_of(e)}<button class="bibbtn" data-key="{e['key']}">BibTeX</button><span class="vtag {vclass}" title="{vtag}">{'✓ ' + vtag}</span></div>
+      <div class="pmeta">{links_of(e, proof)}<button class="bibbtn togglebtn" data-target="bib-{e['key']}">BibTeX</button><button class="bibbtn togglebtn" data-target="proof-{e['key']}">Proof</button><span class="vtag {vclass}" title="{vtag}">{'✓ ' + vtag}</span></div>
       <div class="bibbox" id="bib-{e['key']}" hidden>
         <button class="copybtn" data-key="{e['key']}">Copy</button>
         <pre>{html.escape(e['raw'])}</pre>
+      </div>
+      <div class="proofbox" id="proof-{e['key']}" hidden>{proofbox}
       </div>
     </div>
   </div>
@@ -242,6 +283,13 @@ h1 {{ font-size: 2rem; letter-spacing: -0.02em; }}
   border-radius: 6px; padding: 0.1rem 0.5rem; font-size: 0.72rem; cursor: pointer;
 }}
 .copybtn:hover {{ color: var(--accent); border-color: var(--accent); }}
+.proofbox {{
+  margin-top: 0.6rem; background: var(--accent-soft); border: 1px solid var(--line);
+  border-left: 3px solid var(--accent); border-radius: 8px; padding: 0.7rem 0.9rem;
+}}
+.proofbox blockquote {{ font-size: 0.88rem; font-style: italic; }}
+.proofsrc {{ font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }}
+.proofsrc a {{ color: var(--accent); }}
 footer {{ margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }}
 footer a {{ color: var(--accent); }}
 </style>
@@ -264,9 +312,9 @@ footer a {{ color: var(--accent); }}
 by <code>generate_site.py</code>.</footer>
 </div>
 <script>
-document.querySelectorAll('.bibbtn').forEach(btn => {{
+document.querySelectorAll('.togglebtn').forEach(btn => {{
   btn.addEventListener('click', () => {{
-    const box = document.getElementById('bib-' + btn.dataset.key);
+    const box = document.getElementById(btn.dataset.target);
     box.hidden = !box.hidden;
     btn.classList.toggle('open', !box.hidden);
   }});
