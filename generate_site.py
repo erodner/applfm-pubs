@@ -118,6 +118,9 @@ def venue_of(e) -> str:
         bits.append(f"arXiv:{f['eprint']}")
     elif "howpublished" in f:
         bits.append(delatex(f["howpublished"]))
+    note = re.sub(r"Preprint: arXiv:[\d.]+;?\s*(also\s+)?", "", delatex(f.get("note", ""))).strip(" ;")
+    if note:
+        bits.append(note)
     return ", ".join(bits)
 
 

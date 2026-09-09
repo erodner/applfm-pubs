@@ -26,7 +26,7 @@ Verification method is tagged per entry in `applfm.bib`:
 | `Koddenbrock2026Microtubule` | Synthetic data enables human-grade microtubule analysis… | PLOS Computational Biology 22(5), 2026 |
 | `Koddenbrock2026RamanBench` | RamanBench: A Large-Scale Benchmark for ML on Raman Spectroscopy | arXiv:2605.02003 (v2), 2026 |
 | `Westerhoff2025WeightImprinting` | Robust Weight Imprinting | TMLR 2025 |
-| `Westerhoff2025SCAM` | SCAM: A Real-World Typographic Robustness Evaluation | arXiv:2504.04893, 2025 |
+| `Westerhoff2025SCAM` | SCAM: A Real-World Typographic Robustness Evaluation | Journal of Data-centric Machine Learning Research, 2026 |
 | `Knauer2025GrandmotherCells` | In Search of Grandmother Cells | EurIPS 2025 Workshop on AI for Tabular Data |
 | `Knauer2026ConceptTracer` | ConceptTracer | xAI 2026 (late-breaking), arXiv:2604.07019 |
 | `Knauer2025DecisionTree` | 'Oh LLM, I'm Asking Thee, Please Give Me a Decision Tree' | KDD 2025, pp. 1196–1206 |
@@ -50,7 +50,7 @@ Verification method is tagged per entry in `applfm.bib`:
 | `Figueroa2024LongTail` | Boosting Long-Tail Data Classification with Sparse Prototypical Networks | ECML PKDD 2024, pp. 434–449 |
 | `Figueroa2025Comply` | Comply: Learning Sentences with Complex Weights… | NICE 2025 (IEEE) |
 | `Mi2026Idiomaticity` | Rethinking the Idiomaticity Decomposability Hypothesis | ACL 2026, pp. 34208–34229 |
-| `Kostic2026SameMeaning` | Same Meaning, Different Scores | arXiv:2602.17316, 2026 |
+| `Kostic2026SameMeaning` | Same Meaning, Different Scores | LREC 2026, pp. 4626–4637 |
 | `Gurgurov2026ReasonXL` | ReasonXL | arXiv:2604.12378, 2026 |
 | `Fast2024AMEGA` | AMEGA: Autonomous medical evaluation for guideline adherence | npj Digital Medicine 7:358, 2024 |
 | `Buchem2025Furhat` | Job Interview Training with RAG-LLM (Furhat robot) | AIED 2025 (Springer LNCS), pp. 90–104 |
@@ -82,7 +82,7 @@ Verification method is tagged per entry in `applfm.bib`:
 | BibTeX key | Paper | Venue |
 |---|---|---|
 | `Nguyen2024SatelliteImagery` | Generating Synthetic Satellite Imagery for Rare Objects | arXiv:2409.01138, 2024 |
-| `Schwarz2024FaultyLabels` | The Influence of Faulty Labels in Data Sets on Human Pose Estimation | arXiv:2409.03887, 2024 |
+| `Schwarz2024FaultyLabels` | The Influence of Faulty Labels in Data Sets on Human Pose Estimation | WSCG 2025 (CSRN 3501), pp. 15–26 |
 
 ### Boblan group (robotics, BHT Berlin) — 4
 
