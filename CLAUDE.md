@@ -9,13 +9,16 @@ Curated BibTeX collection of publications acknowledging the DFG project **ApplFM
 
 ## Inclusion criterion (strict)
 
-A paper belongs here **only if its own full text** mentions the project — by name ("ApplFM" / "Berlin Initiative for Applied Foundation Model Research") or by DFG Project-ID 528483508 (often "Project-ID 528483508 - FIP 12"). Author affiliation or topical fit alone is NOT sufficient (e.g., RamanBench, arXiv 2605.02003, is deliberately excluded despite author overlap).
+A paper belongs here **only if its own full text** mentions the project — by name ("ApplFM" / "Berlin Initiative for Applied Foundation Model Research") or by DFG Project-ID 528483508 (often "Project-ID 528483508 - FIP 12"). Author affiliation or topical fit alone is NOT sufficient.
+
+Participating PIs to check for: Kristian Hildebrand, Ivo Boblan, Hannes Höppner, Alexander Löser, Erik Rodner, Felix Biessmann, Simone Reber, Elisabeth Grohmann, Felix Gers.
 
 ## Updating the collection
 
-1. Search the web for new papers: query `"528483508"`, `"Project-ID 528483508"`, `"ApplFM" DFG`, and `"Berlin Initiative for Applied Foundation Model Research"`.
-2. Verify each candidate's acknowledgment/funding section in the actual paper text (arXiv HTML version, publisher page, or PDF) before adding it — a search hit alone is not verification.
-3. Add the entry to `applfm.bib` with a comment quoting the funding wording, update the table in `README.md`, and bump the "last checked" date in both files.
+1. **Primary discovery tool: Google Scholar full-text search** for `"528483508"` (via browser — Scholar indexes acknowledgment sections that plain web search misses; in Sept 2026 this found 64 results across 7 pages vs. ~10 via web search). Also query `"ApplFM"` and `"Berlin Initiative for Applied Foundation Model"` for name-only mentions.
+2. Verify candidates in the actual paper text where accessible: for arXiv papers, grep the **latest** version's HTML for `528483508` (acknowledgments are sometimes added in later versions — RamanBench v1 had none, v2 did). For paywalled venues (IEEE/Springer/Nature/ACM), the Scholar full-text match is the accepted evidence; tag `[scholar]`.
+3. Get bibliographic metadata from the Crossref API (`api.crossref.org/works?query.bibliographic=...`) and the arXiv API — never guess author lists or venue details; Crossref author lists can be truncated in search results, so fetch the DOI record for the full list.
+4. Add the entry to `applfm.bib` with a `[direct]`/`[scholar]` verification comment, update the tables in `README.md`, and bump the "last checked" date in both files.
 
 ## Conventions
 
