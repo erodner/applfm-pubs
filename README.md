@@ -28,7 +28,7 @@ Verification method is tagged per entry in `applfm.bib`:
 | `Westerhoff2025WeightImprinting` | Robust Weight Imprinting | TMLR 2025 |
 | `Westerhoff2025SCAM` | SCAM: A Real-World Typographic Robustness Evaluation | Journal of Data-centric Machine Learning Research, 2026 |
 | `Knauer2025GrandmotherCells` | In Search of Grandmother Cells | EurIPS 2025 Workshop on AI for Tabular Data |
-| `Knauer2026ConceptTracer` | ConceptTracer | xAI 2026 (late-breaking), arXiv:2604.07019 |
+| `Knauer2026ConceptTracer` | ConceptTracer | xAI 2026 (Late-breaking Work, Demos and Doctoral Consortium), Fortaleza |
 | `Knauer2025DecisionTree` | 'Oh LLM, I'm Asking Thee, Please Give Me a Decision Tree' | KDD 2025, pp. 1196–1206 |
 | `Knauer2026Physiotherapy` | Intelligence without intuition | Frontiers in Digital Health 8, 2026 |
 | `Kolomenko2026Embedding` | Embedding World Knowledge into Tabular Models | arXiv:2603.17737, 2026 |
