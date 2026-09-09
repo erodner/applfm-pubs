@@ -31,7 +31,7 @@ Verification method is tagged per entry in `applfm.bib`:
 | `Knauer2026ConceptTracer` | ConceptTracer | xAI 2026 (Late-breaking Work, Demos and Doctoral Consortium), Fortaleza |
 | `Knauer2025DecisionTree` | 'Oh LLM, I'm Asking Thee, Please Give Me a Decision Tree' | KDD 2025, pp. 1196–1206 |
 | `Knauer2026Physiotherapy` | Intelligence without intuition | Frontiers in Digital Health 8, 2026 |
-| `Kolomenko2026Embedding` | Embedding World Knowledge into Tabular Models | arXiv:2603.17737, 2026 |
+| `Kolomenko2026Embedding` | Embedding World Knowledge into Tabular Models | 35. Workshop Computational Intelligence, Berlin, 2025 (KIT Scientific Publishing) |
 | `Tenckhoff2024FeedbackDetection` | Feedback-driven object detection and iterative model improvement | arXiv:2411.19835, 2024 |
 | `Harnischmacher2024BreastCancer` | Detection of breast cancer using ML on diffuse optical transillumination | Journal of Biomedical Optics 29(11), 2024 |
 | `Reiss2025VisualICL` | Is Visual in-Context Learning for Compositional Medical Tasks within Reach? | ICCV 2025, pp. 2642–2652 |
