@@ -44,7 +44,16 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from generate_site import arxiv_id, delatex, parse_bib, pdf_url, venue_of
+from generate_site import LATEX, arxiv_id, delatex, parse_bib, pdf_url, venue_of
+
+
+def deescape_bibtex(s):
+    """Convert LaTeX accent escapes to UTF-8 for display on the website,
+    keeping the BibTeX structure (braces etc.) intact."""
+    for k, v in LATEX.items():
+        if k.startswith("{"):  # accent escapes only, not -- or ``
+            s = s.replace(k, v)
+    return s
 
 HERE = Path(__file__).parent
 CRED_FILE = HERE / "wp_credentials.json"
@@ -252,12 +261,15 @@ def build_entries():
                 "venue": venue_of(e),
                 "doi": f.get("doi", ""), "url": f.get("url", ""),
                 "arxiv": arxiv_id(e) or "", "pdf": pdf_url(e, proof),
-                "bibtex": e["raw"], "group": g["name"],
+                "bibtex": deescape_bibtex(e["raw"]), "group": g["name"],
             })
     return entries
 
 
-def author_rows(entry, team_index):
+def author_rows(entry, team_index, inst_map=None):
+    """inst_map: {external author name: institution} harvested from the existing
+    post, so manually entered institutions survive an update."""
+    inst_map = inst_map or {}
     fields = {}
     for i, name in enumerate(entry["authors"]):
         row = f"{AUTH_REP}[row-{i}]"
@@ -268,8 +280,22 @@ def author_rows(entry, team_index):
         else:
             fields[f"{row}[{AUTH_CONN}]"] = "External"
             fields[f"{row}[{AUTH_EXT_GROUP}][{AUTH_EXT_NAME}]"] = name
-            fields[f"{row}[{AUTH_EXT_GROUP}][{AUTH_EXT_INST}]"] = ""
+            fields[f"{row}[{AUTH_EXT_GROUP}][{AUTH_EXT_INST}]"] = inst_map.get(norm_name(name), "")
     return fields
+
+
+def harvest_institutions(page):
+    """Extract {normalized external name: institution} from an edit-form page."""
+    out = {}
+    for row in set(re.findall(r"\[row-(\d+)\]\[" + AUTH_CONN + r"\]", page)):
+        def val(sub):
+            m = re.search(r'name="' + re.escape(f"{AUTH_REP}[row-{row}][{AUTH_EXT_GROUP}][{sub}]")
+                          + r'"[^>]*\bvalue="([^"]*)"', page)
+            return html.unescape(m.group(1)) if m else ""
+        name, inst = val(AUTH_EXT_NAME), val(AUTH_EXT_INST)
+        if name and inst:
+            out[norm_name(name)] = inst
+    return out
 
 
 def resource_rows(entry):
@@ -291,7 +317,7 @@ def resource_rows(entry):
     return fields
 
 
-def entry_fields(entry, team_index, terms):
+def entry_fields(entry, team_index, terms, inst_map=None):
     """terms: {"category": {name: id}, "year": {...}, "type": {...}}"""
     cat = KEY_CATEGORY.get(entry["key"]) or GROUP_CATEGORY.get(entry["group"], "")
     type_name = TYPE_MAP.get(entry["type"], "Article")
@@ -312,7 +338,7 @@ def entry_fields(entry, team_index, terms):
     if cat_id:
         fields[F_TAX_CATEGORY] = str(cat_id)
         fields["tax_input[publication-category][]"] = str(cat_id)
-    fields.update(author_rows(entry, team_index))
+    fields.update(author_rows(entry, team_index, inst_map))
     fields.update(resource_rows(entry))
     return fields
 
@@ -416,8 +442,8 @@ def main():
 
     if args.update:
         for e, p in matched:
-            pid, hidden, _ = wp.edit_form(p["id"])
-            fields = entry_fields(e, team_index, terms)
+            pid, hidden, page = wp.edit_form(p["id"])
+            fields = entry_fields(e, team_index, terms, harvest_institutions(page))
             publish = p["status"] == "publish"
             url, err = wp.submit_post(hidden, fields, publish=publish)
             print(f"  updated #{pid} {e['title'][:60]}" + (f"  WARN: {err}" if err else ""))
