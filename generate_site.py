@@ -54,17 +54,21 @@ def parse_bib(text: str):
         if line.startswith("@"):
             m = re.match(r"@(\w+)\{([^,]+),", line)
             etype, key = m.group(1), m.group(2)
+            raw = [line]
             body = []
             i += 1
             while i < len(lines) and not lines[i].startswith("}"):
                 body.append(lines[i])
+                raw.append(lines[i])
                 i += 1
+            raw.append("}")
             fields = {}
             for fm in re.finditer(r"(\w+)\s*=\s*\{(.*)\}\s*,?\s*$", "\n".join(body), re.M):
                 fields[fm.group(1).lower()] = fm.group(2)
             comment = " ".join(pending_comment)
             verified = "direct" if "[direct]" in comment else "scholar"
-            entry = {"type": etype, "key": key, "fields": fields, "verified": verified}
+            entry = {"type": etype, "key": key, "fields": fields, "verified": verified,
+                     "raw": "\n".join(raw)}
             if current is None:
                 current = {"name": "Other", "entries": []}
                 groups.append(current)
@@ -158,7 +162,11 @@ def main():
       <div class="ptitle">{html.escape(title)}</div>
       <div class="pauthors">{fmt_authors(f.get('author', ''))}</div>
       <div class="pvenue">{html.escape(venue_of(e))}</div>
-      <div class="pmeta">{links_of(e)}<span class="vtag {vclass}" title="{vtag}">{'✓ ' + vtag}</span></div>
+      <div class="pmeta">{links_of(e)}<button class="bibbtn" data-key="{e['key']}">BibTeX</button><span class="vtag {vclass}" title="{vtag}">{'✓ ' + vtag}</span></div>
+      <div class="bibbox" id="bib-{e['key']}" hidden>
+        <button class="copybtn" data-key="{e['key']}">Copy</button>
+        <pre>{html.escape(e['raw'])}</pre>
+      </div>
     </div>
   </div>
 </article>""")
@@ -217,6 +225,23 @@ h1 {{ font-size: 2rem; letter-spacing: -0.02em; }}
 .pmeta a:hover {{ text-decoration: underline; }}
 .vtag {{ color: var(--muted); }}
 .vtag.direct {{ color: var(--accent); }}
+.bibbtn {{
+  border: 1px solid var(--line); background: var(--chip); color: var(--ink);
+  border-radius: 6px; padding: 0.1rem 0.5rem; font-size: 0.78rem; cursor: pointer;
+}}
+.bibbtn:hover, .bibbtn.open {{ border-color: var(--accent); color: var(--accent); }}
+.bibbox {{ position: relative; margin-top: 0.6rem; }}
+.bibbox pre {{
+  background: var(--chip); border: 1px solid var(--line); border-radius: 8px;
+  padding: 0.7rem 0.9rem; font-size: 0.76rem; line-height: 1.45;
+  overflow-x: auto; white-space: pre;
+}}
+.copybtn {{
+  position: absolute; top: 0.45rem; right: 0.45rem;
+  border: 1px solid var(--line); background: var(--card); color: var(--muted);
+  border-radius: 6px; padding: 0.1rem 0.5rem; font-size: 0.72rem; cursor: pointer;
+}}
+.copybtn:hover {{ color: var(--accent); border-color: var(--accent); }}
 footer {{ margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }}
 footer a {{ color: var(--accent); }}
 </style>
@@ -239,6 +264,22 @@ footer a {{ color: var(--accent); }}
 by <code>generate_site.py</code>.</footer>
 </div>
 <script>
+document.querySelectorAll('.bibbtn').forEach(btn => {{
+  btn.addEventListener('click', () => {{
+    const box = document.getElementById('bib-' + btn.dataset.key);
+    box.hidden = !box.hidden;
+    btn.classList.toggle('open', !box.hidden);
+  }});
+}});
+document.querySelectorAll('.copybtn').forEach(btn => {{
+  btn.addEventListener('click', () => {{
+    const pre = btn.parentElement.querySelector('pre');
+    navigator.clipboard.writeText(pre.textContent).then(() => {{
+      btn.textContent = 'Copied!';
+      setTimeout(() => {{ btn.textContent = 'Copy'; }}, 1500);
+    }});
+  }});
+}});
 document.querySelectorAll('.fbtn').forEach(btn => {{
   btn.addEventListener('click', () => {{
     document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));

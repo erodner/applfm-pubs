@@ -52,6 +52,23 @@ h1 { font-size: 2rem; letter-spacing: -0.02em; }
 .pmeta a:hover { text-decoration: underline; }
 .vtag { color: var(--muted); }
 .vtag.direct { color: var(--accent); }
+.bibbtn {
+  border: 1px solid var(--line); background: var(--chip); color: var(--ink);
+  border-radius: 6px; padding: 0.1rem 0.5rem; font-size: 0.78rem; cursor: pointer;
+}
+.bibbtn:hover, .bibbtn.open { border-color: var(--accent); color: var(--accent); }
+.bibbox { position: relative; margin-top: 0.6rem; }
+.bibbox pre {
+  background: var(--chip); border: 1px solid var(--line); border-radius: 8px;
+  padding: 0.7rem 0.9rem; font-size: 0.76rem; line-height: 1.45;
+  overflow-x: auto; white-space: pre;
+}
+.copybtn {
+  position: absolute; top: 0.45rem; right: 0.45rem;
+  border: 1px solid var(--line); background: var(--card); color: var(--muted);
+  border-radius: 6px; padding: 0.1rem 0.5rem; font-size: 0.72rem; cursor: pointer;
+}
+.copybtn:hover { color: var(--accent); border-color: var(--accent); }
 footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
 footer a { color: var(--accent); }
 </style>
@@ -77,7 +94,24 @@ footer a { color: var(--accent); }
       <div class="ptitle">On the Domain Robustness of Contrastive Vision-Language Models</div>
       <div class="pauthors">Mario Koddenbrock, Rudolf Hoffmann, David Brodmann, <strong>Erik Rodner</strong></div>
       <div class="pvenue">KI 2025: Advances in Artificial Intelligence (48th German Conference on AI), pp. 62–76</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-02813-6_5">DOI</a> · <a href="https://arxiv.org/abs/2506.23663">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-02813-6_5">DOI</a> · <a href="https://arxiv.org/abs/2506.23663">arXiv</a><button class="bibbtn" data-key="Koddenbrock2026DeepBench">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Koddenbrock2026DeepBench" hidden>
+        <button class="copybtn" data-key="Koddenbrock2026DeepBench">Copy</button>
+        <pre>@inproceedings{Koddenbrock2026DeepBench,
+  author    = {Koddenbrock, Mario and Hoffmann, Rudolf and Brodmann, David and Rodner, Erik},
+  title     = {On the Domain Robustness of Contrastive Vision-Language Models},
+  booktitle = {KI 2025: Advances in Artificial Intelligence (48th German Conference on AI)},
+  editor    = {Braun, Tanya and Paa{\ss}en, Benjamin and Stolzenburg, Frieder},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {15956},
+  pages     = {62--76},
+  publisher = {Springer Nature Switzerland},
+  address   = {Cham},
+  year      = {2026},
+  doi       = {10.1007/978-3-032-02813-6_5},
+  note      = {Preprint: arXiv:2506.23663}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -88,7 +122,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Synthetic data enables human-grade microtubule analysis with foundation models for segmentation</div>
       <div class="pauthors">Mario Koddenbrock, Justus Westerhoff, Dominik Fachet, <strong>Simone Reber</strong>, <strong>Felix A. Gers</strong>, <strong>Erik Rodner</strong></div>
       <div class="pvenue">PLOS Computational Biology 22(5):e1013901</div>
-      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pcbi.1013901">DOI</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pcbi.1013901">DOI</a><button class="bibbtn" data-key="Koddenbrock2026Microtubule">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Koddenbrock2026Microtubule" hidden>
+        <button class="copybtn" data-key="Koddenbrock2026Microtubule">Copy</button>
+        <pre>@article{Koddenbrock2026Microtubule,
+  author  = {Koddenbrock, Mario and Westerhoff, Justus and Fachet, Dominik and Reber, Simone and Gers, Felix A. and Rodner, Erik},
+  title   = {Synthetic data enables human-grade microtubule analysis with foundation models for segmentation},
+  journal = {PLOS Computational Biology},
+  volume  = {22},
+  number  = {5},
+  pages   = {e1013901},
+  year    = {2026},
+  doi     = {10.1371/journal.pcbi.1013901}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -99,7 +146,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">RamanBench: A Large-Scale Benchmark for Machine Learning on Raman Spectroscopy</div>
       <div class="pauthors">Mario Koddenbrock, Christoph Lange, Robin Legner, Martin Jäger, Martin Kögler, Mariano N. Cruz Bournazou, Peter Neubauer, <strong>Felix Biessmann</strong>, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2605.02003</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2605.02003">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2605.02003">arXiv</a><button class="bibbtn" data-key="Koddenbrock2026RamanBench">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Koddenbrock2026RamanBench" hidden>
+        <button class="copybtn" data-key="Koddenbrock2026RamanBench">Copy</button>
+        <pre>@misc{Koddenbrock2026RamanBench,
+  author        = {Koddenbrock, Mario and Lange, Christoph and Legner, Robin and J{\&quot;a}ger, Martin and K{\&quot;o}gler, Martin and Cruz Bournazou, Mariano N. and Neubauer, Peter and Biessmann, Felix and Rodner, Erik},
+  title         = {{RamanBench}: A Large-Scale Benchmark for Machine Learning on Raman Spectroscopy},
+  year          = {2026},
+  eprint        = {2605.02003},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -110,7 +167,18 @@ footer a { color: var(--accent); }
       <div class="ptitle">ConceptTracer: Interactive Analysis of Concept Saliency and Selectivity in Neural Representations</div>
       <div class="pauthors">Ricardo Knauer, Andre Beinrucker, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2604.07019</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2604.07019">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2604.07019">arXiv</a><button class="bibbtn" data-key="Knauer2026ConceptTracer">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Knauer2026ConceptTracer" hidden>
+        <button class="copybtn" data-key="Knauer2026ConceptTracer">Copy</button>
+        <pre>@misc{Knauer2026ConceptTracer,
+  author        = {Knauer, Ricardo and Beinrucker, Andre and Rodner, Erik},
+  title         = {{ConceptTracer}: Interactive Analysis of Concept Saliency and Selectivity in Neural Representations},
+  year          = {2026},
+  eprint        = {2604.07019},
+  archivePrefix = {arXiv},
+  note          = {Late-breaking work, Demos and Doctoral Consortium at the 4th World Conference on eXplainable Artificial Intelligence (xAI 2026), Fortaleza, Brazil}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -121,7 +189,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Intelligence without intuition: a mixed-methods pilot study on reasoning models in musculoskeletal physiotherapy for low-back pain</div>
       <div class="pauthors">Ricardo Knauer, Matthias Kalmring, <strong>Erik Rodner</strong></div>
       <div class="pvenue">Frontiers in Digital Health 8:1789412</div>
-      <div class="pmeta"><a href="https://doi.org/10.3389/fdgth.2026.1789412">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.3389/fdgth.2026.1789412">DOI</a><button class="bibbtn" data-key="Knauer2026Physiotherapy">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Knauer2026Physiotherapy" hidden>
+        <button class="copybtn" data-key="Knauer2026Physiotherapy">Copy</button>
+        <pre>@article{Knauer2026Physiotherapy,
+  author  = {Knauer, Ricardo and Kalmring, Matthias and Rodner, Erik},
+  title   = {Intelligence without intuition: a mixed-methods pilot study on reasoning models in musculoskeletal physiotherapy for low-back pain},
+  journal = {Frontiers in Digital Health},
+  volume  = {8},
+  pages   = {1789412},
+  year    = {2026},
+  doi     = {10.3389/fdgth.2026.1789412}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -132,7 +212,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Embedding World Knowledge into Tabular Models: Towards Best Practices for Embedding Pipeline Design</div>
       <div class="pauthors">Oksana Kolomenko, Ricardo Knauer, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2603.17737</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2603.17737">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2603.17737">arXiv</a><button class="bibbtn" data-key="Kolomenko2026Embedding">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Kolomenko2026Embedding" hidden>
+        <button class="copybtn" data-key="Kolomenko2026Embedding">Copy</button>
+        <pre>@misc{Kolomenko2026Embedding,
+  author        = {Kolomenko, Oksana and Knauer, Ricardo and Rodner, Erik},
+  title         = {Embedding World Knowledge into Tabular Models: Towards Best Practices for Embedding Pipeline Design},
+  year          = {2026},
+  eprint        = {2603.17737},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -143,7 +233,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Domain-Specific Robustness Evaluation of Vision-Language Models</div>
       <div class="pauthors">Mario Koddenbrock, Rudolf Hoffmann, David Brodmann, <strong>Erik Rodner</strong></div>
       <div class="pvenue">SSRN preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5349659">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5349659">DOI</a><button class="bibbtn" data-key="Koddenbrock2025DomainRobustnessSSRN">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Koddenbrock2025DomainRobustnessSSRN" hidden>
+        <button class="copybtn" data-key="Koddenbrock2025DomainRobustnessSSRN">Copy</button>
+        <pre>@misc{Koddenbrock2025DomainRobustnessSSRN,
+  author       = {Koddenbrock, Mario and Hoffmann, Rudolf and Brodmann, David and Rodner, Erik},
+  title        = {Domain-Specific Robustness Evaluation of Vision-Language Models},
+  howpublished = {SSRN preprint},
+  year         = {2025},
+  doi          = {10.2139/ssrn.5349659}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -154,7 +254,18 @@ footer a { color: var(--accent); }
       <div class="ptitle">Robust Weight Imprinting: Insights from Neural Collapse and Proxy-Based Aggregation</div>
       <div class="pauthors">Justus Westerhoff, Golzar Atefi, Mario Koddenbrock, Alexei Figueroa, <strong>Alexander Löser</strong>, <strong>Erik Rodner</strong>, <strong>Felix A. Gers</strong></div>
       <div class="pvenue">Transactions on Machine Learning Research</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2503.14572">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2503.14572">arXiv</a><button class="bibbtn" data-key="Westerhoff2025WeightImprinting">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Westerhoff2025WeightImprinting" hidden>
+        <button class="copybtn" data-key="Westerhoff2025WeightImprinting">Copy</button>
+        <pre>@article{Westerhoff2025WeightImprinting,
+  author  = {Westerhoff, Justus and Atefi, Golzar and Koddenbrock, Mario and Figueroa, Alexei and L{\&quot;o}ser, Alexander and Rodner, Erik and Gers, Felix A.},
+  title   = {Robust Weight Imprinting: Insights from Neural Collapse and Proxy-Based Aggregation},
+  journal = {Transactions on Machine Learning Research},
+  issn    = {2835-8856},
+  year    = {2025},
+  note    = {Preprint: arXiv:2503.14572}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -165,7 +276,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">SCAM: A Real-World Typographic Robustness Evaluation for Multimodal Foundation Models</div>
       <div class="pauthors">Justus Westerhoff, Erblina Purelku, Jakob Hackstein, Jonas Loos, Leo Pinetzki, <strong>Erik Rodner</strong>, Lorenz Hufe</div>
       <div class="pvenue">arXiv:2504.04893</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2504.04893">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2504.04893">arXiv</a><button class="bibbtn" data-key="Westerhoff2025SCAM">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Westerhoff2025SCAM" hidden>
+        <button class="copybtn" data-key="Westerhoff2025SCAM">Copy</button>
+        <pre>@misc{Westerhoff2025SCAM,
+  author        = {Westerhoff, Justus and Purelku, Erblina and Hackstein, Jakob and Loos, Jonas and Pinetzki, Leo and Rodner, Erik and Hufe, Lorenz},
+  title         = {{SCAM}: A Real-World Typographic Robustness Evaluation for Multimodal Foundation Models},
+  year          = {2025},
+  eprint        = {2504.04893},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -176,7 +297,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">In Search of Grandmother Cells: Tracing Interpretable Neurons in Tabular Representations</div>
       <div class="pauthors">Ricardo Knauer, <strong>Erik Rodner</strong></div>
       <div class="pvenue">EurIPS 2025 Workshop on AI for Tabular Data</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2601.03657">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2601.03657">arXiv</a><button class="bibbtn" data-key="Knauer2025GrandmotherCells">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Knauer2025GrandmotherCells" hidden>
+        <button class="copybtn" data-key="Knauer2025GrandmotherCells">Copy</button>
+        <pre>@inproceedings{Knauer2025GrandmotherCells,
+  author    = {Knauer, Ricardo and Rodner, Erik},
+  title     = {In Search of Grandmother Cells: Tracing Interpretable Neurons in Tabular Representations},
+  booktitle = {EurIPS 2025 Workshop on AI for Tabular Data},
+  year      = {2025},
+  note      = {Preprint: arXiv:2601.03657}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -187,7 +318,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">&#x27;Oh LLM, I&#x27;m Asking Thee, Please Give Me a Decision Tree&#x27;: Zero-Shot Decision Tree Induction and Embedding with Large Language Models</div>
       <div class="pauthors">Ricardo Knauer, Mario Koddenbrock, Raphael Wallsberger, Nicholas M. Brisson, Georg N. Duda, Deborah Falla, David W. Evans, <strong>Erik Rodner</strong></div>
       <div class="pvenue">Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD &#x27;25), pp. 1196–1206</div>
-      <div class="pmeta"><a href="https://doi.org/10.1145/3711896.3736818">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1145/3711896.3736818">DOI</a><button class="bibbtn" data-key="Knauer2025DecisionTree">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Knauer2025DecisionTree" hidden>
+        <button class="copybtn" data-key="Knauer2025DecisionTree">Copy</button>
+        <pre>@inproceedings{Knauer2025DecisionTree,
+  author    = {Knauer, Ricardo and Koddenbrock, Mario and Wallsberger, Raphael and Brisson, Nicholas M. and Duda, Georg N. and Falla, Deborah and Evans, David W. and Rodner, Erik},
+  title     = {&#x27;Oh {LLM}, {I}&#x27;m Asking Thee, Please Give Me a Decision Tree&#x27;: Zero-Shot Decision Tree Induction and Embedding with Large Language Models},
+  booktitle = {Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD &#x27;25)},
+  pages     = {1196--1206},
+  publisher = {ACM},
+  year      = {2025},
+  doi       = {10.1145/3711896.3736818}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -198,7 +341,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Is Visual in-Context Learning for Compositional Medical Tasks within Reach?</div>
       <div class="pauthors">Simon Reiß, Zdravko Marinov, Alexander Jaus, Constantin Seibold, M. Saquib Sarfraz, <strong>Erik Rodner</strong>, Rainer Stiefelhagen</div>
       <div class="pvenue">2025 IEEE/CVF International Conference on Computer Vision (ICCV), pp. 2642–2652</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/ICCV51701.2025.00254">DOI</a> · <a href="https://arxiv.org/abs/2507.00868">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/ICCV51701.2025.00254">DOI</a> · <a href="https://arxiv.org/abs/2507.00868">arXiv</a><button class="bibbtn" data-key="Reiss2025VisualICL">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Reiss2025VisualICL" hidden>
+        <button class="copybtn" data-key="Reiss2025VisualICL">Copy</button>
+        <pre>@inproceedings{Reiss2025VisualICL,
+  author    = {Rei{\ss}, Simon and Marinov, Zdravko and Jaus, Alexander and Seibold, Constantin and Sarfraz, M. Saquib and Rodner, Erik and Stiefelhagen, Rainer},
+  title     = {Is Visual in-Context Learning for Compositional Medical Tasks within Reach?},
+  booktitle = {2025 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {2642--2652},
+  publisher = {IEEE},
+  year      = {2025},
+  doi       = {10.1109/ICCV51701.2025.00254},
+  note      = {Preprint: arXiv:2507.00868}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -209,7 +365,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Feedback-driven object detection and iterative model improvement</div>
       <div class="pauthors">Sönke Tenckhoff, Mario Koddenbrock, <strong>Erik Rodner</strong></div>
       <div class="pvenue">arXiv:2411.19835</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2411.19835">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2411.19835">arXiv</a><button class="bibbtn" data-key="Tenckhoff2024FeedbackDetection">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Tenckhoff2024FeedbackDetection" hidden>
+        <button class="copybtn" data-key="Tenckhoff2024FeedbackDetection">Copy</button>
+        <pre>@misc{Tenckhoff2024FeedbackDetection,
+  author        = {Tenckhoff, S{\&quot;o}nke and Koddenbrock, Mario and Rodner, Erik},
+  title         = {Feedback-driven object detection and iterative model improvement},
+  year          = {2024},
+  eprint        = {2411.19835},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -220,7 +386,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Detection of breast cancer using machine learning on time-series diffuse optical transillumination data</div>
       <div class="pauthors">Nils Harnischmacher, <strong>Erik Rodner</strong>, Christoph H. Schmitz</div>
       <div class="pvenue">Journal of Biomedical Optics 29(11):115001</div>
-      <div class="pmeta"><a href="https://doi.org/10.1117/1.JBO.29.11.115001">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1117/1.JBO.29.11.115001">DOI</a><button class="bibbtn" data-key="Harnischmacher2024BreastCancer">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Harnischmacher2024BreastCancer" hidden>
+        <button class="copybtn" data-key="Harnischmacher2024BreastCancer">Copy</button>
+        <pre>@article{Harnischmacher2024BreastCancer,
+  author  = {Harnischmacher, Nils and Rodner, Erik and Schmitz, Christoph H.},
+  title   = {Detection of breast cancer using machine learning on time-series diffuse optical transillumination data},
+  journal = {Journal of Biomedical Optics},
+  volume  = {29},
+  number  = {11},
+  pages   = {115001},
+  year    = {2024},
+  doi     = {10.1117/1.JBO.29.11.115001}
+}</pre>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g1">Löser / Gers group (DATEXIS, BHT Berlin)</h2>
@@ -231,7 +410,18 @@ footer a { color: var(--accent); }
       <div class="ptitle">Robust Conformal Prediction for Infrequent Classes</div>
       <div class="pauthors">Jens-Michalis Papaioannou, Sebastian Jäger, Alexei Figueroa, David Stutz, Betty van Aken, Keno Bressem, Wolfgang Nejdl, <strong>Felix Gers</strong>, <strong>Alexander Löser</strong>, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">Transactions on Machine Learning Research</div>
-      <div class="pmeta"><a href="https://openreview.net/forum?id=nJ4p8rh3Ig">link</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://openreview.net/forum?id=nJ4p8rh3Ig">link</a><button class="bibbtn" data-key="Papaioannou2026ConformalPrediction">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Papaioannou2026ConformalPrediction" hidden>
+        <button class="copybtn" data-key="Papaioannou2026ConformalPrediction">Copy</button>
+        <pre>@article{Papaioannou2026ConformalPrediction,
+  author  = {Papaioannou, Jens-Michalis and J{\&quot;a}ger, Sebastian and Figueroa, Alexei and Stutz, David and van Aken, Betty and Bressem, Keno and Nejdl, Wolfgang and Gers, Felix and L{\&quot;o}ser, Alexander and Biessmann, Felix},
+  title   = {Robust Conformal Prediction for Infrequent Classes},
+  journal = {Transactions on Machine Learning Research},
+  issn    = {2835-8856},
+  year    = {2026},
+  url     = {https://openreview.net/forum?id=nJ4p8rh3Ig}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -242,7 +432,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">CliniBench: A Clinical Outcome Prediction Benchmark for Generative and Encoder-Based Language Models</div>
       <div class="pauthors">Paul Grundmann, Jan Frick, Dennis Fast, Thomas Steffek, <strong>Felix Gers</strong>, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 5360–5378</div>
-      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.eacl-long.247">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.eacl-long.247">DOI</a><button class="bibbtn" data-key="Grundmann2026CliniBench">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Grundmann2026CliniBench" hidden>
+        <button class="copybtn" data-key="Grundmann2026CliniBench">Copy</button>
+        <pre>@inproceedings{Grundmann2026CliniBench,
+  author    = {Grundmann, Paul and Frick, Jan and Fast, Dennis and Steffek, Thomas and Gers, Felix and Nejdl, Wolfgang and L{\&quot;o}ser, Alexander},
+  title     = {{CliniBench}: A Clinical Outcome Prediction Benchmark for Generative and Encoder-Based Language Models},
+  booktitle = {Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {5360--5378},
+  publisher = {Association for Computational Linguistics},
+  year      = {2026},
+  doi       = {10.18653/v1/2026.eacl-long.247}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -253,7 +455,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">DeepICD-R1: Medical Reasoning through Hierarchical Rewards and Unsupervised Distillation</div>
       <div class="pauthors">Tom Röhr, Thomas Maximilian Josef Steffek, Roman Teucher, Keno Bressem, Alexei Figueroa, Paul Grundmann, Peter Troeger, <strong>Felix Alexander Gers</strong>, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026), pp. 10764–10775</div>
-      <div class="pmeta"><a href="https://doi.org/10.63317/5ntn3gnmv9cy">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.63317/5ntn3gnmv9cy">DOI</a><button class="bibbtn" data-key="Roehr2026DeepICD">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Roehr2026DeepICD" hidden>
+        <button class="copybtn" data-key="Roehr2026DeepICD">Copy</button>
+        <pre>@inproceedings{Roehr2026DeepICD,
+  author    = {R{\&quot;o}hr, Tom and Steffek, Thomas Maximilian Josef and Teucher, Roman and Bressem, Keno and Figueroa, Alexei and Grundmann, Paul and Troeger, Peter and Gers, Felix Alexander and L{\&quot;o}ser, Alexander},
+  title     = {{DeepICD-R1}: Medical Reasoning through Hierarchical Rewards and Unsupervised Distillation},
+  booktitle = {Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026)},
+  pages     = {10764--10775},
+  publisher = {European Language Resources Association (ELRA)},
+  year      = {2026},
+  doi       = {10.63317/5ntn3gnmv9cy}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -264,7 +478,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Rethinking the Idiomaticity Decomposability Hypothesis: Evidence from Distributional Learning</div>
       <div class="pauthors">Maggie Mi, Golzar Atefi, Atsuki Yamaguchi, <strong>Felix Gers</strong>, Aline Villavicencio, Nafise Sadat Moosavi</div>
       <div class="pvenue">Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 34208–34229</div>
-      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.acl-long.1579">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2026.acl-long.1579">DOI</a><button class="bibbtn" data-key="Mi2026Idiomaticity">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Mi2026Idiomaticity" hidden>
+        <button class="copybtn" data-key="Mi2026Idiomaticity">Copy</button>
+        <pre>@inproceedings{Mi2026Idiomaticity,
+  author    = {Mi, Maggie and Atefi, Golzar and Yamaguchi, Atsuki and Gers, Felix and Villavicencio, Aline and Moosavi, Nafise Sadat},
+  title     = {Rethinking the Idiomaticity Decomposability Hypothesis: Evidence from Distributional Learning},
+  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {34208--34229},
+  publisher = {Association for Computational Linguistics},
+  year      = {2026},
+  doi       = {10.18653/v1/2026.acl-long.1579}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -275,7 +501,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Same Meaning, Different Scores: Lexical and Syntactic Sensitivity in LLM Evaluation</div>
       <div class="pauthors">Bogdan Kostić, Conor Fallon, Julian Risch, <strong>Alexander Löser</strong></div>
       <div class="pvenue">arXiv:2602.17316</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2602.17316">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2602.17316">arXiv</a><button class="bibbtn" data-key="Kostic2026SameMeaning">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Kostic2026SameMeaning" hidden>
+        <button class="copybtn" data-key="Kostic2026SameMeaning">Copy</button>
+        <pre>@misc{Kostic2026SameMeaning,
+  author        = {Kosti{\&#x27;c}, Bogdan and Fallon, Conor and Risch, Julian and L{\&quot;o}ser, Alexander},
+  title         = {Same Meaning, Different Scores: Lexical and Syntactic Sensitivity in {LLM} Evaluation},
+  year          = {2026},
+  eprint        = {2602.17316},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -286,7 +522,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">ReasonXL: Shifting LLM Reasoning Language Without Sacrificing Performance</div>
       <div class="pauthors">Daniil Gurgurov, Tom Röhr, Sebastian von Rohrscheidt, Josef van Genabith, <strong>Alexander Löser</strong>, Simon Ostermann</div>
       <div class="pvenue">arXiv:2604.12378</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2604.12378">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2604.12378">arXiv</a><button class="bibbtn" data-key="Gurgurov2026ReasonXL">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Gurgurov2026ReasonXL" hidden>
+        <button class="copybtn" data-key="Gurgurov2026ReasonXL">Copy</button>
+        <pre>@misc{Gurgurov2026ReasonXL,
+  author        = {Gurgurov, Daniil and R{\&quot;o}hr, Tom and von Rohrscheidt, Sebastian and van Genabith, Josef and L{\&quot;o}ser, Alexander and Ostermann, Simon},
+  title         = {{ReasonXL}: Shifting {LLM} Reasoning Language Without Sacrificing Performance},
+  year          = {2026},
+  eprint        = {2604.12378},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -297,7 +543,18 @@ footer a { color: var(--accent); }
       <div class="ptitle">SPONGE: Competing Sparse Language Representations for Effective Cross-Lingual Knowledge Transfer in Healthcare</div>
       <div class="pauthors">Jens-Michalis Papaioannou, Alexei Figueroa, Conor Fallon, Anna Capilla, Alexandra Bekiaridou, Stavros Zanos, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Transactions on Machine Learning Research</div>
-      <div class="pmeta"><a href="https://openreview.net/forum?id=OevFdPgk3h">link</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://openreview.net/forum?id=OevFdPgk3h">link</a><button class="bibbtn" data-key="Papaioannou2025SPONGE">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Papaioannou2025SPONGE" hidden>
+        <button class="copybtn" data-key="Papaioannou2025SPONGE">Copy</button>
+        <pre>@article{Papaioannou2025SPONGE,
+  author  = {Papaioannou, Jens-Michalis and Figueroa, Alexei and Fallon, Conor and Capilla, Anna and Bekiaridou, Alexandra and Zanos, Stavros and Nejdl, Wolfgang and L{\&quot;o}ser, Alexander},
+  title   = {{SPONGE}: Competing Sparse Language Representations for Effective Cross-Lingual Knowledge Transfer in Healthcare},
+  journal = {Transactions on Machine Learning Research},
+  issn    = {2835-8856},
+  year    = {2025},
+  url     = {https://openreview.net/forum?id=OevFdPgk3h}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -308,7 +565,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Evaluating Financial Literacy of Large Language Models through Domain Specific Languages for Plain Text Accounting</div>
       <div class="pauthors">Alexei Figueroa, Paul Grundmann, Julius Freidank, <strong>Alexander Löser</strong>, Wolfgang Nejdl</div>
       <div class="pvenue">Proceedings of the Joint Workshop of the 9th Financial Technology and Natural Language Processing (FinNLP), the 6th Financial Narrative Processing (FNP), and the 1st Workshop on Large Language Models for Finance and Legal (LLMFinLegal), pp. 63–75</div>
-      <div class="pmeta"><a href="https://aclanthology.org/2025.finnlp-1.6/">link</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://aclanthology.org/2025.finnlp-1.6/">link</a><button class="bibbtn" data-key="Figueroa2025FinancialLiteracy">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Figueroa2025FinancialLiteracy" hidden>
+        <button class="copybtn" data-key="Figueroa2025FinancialLiteracy">Copy</button>
+        <pre>@inproceedings{Figueroa2025FinancialLiteracy,
+  author    = {Figueroa, Alexei and Grundmann, Paul and Freidank, Julius and L{\&quot;o}ser, Alexander and Nejdl, Wolfgang},
+  title     = {Evaluating Financial Literacy of Large Language Models through Domain Specific Languages for Plain Text Accounting},
+  booktitle = {Proceedings of the Joint Workshop of the 9th Financial Technology and Natural Language Processing (FinNLP), the 6th Financial Narrative Processing (FNP), and the 1st Workshop on Large Language Models for Finance and Legal (LLMFinLegal)},
+  pages     = {63--75},
+  publisher = {Association for Computational Linguistics},
+  address   = {Abu Dhabi, UAE},
+  year      = {2025},
+  url       = {https://aclanthology.org/2025.finnlp-1.6/}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -319,7 +589,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">“Where does it hurt?” – Dataset and Study on Physician Intent Trajectories in Doctor Patient Dialogues</div>
       <div class="pauthors">Tom Röhr, Soumyadeep Roy, Fares Al Mohamad, Jens-Michalis Papaioannou, Wolfgang Nejdl, <strong>Felix Gers</strong>, <strong>Alexander Löser</strong></div>
       <div class="pvenue">ECAI 2025: 28th European Conference on Artificial Intelligence</div>
-      <div class="pmeta"><a href="https://doi.org/10.3233/FAIA251359">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.3233/FAIA251359">DOI</a><button class="bibbtn" data-key="Roehr2025WhereDoesItHurt">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Roehr2025WhereDoesItHurt" hidden>
+        <button class="copybtn" data-key="Roehr2025WhereDoesItHurt">Copy</button>
+        <pre>@inproceedings{Roehr2025WhereDoesItHurt,
+  author    = {R{\&quot;o}hr, Tom and Roy, Soumyadeep and Al Mohamad, Fares and Papaioannou, Jens-Michalis and Nejdl, Wolfgang and Gers, Felix and L{\&quot;o}ser, Alexander},
+  title     = {``Where does it hurt?&#x27;&#x27; -- Dataset and Study on Physician Intent Trajectories in Doctor Patient Dialogues},
+  booktitle = {ECAI 2025: 28th European Conference on Artificial Intelligence},
+  series    = {Frontiers in Artificial Intelligence and Applications},
+  publisher = {IOS Press},
+  year      = {2025},
+  doi       = {10.3233/FAIA251359}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -330,7 +612,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Comply: Learning Sentences with Complex Weights inspired by Fruit Fly Olfaction</div>
       <div class="pauthors">Alexei Figueroa, Justus Westerhoff, Golzar Atefi, Dennis Fast, Benjamin Winter, <strong>Felix Alexander Gers</strong>, <strong>Alexander Löser</strong>, Wolfgang Nejdl</div>
       <div class="pvenue">2025 Neuro Inspired Computational Elements (NICE), pp. 1–10</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/NICE65350.2025.11064982">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/NICE65350.2025.11064982">DOI</a><button class="bibbtn" data-key="Figueroa2025Comply">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Figueroa2025Comply" hidden>
+        <button class="copybtn" data-key="Figueroa2025Comply">Copy</button>
+        <pre>@inproceedings{Figueroa2025Comply,
+  author    = {Figueroa, Alexei and Westerhoff, Justus and Atefi, Golzar and Fast, Dennis and Winter, Benjamin and Gers, Felix Alexander and L{\&quot;o}ser, Alexander and Nejdl, Wolfgang},
+  title     = {Comply: Learning Sentences with Complex Weights inspired by Fruit Fly Olfaction},
+  booktitle = {2025 Neuro Inspired Computational Elements (NICE)},
+  pages     = {1--10},
+  publisher = {IEEE},
+  year      = {2025},
+  doi       = {10.1109/NICE65350.2025.11064982}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -341,7 +635,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Job Interview Training with RAG-LLM: An Experimental Study with the Furhat Robot</div>
       <div class="pauthors">Ilona Buchem, Robin Bedemann, <strong>Felix Gers</strong></div>
       <div class="pvenue">Artificial Intelligence in Education (AIED 2025), pp. 90–104</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-98417-4_7">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-98417-4_7">DOI</a><button class="bibbtn" data-key="Buchem2025Furhat">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Buchem2025Furhat" hidden>
+        <button class="copybtn" data-key="Buchem2025Furhat">Copy</button>
+        <pre>@inproceedings{Buchem2025Furhat,
+  author    = {Buchem, Ilona and Bedemann, Robin and Gers, Felix},
+  title     = {Job Interview Training with {RAG-LLM}: An Experimental Study with the Furhat Robot},
+  booktitle = {Artificial Intelligence in Education (AIED 2025)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {90--104},
+  publisher = {Springer Nature Switzerland},
+  year      = {2025},
+  doi       = {10.1007/978-3-031-98417-4_7}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -352,7 +659,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Revisiting Clinical Outcome Prediction for MIMIC-IV</div>
       <div class="pauthors">Tom Röhr, Alexei Figueroa, Jens-Michalis Papaioannou, Conor Fallon, Keno Bressem, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Proceedings of the 6th Clinical Natural Language Processing Workshop, pp. 208–217</div>
-      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2024.clinicalnlp-1.18">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.18653/v1/2024.clinicalnlp-1.18">DOI</a><button class="bibbtn" data-key="Roehr2024MIMIC">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Roehr2024MIMIC" hidden>
+        <button class="copybtn" data-key="Roehr2024MIMIC">Copy</button>
+        <pre>@inproceedings{Roehr2024MIMIC,
+  author    = {R{\&quot;o}hr, Tom and Figueroa, Alexei and Papaioannou, Jens-Michalis and Fallon, Conor and Bressem, Keno and Nejdl, Wolfgang and L{\&quot;o}ser, Alexander},
+  title     = {Revisiting Clinical Outcome Prediction for {MIMIC-IV}},
+  booktitle = {Proceedings of the 6th Clinical Natural Language Processing Workshop},
+  pages     = {208--217},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.clinicalnlp-1.18}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -363,7 +682,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Boosting Long-Tail Data Classification with Sparse Prototypical Networks</div>
       <div class="pauthors">Alexei Figueroa, Jens-Michalis Papaioannou, Conor Fallon, Alexandra Bekiaridou, Keno Bressem, Stavros Zanos, <strong>Felix Gers</strong>, Wolfgang Nejdl, <strong>Alexander Löser</strong></div>
       <div class="pvenue">Machine Learning and Knowledge Discovery in Databases (ECML PKDD 2024), pp. 434–449</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-70368-3_26">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-031-70368-3_26">DOI</a><button class="bibbtn" data-key="Figueroa2024LongTail">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Figueroa2024LongTail" hidden>
+        <button class="copybtn" data-key="Figueroa2024LongTail">Copy</button>
+        <pre>@inproceedings{Figueroa2024LongTail,
+  author    = {Figueroa, Alexei and Papaioannou, Jens-Michalis and Fallon, Conor and Bekiaridou, Alexandra and Bressem, Keno and Zanos, Stavros and Gers, Felix and Nejdl, Wolfgang and L{\&quot;o}ser, Alexander},
+  title     = {Boosting Long-Tail Data Classification with Sparse Prototypical Networks},
+  booktitle = {Machine Learning and Knowledge Discovery in Databases (ECML PKDD 2024)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {434--449},
+  publisher = {Springer Nature Switzerland},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-70368-3_26}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -374,7 +706,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Autonomous medical evaluation for guideline adherence of large language models</div>
       <div class="pauthors">Dennis Fast, Lisa C. Adams, Felix Busch, Conor Fallon, Marc Huppertz, Robert Siepmann, Philipp Prucker, Nadine Bayerl, Daniel Truhn, Marcus Makowski, <strong>Alexander Löser</strong>, Keno K. Bressem</div>
       <div class="pvenue">npj Digital Medicine 7:358</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41746-024-01356-6">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41746-024-01356-6">DOI</a><button class="bibbtn" data-key="Fast2024AMEGA">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Fast2024AMEGA" hidden>
+        <button class="copybtn" data-key="Fast2024AMEGA">Copy</button>
+        <pre>@article{Fast2024AMEGA,
+  author  = {Fast, Dennis and Adams, Lisa C. and Busch, Felix and Fallon, Conor and Huppertz, Marc and Siepmann, Robert and Prucker, Philipp and Bayerl, Nadine and Truhn, Daniel and Makowski, Marcus and L{\&quot;o}ser, Alexander and Bressem, Keno K.},
+  title   = {Autonomous medical evaluation for guideline adherence of large language models},
+  journal = {npj Digital Medicine},
+  volume  = {7},
+  pages   = {358},
+  year    = {2024},
+  doi     = {10.1038/s41746-024-01356-6}
+}</pre>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g2">Biessmann group (BHT Berlin)</h2>
@@ -385,7 +729,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">SoilNet: A multimodal multitask model for hierarchical classification of soil horizons</div>
       <div class="pauthors">Vipin Singh, Teodor Chiaburu, Einar Eberhardt, Stefan Broda, Joey Prüssing, Frank Haußer, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">Geoderma 466:117684</div>
-      <div class="pmeta"><a href="https://doi.org/10.1016/j.geoderma.2026.117684">DOI</a> · <a href="https://arxiv.org/abs/2508.03785">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1016/j.geoderma.2026.117684">DOI</a> · <a href="https://arxiv.org/abs/2508.03785">arXiv</a><button class="bibbtn" data-key="Singh2026SoilNet">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Singh2026SoilNet" hidden>
+        <button class="copybtn" data-key="Singh2026SoilNet">Copy</button>
+        <pre>@article{Singh2026SoilNet,
+  author  = {Singh, Vipin and Chiaburu, Teodor and Eberhardt, Einar and Broda, Stefan and Pr{\&quot;u}ssing, Joey and Hau{\ss}er, Frank and Bie{\ss}mann, Felix},
+  title   = {{SoilNet}: A multimodal multitask model for hierarchical classification of soil horizons},
+  journal = {Geoderma},
+  volume  = {466},
+  pages   = {117684},
+  year    = {2026},
+  doi     = {10.1016/j.geoderma.2026.117684},
+  note    = {Preprint: arXiv:2508.03785}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -396,7 +753,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">A Resilient Solution for Sewer Overflow Monitoring across Cloud and Edge</div>
       <div class="pauthors">Vipin Singh, Tianheng Ling, Peter Ghaly, Felix Grimmeisen, Gregor Schiele, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2605.10592</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2605.10592">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2605.10592">arXiv</a><button class="bibbtn" data-key="Singh2026SewerEdge">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Singh2026SewerEdge" hidden>
+        <button class="copybtn" data-key="Singh2026SewerEdge">Copy</button>
+        <pre>@misc{Singh2026SewerEdge,
+  author        = {Singh, Vipin and Ling, Tianheng and Ghaly, Peter and Grimmeisen, Felix and Schiele, Gregor and Biessmann, Felix},
+  title         = {A Resilient Solution for Sewer Overflow Monitoring across Cloud and Edge},
+  year          = {2026},
+  eprint        = {2605.10592},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -407,7 +774,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Redakto – The Incognito Tab for LLMs</div>
       <div class="pauthors">Saurav Kumar Saha, Tom Röhr, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">arXiv:2608.18260</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18260">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18260">arXiv</a><button class="bibbtn" data-key="Saha2026Redakto">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Saha2026Redakto" hidden>
+        <button class="copybtn" data-key="Saha2026Redakto">Copy</button>
+        <pre>@misc{Saha2026Redakto,
+  author        = {Saha, Saurav Kumar and R{\&quot;o}hr, Tom and Bie{\ss}mann, Felix},
+  title         = {Redakto -- The Incognito Tab for {LLMs}},
+  year          = {2026},
+  eprint        = {2608.18260},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -418,7 +795,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Accuracy and Robustness of Model Cascades Under Data Perturbations</div>
       <div class="pauthors">Pallavi Mitra, Jai Kushwaha, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2608.17711</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2608.17711">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2608.17711">arXiv</a><button class="bibbtn" data-key="Mitra2026Cascades">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Mitra2026Cascades" hidden>
+        <button class="copybtn" data-key="Mitra2026Cascades">Copy</button>
+        <pre>@misc{Mitra2026Cascades,
+  author        = {Mitra, Pallavi and Kushwaha, Jai and Biessmann, Felix},
+  title         = {Accuracy and Robustness of Model Cascades Under Data Perturbations},
+  year          = {2026},
+  eprint        = {2608.17711},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -429,7 +816,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Global Crises and National Policies: A Large Scale Analysis of Political Content in German Language Online Media</div>
       <div class="pauthors">Yara Döring, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">arXiv:2608.18268</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18268">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2608.18268">arXiv</a><button class="bibbtn" data-key="Doering2026GlobalCrises">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Doering2026GlobalCrises" hidden>
+        <button class="copybtn" data-key="Doering2026GlobalCrises">Copy</button>
+        <pre>@misc{Doering2026GlobalCrises,
+  author        = {D{\&quot;o}ring, Yara and Bie{\ss}mann, Felix},
+  title         = {Global Crises and National Policies: A Large Scale Analysis of Political Content in German Language Online Media},
+  year          = {2026},
+  eprint        = {2608.18268},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -440,7 +837,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Evaluating the quality of tabular synthetic data in health care</div>
       <div class="pauthors">Ivana Nanevski, Maryam Mohebi, Sebastian Jäger, Karen Otte, Fabian Prasser, Matthias Schulte-Althoff, Daniel Fürstenau, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">PLOS Digital Health 5(7):e0001522</div>
-      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pdig.0001522">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1371/journal.pdig.0001522">DOI</a><button class="bibbtn" data-key="Nanevski2026SyntheticData">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Nanevski2026SyntheticData" hidden>
+        <button class="copybtn" data-key="Nanevski2026SyntheticData">Copy</button>
+        <pre>@article{Nanevski2026SyntheticData,
+  author  = {Nanevski, Ivana and Mohebi, Maryam and J{\&quot;a}ger, Sebastian and Otte, Karen and Prasser, Fabian and Schulte-Althoff, Matthias and F{\&quot;u}rstenau, Daniel and Biessmann, Felix},
+  title   = {Evaluating the quality of tabular synthetic data in health care},
+  journal = {PLOS Digital Health},
+  volume  = {5},
+  number  = {7},
+  pages   = {e0001522},
+  year    = {2026},
+  doi     = {10.1371/journal.pdig.0001522}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -451,7 +861,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Anonymized but Useful Synthetic Tabular Health Data for AI based Fall Risk Assessment</div>
       <div class="pauthors">Ivana Nanevski, Sebastian Jäger, Maryam Mohebi, Matthias Schulte-Althoff, Jörg Pohle, Nicholas Chandler, Rahel Gubser, Alessia Nowak, Fabian Prasser, Daniel Fürstenau, Felix Balzer, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">Scientific Data 13:1089</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41597-026-07910-z">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41597-026-07910-z">DOI</a><button class="bibbtn" data-key="Nanevski2026FallRisk">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Nanevski2026FallRisk" hidden>
+        <button class="copybtn" data-key="Nanevski2026FallRisk">Copy</button>
+        <pre>@article{Nanevski2026FallRisk,
+  author  = {Nanevski, Ivana and J{\&quot;a}ger, Sebastian and Mohebi, Maryam and Schulte-Althoff, Matthias and Pohle, J{\&quot;o}rg and Chandler, Nicholas and Gubser, Rahel and Nowak, Alessia and Prasser, Fabian and F{\&quot;u}rstenau, Daniel and Balzer, Felix and Biessmann, Felix},
+  title   = {Anonymized but Useful Synthetic Tabular Health Data for AI based Fall Risk Assessment},
+  journal = {Scientific Data},
+  volume  = {13},
+  pages   = {1089},
+  year    = {2026},
+  doi     = {10.1038/s41597-026-07910-z}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -462,7 +884,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Readiness Assessment for AI in Nursing Care Projects: Multimethods Study</div>
       <div class="pauthors">Kathrin Seibert, Dominik Domhoff, Janissa Altona, Sebastian Jäger, <strong>Felix Bießmann</strong>, Alessia Nowak, Rahel Gubser, Matthias Schulte-Althoff, Daniel Fürstenau, Jörg Pohle, Lea Bergmann, David Walter, Kathi Beier, Dagmar Borchers, Karin Wolf-Ostermann</div>
       <div class="pvenue">JMIR Nursing 9:e84148</div>
-      <div class="pmeta"><a href="https://doi.org/10.2196/84148">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.2196/84148">DOI</a><button class="bibbtn" data-key="Seibert2026AINCRA">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Seibert2026AINCRA" hidden>
+        <button class="copybtn" data-key="Seibert2026AINCRA">Copy</button>
+        <pre>@article{Seibert2026AINCRA,
+  author  = {Seibert, Kathrin and Domhoff, Dominik and Altona, Janissa and J{\&quot;a}ger, Sebastian and Bie{\ss}mann, Felix and Nowak, Alessia and Gubser, Rahel and Schulte-Althoff, Matthias and F{\&quot;u}rstenau, Daniel and Pohle, J{\&quot;o}rg and Bergmann, Lea and Walter, David and Beier, Kathi and Borchers, Dagmar and Wolf-Ostermann, Karin},
+  title   = {Readiness Assessment for AI in Nursing Care Projects: Multimethods Study},
+  journal = {JMIR Nursing},
+  volume  = {9},
+  pages   = {e84148},
+  year    = {2026},
+  doi     = {10.2196/84148}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -473,7 +907,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Uncertainty-Guided Expert-AI Collaboration for Efficient Soil Horizon Annotation</div>
       <div class="pauthors">Teodor Chiaburu, Vipin Singh, Frank Haußer, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">arXiv:2509.24873</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2509.24873">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2509.24873">arXiv</a><button class="bibbtn" data-key="Chiaburu2025SoilAnnotation">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Chiaburu2025SoilAnnotation" hidden>
+        <button class="copybtn" data-key="Chiaburu2025SoilAnnotation">Copy</button>
+        <pre>@misc{Chiaburu2025SoilAnnotation,
+  author        = {Chiaburu, Teodor and Singh, Vipin and Hau{\ss}er, Frank and Bie{\ss}mann, Felix},
+  title         = {Uncertainty-Guided Expert-AI Collaboration for Efficient Soil Horizon Annotation},
+  year          = {2025},
+  eprint        = {2509.24873},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -484,7 +928,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Uncertainty Propagation in XAI: A Comparison of Analytical and Empirical Estimators</div>
       <div class="pauthors">Teodor Chiaburu, <strong>Felix Bießmann</strong>, Frank Haußer</div>
       <div class="pvenue">Explainable Artificial Intelligence (World Conference on Explainable Artificial Intelligence 2025), pp. 390–411</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-08333-3_18">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-08333-3_18">DOI</a><button class="bibbtn" data-key="Chiaburu2025UncertaintyXAI">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Chiaburu2025UncertaintyXAI" hidden>
+        <button class="copybtn" data-key="Chiaburu2025UncertaintyXAI">Copy</button>
+        <pre>@inproceedings{Chiaburu2025UncertaintyXAI,
+  author    = {Chiaburu, Teodor and Bie{\ss}mann, Felix and Hau{\ss}er, Frank},
+  title     = {Uncertainty Propagation in {XAI}: A Comparison of Analytical and Empirical Estimators},
+  booktitle = {Explainable Artificial Intelligence (World Conference on Explainable Artificial Intelligence 2025)},
+  series    = {Communications in Computer and Information Science},
+  pages     = {390--411},
+  publisher = {Springer Nature Switzerland},
+  year      = {2025},
+  doi       = {10.1007/978-3-032-08333-3_18}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -495,7 +952,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">End-to-end Pseudonymization of German Texts with Deep Learning – An Empirical Comparison of Classical and Modern Approaches</div>
       <div class="pauthors">Saurav Kumar Saha, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">Proceedings of the 1st International Conference on AI in Medicine and Healthcare (AiMH 2025)</div>
-      <div class="pmeta"><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><button class="bibbtn" data-key="Saha2025Pseudonymization">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Saha2025Pseudonymization" hidden>
+        <button class="copybtn" data-key="Saha2025Pseudonymization">Copy</button>
+        <pre>@inproceedings{Saha2025Pseudonymization,
+  author    = {Saha, Saurav Kumar and Biessmann, Felix},
+  title     = {End-to-end Pseudonymization of German Texts with Deep Learning -- An Empirical Comparison of Classical and Modern Approaches},
+  booktitle = {Proceedings of the 1st International Conference on AI in Medicine and Healthcare (AiMH 2025)},
+  address   = {Innsbruck, Austria},
+  year      = {2025}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -506,7 +973,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">MechDetect: Detecting Data-Dependent Errors</div>
       <div class="pauthors">Philipp Jung, Nicholas Chandler, Sebastian Jäger, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">2025 International Conference on Data Science and Intelligent Systems (DSIS), pp. 1–7</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/DSIS67228.2025.11390600">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/DSIS67228.2025.11390600">DOI</a><button class="bibbtn" data-key="Jung2025MechDetect">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Jung2025MechDetect" hidden>
+        <button class="copybtn" data-key="Jung2025MechDetect">Copy</button>
+        <pre>@inproceedings{Jung2025MechDetect,
+  author    = {Jung, Philipp and Chandler, Nicholas and J{\&quot;a}ger, Sebastian and Biessmann, Felix},
+  title     = {{MechDetect}: Detecting Data-Dependent Errors},
+  booktitle = {2025 International Conference on Data Science and Intelligent Systems (DSIS)},
+  pages     = {1--7},
+  publisher = {IEEE},
+  year      = {2025},
+  doi       = {10.1109/DSIS67228.2025.11390600}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -517,7 +996,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Towards Realistic Error Models for Tabular Data</div>
       <div class="pauthors">Philipp Jung, Sebastian Jäger, Nicholas Chandler, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">ACM Journal of Data and Information Quality 17(4):1–27</div>
-      <div class="pmeta"><a href="https://doi.org/10.1145/3774914">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1145/3774914">DOI</a><button class="bibbtn" data-key="Jung2025ErrorModels">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Jung2025ErrorModels" hidden>
+        <button class="copybtn" data-key="Jung2025ErrorModels">Copy</button>
+        <pre>@article{Jung2025ErrorModels,
+  author  = {Jung, Philipp and J{\&quot;a}ger, Sebastian and Chandler, Nicholas and Biessmann, Felix},
+  title   = {Towards Realistic Error Models for Tabular Data},
+  journal = {ACM Journal of Data and Information Quality},
+  volume  = {17},
+  number  = {4},
+  pages   = {1--27},
+  year    = {2025},
+  doi     = {10.1145/3774914}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -528,7 +1020,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Advancing Blood Sample Analysis: Incorporating Expert Opinions and Explainable AI in Multi-label Disease Prediction</div>
       <div class="pauthors">Sultan Orynbay, Inabat Akanova, Diana Turmakhan, Natalya Lim, <strong>Felix Biessmann</strong>, Siamac Fazli</div>
       <div class="pvenue">Intelligent Systems and Applications (IntelliSys 2025), pp. 130–146</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-07109-5_10">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/978-3-032-07109-5_10">DOI</a><button class="bibbtn" data-key="Orynbay2025BloodSample">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Orynbay2025BloodSample" hidden>
+        <button class="copybtn" data-key="Orynbay2025BloodSample">Copy</button>
+        <pre>@inproceedings{Orynbay2025BloodSample,
+  author    = {Orynbay, Sultan and Akanova, Inabat and Turmakhan, Diana and Lim, Natalya and Biessmann, Felix and Fazli, Siamac},
+  title     = {Advancing Blood Sample Analysis: Incorporating Expert Opinions and Explainable AI in Multi-label Disease Prediction},
+  booktitle = {Intelligent Systems and Applications (IntelliSys 2025)},
+  series    = {Lecture Notes in Networks and Systems},
+  pages     = {130--146},
+  publisher = {Springer Nature Switzerland},
+  year      = {2025},
+  doi       = {10.1007/978-3-032-07109-5_10}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -539,7 +1044,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Data-driven Modeling of Combined Sewer Systems for Urban Sustainability: An Empirical Evaluation</div>
       <div class="pauthors">Vipin Singh, Tianheng Ling, Teodor Chiaburu, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2408.11619</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2408.11619">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2408.11619">arXiv</a><button class="bibbtn" data-key="Singh2024SewerModeling">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Singh2024SewerModeling" hidden>
+        <button class="copybtn" data-key="Singh2024SewerModeling">Copy</button>
+        <pre>@misc{Singh2024SewerModeling,
+  author        = {Singh, Vipin and Ling, Tianheng and Chiaburu, Teodor and Biessmann, Felix},
+  title         = {Data-driven Modeling of Combined Sewer Systems for Urban Sustainability: An Empirical Evaluation},
+  year          = {2024},
+  eprint        = {2408.11619},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -550,7 +1065,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">TinyChirp: Bird Song Recognition Using TinyML Models on Low-power Wireless Acoustic Sensors</div>
       <div class="pauthors">Zhaolan Huang, Adrien Tousnakhoff, Polina Kozyr, Roman Rehausen, <strong>Felix Bießmann</strong>, Robert Lachlan, Cédric Adjih, Emmanuel Baccelli</div>
       <div class="pvenue">2024 IEEE 5th International Symposium on the Internet of Sounds (IS2), pp. 1–10</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/IS262782.2024.10704131">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/IS262782.2024.10704131">DOI</a><button class="bibbtn" data-key="Huang2024TinyChirp">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Huang2024TinyChirp" hidden>
+        <button class="copybtn" data-key="Huang2024TinyChirp">Copy</button>
+        <pre>@inproceedings{Huang2024TinyChirp,
+  author    = {Huang, Zhaolan and Tousnakhoff, Adrien and Kozyr, Polina and Rehausen, Roman and Bie{\ss}mann, Felix and Lachlan, Robert and Adjih, C{\&#x27;e}dric and Baccelli, Emmanuel},
+  title     = {{TinyChirp}: Bird Song Recognition Using {TinyML} Models on Low-power Wireless Acoustic Sensors},
+  booktitle = {2024 IEEE 5th International Symposium on the Internet of Sounds (IS2)},
+  pages     = {1--10},
+  publisher = {IEEE},
+  year      = {2024},
+  doi       = {10.1109/IS262782.2024.10704131}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -561,7 +1088,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Towards Transnational Fairness in Machine Learning: A Case Study in Disaster Response Systems</div>
       <div class="pauthors">Cem Kozcuer, Anne Mollen, <strong>Felix Bießmann</strong></div>
       <div class="pvenue">Minds and Machines 34(2):11</div>
-      <div class="pmeta"><a href="https://doi.org/10.1007/s11023-024-09663-3">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1007/s11023-024-09663-3">DOI</a><button class="bibbtn" data-key="Kozcuer2024Fairness">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Kozcuer2024Fairness" hidden>
+        <button class="copybtn" data-key="Kozcuer2024Fairness">Copy</button>
+        <pre>@article{Kozcuer2024Fairness,
+  author  = {Kozcuer, Cem and Mollen, Anne and Bie{\ss}mann, Felix},
+  title   = {Towards Transnational Fairness in Machine Learning: A Case Study in Disaster Response Systems},
+  journal = {Minds and Machines},
+  volume  = {34},
+  number  = {2},
+  pages   = {11},
+  year    = {2024},
+  doi     = {10.1007/s11023-024-09663-3}
+}</pre>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g3">Hildebrand group (BHT Berlin)</h2>
@@ -572,7 +1112,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Generating Synthetic Satellite Imagery for Rare Objects: An Empirical Comparison of Models and Metrics</div>
       <div class="pauthors">Tuong Vy Nguyen, Johannes Hoster, Alexander Glaser, <strong>Kristian Hildebrand</strong>, <strong>Felix Biessmann</strong></div>
       <div class="pvenue">arXiv:2409.01138</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2409.01138">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2409.01138">arXiv</a><button class="bibbtn" data-key="Nguyen2024SatelliteImagery">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Nguyen2024SatelliteImagery" hidden>
+        <button class="copybtn" data-key="Nguyen2024SatelliteImagery">Copy</button>
+        <pre>@misc{Nguyen2024SatelliteImagery,
+  author        = {Nguyen, Tuong Vy and Hoster, Johannes and Glaser, Alexander and Hildebrand, Kristian and Biessmann, Felix},
+  title         = {Generating Synthetic Satellite Imagery for Rare Objects: An Empirical Comparison of Models and Metrics},
+  year          = {2024},
+  eprint        = {2409.01138},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -583,7 +1133,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">The Influence of Faulty Labels in Data Sets on Human Pose Estimation</div>
       <div class="pauthors">Arnold Schwarz, Levente Hernadi, <strong>Felix Bießmann</strong>, <strong>Kristian Hildebrand</strong></div>
       <div class="pvenue">arXiv:2409.03887</div>
-      <div class="pmeta"><a href="https://arxiv.org/abs/2409.03887">arXiv</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://arxiv.org/abs/2409.03887">arXiv</a><button class="bibbtn" data-key="Schwarz2024FaultyLabels">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Schwarz2024FaultyLabels" hidden>
+        <button class="copybtn" data-key="Schwarz2024FaultyLabels">Copy</button>
+        <pre>@misc{Schwarz2024FaultyLabels,
+  author        = {Schwarz, Arnold and Hernadi, Levente and Bie{\ss}mann, Felix and Hildebrand, Kristian},
+  title         = {The Influence of Faulty Labels in Data Sets on Human Pose Estimation},
+  year          = {2024},
+  eprint        = {2409.03887},
+  archivePrefix = {arXiv}
+}</pre>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g4">Boblan group (robotics, BHT Berlin)</h2>
@@ -594,7 +1154,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Lagrangian Neural Network-Based Control: Improving Robotic Trajectory Tracking via Linearized Feedback</div>
       <div class="pauthors">Manuel Weiss, Alexander Pawluchin, Jan-Hendrik Ewering, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">IEEE Robotics and Automation Letters 11(3):2546–2553</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2026.3653326">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2026.3653326">DOI</a><button class="bibbtn" data-key="Weiss2026LNNControl">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Weiss2026LNNControl" hidden>
+        <button class="copybtn" data-key="Weiss2026LNNControl">Copy</button>
+        <pre>@article{Weiss2026LNNControl,
+  author  = {Weiss, Manuel and Pawluchin, Alexander and Ewering, Jan-Hendrik and Seel, Thomas and Boblan, Ivo},
+  title   = {Lagrangian Neural Network-Based Control: Improving Robotic Trajectory Tracking via Linearized Feedback},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {11},
+  number  = {3},
+  pages   = {2546--2553},
+  year    = {2026},
+  doi     = {10.1109/LRA.2026.3653326}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -605,7 +1178,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Learning by doing: Online Learning to Compensate Gravity with a Computed Torque Controller using Lagrangian Neural Networks</div>
       <div class="pauthors">Manuel Weiss, Alexander Pawluchin, Arnold Schwarz, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">2025 11th International Conference on Control, Decision and Information Technologies (CoDIT), pp. 272–277</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/CoDIT66093.2025.11321475">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/CoDIT66093.2025.11321475">DOI</a><button class="bibbtn" data-key="Weiss2025LearningByDoing">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Weiss2025LearningByDoing" hidden>
+        <button class="copybtn" data-key="Weiss2025LearningByDoing">Copy</button>
+        <pre>@inproceedings{Weiss2025LearningByDoing,
+  author    = {Weiss, Manuel and Pawluchin, Alexander and Schwarz, Arnold and Seel, Thomas and Boblan, Ivo},
+  title     = {Learning by doing: Online Learning to Compensate Gravity with a Computed Torque Controller using Lagrangian Neural Networks},
+  booktitle = {2025 11th International Conference on Control, Decision and Information Technologies (CoDIT)},
+  pages     = {272--277},
+  publisher = {IEEE},
+  year      = {2025},
+  doi       = {10.1109/CoDIT66093.2025.11321475}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -616,7 +1201,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Achieving Velocity Tracking Despite Model Uncertainty for a Quadruped Robot with a PD-ILC Controller</div>
       <div class="pauthors">Manuel Weiss, Andrew Stirling, Alexander Pawluchin, Dustin Lehmann, Yannis Hannemann, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">2024 European Control Conference (ECC), pp. 134–140</div>
-      <div class="pmeta"><a href="https://doi.org/10.23919/ECC64448.2024.10590932">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.23919/ECC64448.2024.10590932">DOI</a><button class="bibbtn" data-key="Weiss2024PDILC">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Weiss2024PDILC" hidden>
+        <button class="copybtn" data-key="Weiss2024PDILC">Copy</button>
+        <pre>@inproceedings{Weiss2024PDILC,
+  author    = {Weiss, Manuel and Stirling, Andrew and Pawluchin, Alexander and Lehmann, Dustin and Hannemann, Yannis and Seel, Thomas and Boblan, Ivo},
+  title     = {Achieving Velocity Tracking Despite Model Uncertainty for a Quadruped Robot with a {PD-ILC} Controller},
+  booktitle = {2024 European Control Conference (ECC)},
+  pages     = {134--140},
+  publisher = {IEEE},
+  year      = {2024},
+  doi       = {10.23919/ECC64448.2024.10590932}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -627,7 +1224,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Learning of a Rapid Prototyping Gait Library for a Quadruped Robot Using PD-ILC and Gaussian Processes</div>
       <div class="pauthors">Manuel Weiss, Alexander Pawluchin, Thomas Seel, <strong>Ivo Boblan</strong></div>
       <div class="pvenue">2024 18th International Conference on Control, Automation, Robotics and Vision (ICARCV), pp. 1213–1218</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/ICARCV63323.2024.10821620">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/ICARCV63323.2024.10821620">DOI</a><button class="bibbtn" data-key="Weiss2024GaitLibrary">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Weiss2024GaitLibrary" hidden>
+        <button class="copybtn" data-key="Weiss2024GaitLibrary">Copy</button>
+        <pre>@inproceedings{Weiss2024GaitLibrary,
+  author    = {Weiss, Manuel and Pawluchin, Alexander and Seel, Thomas and Boblan, Ivo},
+  title     = {Learning of a Rapid Prototyping Gait Library for a Quadruped Robot Using {PD-ILC} and Gaussian Processes},
+  booktitle = {2024 18th International Conference on Control, Automation, Robotics and Vision (ICARCV)},
+  pages     = {1213--1218},
+  publisher = {IEEE},
+  year      = {2024},
+  doi       = {10.1109/ICARCV63323.2024.10821620}
+}</pre>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g5">Höppner group (robotics, BHT Berlin)</h2>
@@ -638,7 +1247,20 @@ footer a { color: var(--accent); }
       <div class="ptitle">Variable Stiffness Actuation via 3D-Printed Nonlinear Torsional Springs</div>
       <div class="pauthors"><strong>Hannes Höppner</strong>, Annika Kirner, Joshua Göttlich, Linnéa Jakob, Alexander Dietrich, Christian Ott</div>
       <div class="pvenue">IEEE Robotics and Automation Letters 10(5):4324–4331</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2025.3549658">DOI</a><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/LRA.2025.3549658">DOI</a><button class="bibbtn" data-key="Hoeppner2025TorsionalSprings">BibTeX</button><span class="vtag direct" title="verified in paper text">✓ verified in paper text</span></div>
+      <div class="bibbox" id="bib-Hoeppner2025TorsionalSprings" hidden>
+        <button class="copybtn" data-key="Hoeppner2025TorsionalSprings">Copy</button>
+        <pre>@article{Hoeppner2025TorsionalSprings,
+  author  = {H{\&quot;o}ppner, Hannes and Kirner, Annika and G{\&quot;o}ttlich, Joshua and Jakob, Linn{\&#x27;e}a and Dietrich, Alexander and Ott, Christian},
+  title   = {Variable Stiffness Actuation via 3D-Printed Nonlinear Torsional Springs},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {10},
+  number  = {5},
+  pages   = {4324--4331},
+  year    = {2025},
+  doi     = {10.1109/LRA.2025.3549658}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -649,7 +1271,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">VSB – Variable Stiffness Based on Bowden Cables: A Simple Mechanism for Soft Robotic Hands</div>
       <div class="pauthors">Steffen Puhlmann, Alin Albu-Schäffer, <strong>Hannes Höppner</strong></div>
       <div class="pvenue">2025 IEEE International Conference on Robotics and Automation (ICRA), pp. 5556–5562</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/ICRA55743.2025.11127353">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/ICRA55743.2025.11127353">DOI</a><button class="bibbtn" data-key="Puhlmann2025VSB">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Puhlmann2025VSB" hidden>
+        <button class="copybtn" data-key="Puhlmann2025VSB">Copy</button>
+        <pre>@inproceedings{Puhlmann2025VSB,
+  author    = {Puhlmann, Steffen and Albu-Sch{\&quot;a}ffer, Alin and H{\&quot;o}ppner, Hannes},
+  title     = {{VSB} -- Variable Stiffness Based on Bowden Cables: A Simple Mechanism for Soft Robotic Hands},
+  booktitle = {2025 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {5556--5562},
+  publisher = {IEEE},
+  year      = {2025},
+  doi       = {10.1109/ICRA55743.2025.11127353}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -660,7 +1294,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Programming Passive Fingertip Deformation for Improved Grasping and Manipulation</div>
       <div class="pauthors">Steffen Puhlmann, Lion-Constantin Weber, <strong>Hannes Höppner</strong></div>
       <div class="pvenue">2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 9175–9181</div>
-      <div class="pmeta"><a href="https://doi.org/10.1109/IROS58592.2024.10801459">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1109/IROS58592.2024.10801459">DOI</a><button class="bibbtn" data-key="Puhlmann2024Fingertip">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Puhlmann2024Fingertip" hidden>
+        <button class="copybtn" data-key="Puhlmann2024Fingertip">Copy</button>
+        <pre>@inproceedings{Puhlmann2024Fingertip,
+  author    = {Puhlmann, Steffen and Weber, Lion-Constantin and H{\&quot;o}ppner, Hannes},
+  title     = {Programming Passive Fingertip Deformation for Improved Grasping and Manipulation},
+  booktitle = {2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {9175--9181},
+  publisher = {IEEE},
+  year      = {2024},
+  doi       = {10.1109/IROS58592.2024.10801459}
+}</pre>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g6">Reber group (BHT Berlin)</h2>
@@ -671,7 +1317,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Adaptations in Plasmodium tubulin determine distinct microtubule architectures, mechanics and drug susceptibility</div>
       <div class="pauthors">Mamata Bangera, Jiangbo Wu, Daniel Beckett, Dominik Fachet, Josie L. Ferreira, Gregory A. Voth, <strong>Simone Reber</strong>, Carolyn A. Moores</div>
       <div class="pvenue">Nature Communications 17:2275</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-026-70181-0">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-026-70181-0">DOI</a><button class="bibbtn" data-key="Bangera2026Plasmodium">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Bangera2026Plasmodium" hidden>
+        <button class="copybtn" data-key="Bangera2026Plasmodium">Copy</button>
+        <pre>@article{Bangera2026Plasmodium,
+  author  = {Bangera, Mamata and Wu, Jiangbo and Beckett, Daniel and Fachet, Dominik and Ferreira, Josie L. and Voth, Gregory A. and Reber, Simone and Moores, Carolyn A.},
+  title   = {Adaptations in Plasmodium tubulin determine distinct microtubule architectures, mechanics and drug susceptibility},
+  journal = {Nature Communications},
+  volume  = {17},
+  pages   = {2275},
+  year    = {2026},
+  doi     = {10.1038/s41467-026-70181-0}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -682,7 +1340,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Weak interactions drive selective proteome demixing and tune the differential response to environmental perturbations</div>
       <div class="pauthors">Guido Narduzzi, Federico Zucca, Leo Willig, Ludovic Gillet, Ino Karemaker, Aleksander A. Rebane, Alba Tomas Sitjes, Leon Young, Moritz Becker, <strong>Simone Reber</strong>, Thomas Michaels, Paola Picotti, Gabriel E. Neurohr</div>
       <div class="pvenue">bioRxiv preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.64898/2026.07.22.739830">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.64898/2026.07.22.739830">DOI</a><button class="bibbtn" data-key="Narduzzi2026Demixing">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Narduzzi2026Demixing" hidden>
+        <button class="copybtn" data-key="Narduzzi2026Demixing">Copy</button>
+        <pre>@misc{Narduzzi2026Demixing,
+  author       = {Narduzzi, Guido and Zucca, Federico and Willig, Leo and Gillet, Ludovic and Karemaker, Ino and Rebane, Aleksander A. and Tomas Sitjes, Alba and Young, Leon and Becker, Moritz and Reber, Simone and Michaels, Thomas and Picotti, Paola and Neurohr, Gabriel E.},
+  title        = {Weak interactions drive selective proteome demixing and tune the differential response to environmental perturbations},
+  howpublished = {bioRxiv preprint},
+  year         = {2026},
+  doi          = {10.64898/2026.07.22.739830}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -693,7 +1361,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">Inhomogeneous Tau polymerization, core–shell organization, and seed formation during Tau condensate aging</div>
       <div class="pauthors">Maximilian Franck, Abin Biswas, Pin-Lian Jiang, Martin Fernandez-Campo, Satabdee Mohapatra, Rithika Sankar, Alvaro Dominguez-Baquero, Leandre Ravatt, Boglarka K. Nagy-Herczeg, Ozan Kantar, Janine Hochmair, Thorsten Mielke, Lisa Diez, Fan Liu, Michael Krieg, <strong>Simone Reber</strong>, Susanne Wegmann</div>
       <div class="pvenue">bioRxiv preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.64898/2026.03.18.711671">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.64898/2026.03.18.711671">DOI</a><button class="bibbtn" data-key="Franck2026Tau">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Franck2026Tau" hidden>
+        <button class="copybtn" data-key="Franck2026Tau">Copy</button>
+        <pre>@misc{Franck2026Tau,
+  author       = {Franck, Maximilian and Biswas, Abin and Jiang, Pin-Lian and Fernandez-Campo, Martin and Mohapatra, Satabdee and Sankar, Rithika and Dominguez-Baquero, Alvaro and Ravatt, Leandre and Nagy-Herczeg, Boglarka K. and Kantar, Ozan and Hochmair, Janine and Mielke, Thorsten and Diez, Lisa and Liu, Fan and Krieg, Michael and Reber, Simone and Wegmann, Susanne},
+  title        = {Inhomogeneous Tau polymerization, core--shell organization, and seed formation during Tau condensate aging},
+  howpublished = {bioRxiv preprint},
+  year         = {2026},
+  doi          = {10.64898/2026.03.18.711671}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -704,7 +1382,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Conserved nucleocytoplasmic density homeostasis drives cellular organization across eukaryotes</div>
       <div class="pauthors">Abin Biswas, Omar Muñoz, Kyoohyun Kim, Carsten Hoege, Benjamin M. Lorton, Rainer Nikolay, Matthew L. Kraushar, David Shechter, Jochen Guck, Vasily Zaburdaev, <strong>Simone Reber</strong></div>
       <div class="pvenue">Nature Communications 16:7597</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-025-62605-0">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41467-025-62605-0">DOI</a><button class="bibbtn" data-key="Biswas2025Density">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Biswas2025Density" hidden>
+        <button class="copybtn" data-key="Biswas2025Density">Copy</button>
+        <pre>@article{Biswas2025Density,
+  author  = {Biswas, Abin and Mu{\~n}oz, Omar and Kim, Kyoohyun and Hoege, Carsten and Lorton, Benjamin M. and Nikolay, Rainer and Kraushar, Matthew L. and Shechter, David and Guck, Jochen and Zaburdaev, Vasily and Reber, Simone},
+  title   = {Conserved nucleocytoplasmic density homeostasis drives cellular organization across eukaryotes},
+  journal = {Nature Communications},
+  volume  = {16},
+  pages   = {7597},
+  year    = {2025},
+  doi     = {10.1038/s41467-025-62605-0}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -715,7 +1405,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Cell state-specific cytoplasmic density controls spindle architecture and scaling</div>
       <div class="pauthors">Tobias Kletter, Omar Muñoz, Sebastian Reusch, Abin Biswas, Aliaksandr Halavatyi, Beate Neumann, Benno Kuropka, Vasily Zaburdaev, <strong>Simone Reber</strong></div>
       <div class="pvenue">Nature Cell Biology 27:959–971</div>
-      <div class="pmeta"><a href="https://doi.org/10.1038/s41556-025-01678-x">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1038/s41556-025-01678-x">DOI</a><button class="bibbtn" data-key="Kletter2025Spindle">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Kletter2025Spindle" hidden>
+        <button class="copybtn" data-key="Kletter2025Spindle">Copy</button>
+        <pre>@article{Kletter2025Spindle,
+  author  = {Kletter, Tobias and Mu{\~n}oz, Omar and Reusch, Sebastian and Biswas, Abin and Halavatyi, Aliaksandr and Neumann, Beate and Kuropka, Benno and Zaburdaev, Vasily and Reber, Simone},
+  title   = {Cell state-specific cytoplasmic density controls spindle architecture and scaling},
+  journal = {Nature Cell Biology},
+  volume  = {27},
+  pages   = {959--971},
+  year    = {2025},
+  doi     = {10.1038/s41556-025-01678-x}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -726,7 +1428,17 @@ footer a { color: var(--accent); }
       <div class="ptitle">2-Naphthyl tetrazoles are tubulin polymerization inhibitors with potent antiproliferative and apoptotic induction activities with distinct mechanisms</div>
       <div class="pauthors">Miguel Marín, Laura Gallego-Yerga, Dominik Fachet, Raúl Fuentes-Martín, Silvia González-Pelayo, <strong>Simone Reber</strong>, Rafael Pelaez</div>
       <div class="pvenue">SSRN preprint</div>
-      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5510720">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.2139/ssrn.5510720">DOI</a><button class="bibbtn" data-key="Marin2025Naphthyl">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Marin2025Naphthyl" hidden>
+        <button class="copybtn" data-key="Marin2025Naphthyl">Copy</button>
+        <pre>@misc{Marin2025Naphthyl,
+  author       = {Mar{\&#x27;i}n, Miguel and Gallego-Yerga, Laura and Fachet, Dominik and Fuentes-Mart{\&#x27;i}n, Ra{\&#x27;u}l and Gonz{\&#x27;a}lez-Pelayo, Silvia and Reber, Simone and Pelaez, Rafael},
+  title        = {2-Naphthyl tetrazoles are tubulin polymerization inhibitors with potent antiproliferative and apoptotic induction activities with distinct mechanisms},
+  howpublished = {SSRN preprint},
+  year         = {2025},
+  doi          = {10.2139/ssrn.5510720}
+}</pre>
+      </div>
     </div>
   </div>
 </article><h2 class="ghead" data-group="g7">Grohmann group (BHT Berlin)</h2>
@@ -737,7 +1449,19 @@ footer a { color: var(--accent); }
       <div class="ptitle">Crucial Gram-positive type IV secretion system protein TraF is a structural homolog of type VII secretion system protein EssB/YukC</div>
       <div class="pauthors">Kirill Kuhlmann, Amrutha Stallinger, Claudia Michaelis, Tamara Margot Ismael Berger, Verena Kohler, Bernd Gesslbauer, Tea Pavkov-Keller, <strong>Elisabeth Grohmann</strong>, Walter Keller</div>
       <div class="pvenue">microLife 7:uqag009</div>
-      <div class="pmeta"><a href="https://doi.org/10.1093/femsml/uqag009">DOI</a><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="pmeta"><a href="https://doi.org/10.1093/femsml/uqag009">DOI</a><button class="bibbtn" data-key="Kuhlmann2026TraF">BibTeX</button><span class="vtag scholar" title="verified via Scholar full-text index">✓ verified via Scholar full-text index</span></div>
+      <div class="bibbox" id="bib-Kuhlmann2026TraF" hidden>
+        <button class="copybtn" data-key="Kuhlmann2026TraF">Copy</button>
+        <pre>@article{Kuhlmann2026TraF,
+  author  = {Kuhlmann, Kirill and Stallinger, Amrutha and Michaelis, Claudia and Berger, Tamara Margot Ismael and Kohler, Verena and Gesslbauer, Bernd and Pavkov-Keller, Tea and Grohmann, Elisabeth and Keller, Walter},
+  title   = {Crucial Gram-positive type IV secretion system protein TraF is a structural homolog of type VII secretion system protein EssB/YukC},
+  journal = {microLife},
+  volume  = {7},
+  pages   = {uqag009},
+  year    = {2026},
+  doi     = {10.1093/femsml/uqag009}
+}</pre>
+      </div>
     </div>
   </div>
 </article>
@@ -745,6 +1469,22 @@ footer a { color: var(--accent); }
 by <code>generate_site.py</code>.</footer>
 </div>
 <script>
+document.querySelectorAll('.bibbtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const box = document.getElementById('bib-' + btn.dataset.key);
+    box.hidden = !box.hidden;
+    btn.classList.toggle('open', !box.hidden);
+  });
+});
+document.querySelectorAll('.copybtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const pre = btn.parentElement.querySelector('pre');
+    navigator.clipboard.writeText(pre.textContent).then(() => {
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+    });
+  });
+});
 document.querySelectorAll('.fbtn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
