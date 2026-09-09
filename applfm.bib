@@ -27,7 +27,8 @@
   address   = {Cham},
   year      = {2026},
   doi       = {10.1007/978-3-032-02813-6_5},
-  note      = {Preprint: arXiv:2506.23663}
+  note      = {Preprint: arXiv:2506.23663},
+  abstract = {In real-world vision-language applications, practitioners increasingly rely on large, pretrained foundation models rather than custom-built solutions, despite limited transparency regarding their training data and processes. While these models achieve impressive performance on general benchmarks, their effectiveness can decline notably under specialized domain shifts, such as unique imaging conditions or environmental variations. In this work, we introduce Deepbench, a framework designed to assess domain-specific robustness of vision-language models (VLMs). Deepbench leverages a large language model (LLM) to generate realistic, context-aware image corruptions tailored to specific deployment domains without requiring labeled data. We evaluate a range of contrastive vision-language architectures and architectural variants across six real-world domains and observe substantial variability in robustness, highlighting the need for targeted, domain-aware evaluation. Deepbench is released as open-source software to support further research into domain-aware robustness assessment.}
 }
 
 % [scholar] Extended journal version of the KI 2025 DeepBench paper.
@@ -36,7 +37,8 @@
   title        = {Domain-Specific Robustness Evaluation of Vision-Language Models},
   howpublished = {SSRN preprint},
   year         = {2025},
-  doi          = {10.2139/ssrn.5349659}
+  doi          = {10.2139/ssrn.5349659},
+  abstract = {Robustness evaluation of computer vision and vision-language models (VLMs) remains a critical challenge, particularly when models are deployed in domain-specific settings that differ significantly from their training distributions. While existing benchmarks target generic corruptions or adversarial attacks, they offer limited insight into how models perform under realistic visual conditions, such as lighting variability in handheld photography or anatomical variation in medical imaging. Additionally, the increasing reliance on large pretrained foundation models with opaque data pipelines complicates the analysis of potential failure modes. In this work, we introduce DeepBench, a framework for evaluating domain-specific robustness without requiring labeled data. Given a high-level description of the deployment environment, a large language model (LLM) selects a context-relevant corruption set that simulates expected visual variability. The framework supports both standard accuracy-based metrics and an unsupervised measure of prediction consistency, the label-flip probability (LFP), enabling robustness analysis even in data-scarce applications. We systematically benchmark five popular VLMs - CLIP, SigLIP, ALIGN, LLaVA, and Gemma 3 - across six real-world domains. Our results show that robustness and performance vary significantly by use case: no single model dominates across all domains. These findings underscore the importance of domain-specific evaluation, which captures failure modes that generic robustness benchmarks may overlook. Furthermore, we validate LFP as a reliable proxy for accuracy under corruption, supporting its use in label-free settings. We release our framework as open-source software on https://github.com/ml-lab-htw/deepbench.}
 }
 
 % [direct] "funded by the DFG ... Project-ID 528483508 - FIP 12"
@@ -48,7 +50,8 @@
   number  = {5},
   pages   = {e1013901},
   year    = {2026},
-  doi     = {10.1371/journal.pcbi.1013901}
+  doi     = {10.1371/journal.pcbi.1013901},
+  abstract = {Studying microtubules (MTs) and their mechanical properties is central to understanding intracellular transport, cell division, and drug action. While important, experts still need to spend many hours manually segmenting these filamentous structures. The suitability of state-of-the-art methods for this task cannot be systematically assessed, as large-scale labeled datasets are missing. We address this gap by introducing the synthetic dataset SynthMT , produced by tuning a novel image generation pipeline on real-world interference reflection microscopy (IRM) frames of in vitro reconstituted MTs without requiring human annotations. In our benchmark, we evaluate nine fully automated methods for MT analysis in both zero- and Hyperparameter Optimization (HPO)-based few-shot settings. Across both settings, classical algorithms and current foundation models still struggle to achieve the accuracy required for biological downstream analysis on in vitro MT IRM images that humans perceive as visually simple. However, a notable exception is the recently introduced SAM3 model. After HPO on only ten random SynthMT images, its text-prompted version SAM3Text achieves near-perfect and in some cases super-human performance on unseen, real data. This indicates that fully automated MT segmentation has become feasible when method configuration is effectively guided by synthetic data. To enable progress, we publicly release the dataset, the generation pipeline, and the evaluation framework.}
 }
 
 % [direct] arXiv v2 full text contains Project-ID 528483508 (added after v1)
@@ -57,7 +60,8 @@
   title         = {{RamanBench}: A Large-Scale Benchmark for Machine Learning on Raman Spectroscopy},
   year          = {2026},
   eprint        = {2605.02003},
-  archivePrefix = {arXiv}
+  archivePrefix = {arXiv},
+  abstract = {Machine Learning (ML) has transformed many scientific fields, yet key applications still lack standardized benchmarks. Raman spectroscopy, a widely used technique for non-invasive molecular analysis, is one such field where progress is limited by fragmented datasets, inconsistent evaluation, and models that fail to capture the structure of spectral data. We introduce RamanBench, the first large-scale, fully reproducible benchmark for ML on Raman spectroscopy, consisting of streamlined data access, evaluation protocols and code, as well as a live leaderboard. It unifies 74 datasets (including 16 first released with this benchmark) across four domains, comprising 325,668 spectra and spanning classification and regression tasks under diverse experimental conditions. We benchmark 28 models under a standardized protocol, including classical methods (e.g., PLS), Raman-specific (e.g., RamanNet), Tabular Foundation Model (TFM) (e.g., TabPFN), and time-series approaches (e.g., ROCKET). TFM consistently outperform domain-specific and gradient boosting baselines, while time-series models remain competitive. However, no method generalizes across datasets, revealing a fundamental gap. Therefore, we invite the community to contribute new approaches to our living benchmark, with the potential to accelerate advances in critical applications such as medical diagnostics, biological research, and materials science.}
 }
 
 % [direct] "Our work is funded by the DFG -- FIP-12 -- Project-ID 528483508"
@@ -67,7 +71,8 @@
   journal = {Transactions on Machine Learning Research},
   issn    = {2835-8856},
   year    = {2025},
-  note    = {Preprint: arXiv:2503.14572}
+  note    = {Preprint: arXiv:2503.14572},
+  abstract = {The capacity of foundation models allows for their application to new, unseen tasks. The adaptation to such tasks is called transfer learning. An efficient transfer learning method that circumvents parameter optimization is imprinting. The conceptual differences between studies on imprinting form the basis of our systematic investigation. In this work, we propose the general textttIMPRINT framework, identifying three main components: generation, normalization, and aggregation. Through the lens of this framework, we conduct an in-depth analysis and a comparison of the existing methods. Our findings reveal the benefits of representing novel data with multiple proxies in the generation step and show the importance of proper normalization. Beyond an extensive analytical grounding, our framework enables us to propose a novel variant of imprinting which outperforms previous work on transfer learning tasks by 4%. This variant determines proxies through clustering motivated by the neural collapse phenomenon -- a connection that we draw for the first time. We publicly release our code at https://github.com/DATEXIS/IMPRINT.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -76,7 +81,8 @@
   title   = {{SCAM}: A Real-World Typographic Robustness Evaluation for Multimodal Foundation Models},
   journal = {Journal of Data-centric Machine Learning Research},
   year    = {2026},
-  note    = {Preprint: arXiv:2504.04893; also presented at the CVPR 2025 Workshop EVAL-FoMo-2}
+  note    = {Preprint: arXiv:2504.04893; also presented at the CVPR 2025 Workshop EVAL-FoMo-2},
+  abstract = {Typographic attacks exploit the interplay between text and visual content in multimodal foundation models, causing misclassifications when misleading text is embedded within images. Existing datasets are limited in size and diversity, making it difficult to study such vulnerabilities. In this paper, we introduce SCAM, the largest and most diverse dataset of real-world typographic attack images to date, containing 1162 images across hundreds of object categories and attack words. Through extensive benchmarking of Vision-Language Models on SCAM, we demonstrate that typographic attacks significantly degrade performance, and identify that training data and model architecture influence the susceptibility to these attacks. Our findings indicate that typographic attacks remain effective against state-of-the-art Large Vision-Language Models, especially those employing vision encoders inherently vulnerable to such attacks. However, employing larger Large Language Model backbones reduces this vulnerability while simultaneously enhancing typographic understanding. Additionally, we demonstrate that synthetic attacks closely resemble real-world (handwritten) attacks, validating their use in research. Our work provides a comprehensive resource and empirical insights to facilitate future research toward robust and trustworthy multimodal AI systems. Finally, we publicly release the datasets introduced in this paper, along with the code for evaluations under www.bliss.berlin/research/scam.}
 }
 
 % [direct] "funded by ... the DFG (... project number: 528483508)"
@@ -85,7 +91,8 @@
   title     = {In Search of Grandmother Cells: Tracing Interpretable Neurons in Tabular Representations},
   booktitle = {EurIPS 2025 Workshop on AI for Tabular Data},
   year      = {2025},
-  note      = {Preprint: arXiv:2601.03657}
+  note      = {Preprint: arXiv:2601.03657},
+  abstract = {Foundation models are powerful yet often opaque in their decision-making. A topic of continued interest in both neuroscience and artificial intelligence is whether some neurons behave like grandmother cells, i.e., neurons that are inherently interpretable because they exclusively respond to single concepts. In this work, we propose two information-theoretic measures that quantify the neuronal saliency and selectivity for single concepts. We apply these metrics to the representations of TabPFN, a tabular foundation model, and perform a simple search across neuron-concept pairs to find the most salient and selective pair. Our analysis provides the first evidence that some neurons in such models show moderate, statistically significant saliency and selectivity for high-level concepts. These findings suggest that interpretable neurons can emerge naturally and that they can, in some cases, be identified without resorting to more complex interpretability techniques.}
 }
 
 % [direct] cites "Berlin Initiative for Applied Foundation Model Research, project number: 528483508"
@@ -95,7 +102,8 @@
   booktitle = {4th World Conference on eXplainable Artificial Intelligence (xAI 2026), Late-breaking Work, Demos and Doctoral Consortium},
   address   = {Fortaleza, Brazil},
   year      = {2026},
-  note      = {Preprint: arXiv:2604.07019; CEUR-WS joint proceedings volume forthcoming as of September 2026}
+  note      = {Preprint: arXiv:2604.07019; CEUR-WS joint proceedings volume forthcoming as of September 2026},
+  abstract = {Neural networks deliver impressive predictive performance across a variety of tasks, but they are often opaque in their decision-making processes. Despite a growing interest in mechanistic interpretability, tools for systematically exploring the representations learned by neural networks in general, and tabular foundation models in particular, remain limited. In this work, we introduce ConceptTracer, an interactive application for analyzing neural representations through the lens of human-interpretable concepts. ConceptTracer integrates two information-theoretic measures that quantify concept saliency and selectivity, enabling researchers and practitioners to identify neurons that respond strongly to individual concepts. We demonstrate the utility of ConceptTracer on representations learned by TabPFN and show that our approach facilitates the discovery of interpretable neurons. Together, these capabilities provide a practical framework for investigating how neural networks like TabPFN encode concept-level information. ConceptTracer is available at https://github.com/ml-lab-htw/concept-tracer.}
 }
 
 % [scholar]
@@ -107,7 +115,8 @@
   publisher = {ACM},
   year      = {2025},
   doi       = {10.1145/3711896.3736818},
-  note      = {Preprint: arXiv:2409.18594}
+  note      = {Preprint: arXiv:2409.18594},
+  abstract = {Large language models (LLMs) provide powerful means to leverage prior knowledge for predictive modeling when data is limited. In this work, we demonstrate how LLMs can use their compressed world knowledge to generate intrinsically interpretable machine learning models, i.e., decision trees, without any training data. We find that these zero-shot decision trees can even surpass data-driven trees on some small-sized tabular datasets and that embeddings derived from these trees perform better than data-driven tree-based embeddings on average. Our decision tree induction and embedding approaches can therefore serve as new knowledge-driven baselines for data-driven machine learning methods in the low-data regime. Furthermore, they offer ways to harness the rich world knowledge within LLMs for tabular machine learning tasks. Our code and results are available at https://github.com/ml-lab-htw/llm-trees.}
 }
 
 % [scholar]
@@ -118,7 +127,8 @@
   volume  = {8},
   pages   = {1789412},
   year    = {2026},
-  doi     = {10.3389/fdgth.2026.1789412}
+  doi     = {10.3389/fdgth.2026.1789412},
+  abstract = {Musculoskeletal pain, especially low-back pain, is highly prevalent and often challenging to manage due to its multifactorial nature. Effective diagnosis and therapy require clinicians to integrate biopsychosocial information within an evidence-based clinical reasoning framework. Large language models that “think” before responding, so-called reasoning models, show promise to support such complex decision-making, yet their validity and reliability in this setting remain unclear. In our work, we present a comprehensive human evaluation of reasoning models for clinical reasoning. Our results indicate that state-of-the art reasoning models demonstrate sufficient test–retest reliability and are competent or proficient in terms of their conceptual reasoning, completeness, correctness, relevance, and usefulness, with no statistically significant or clinically relevant differences between them. However, our qualitative analysis reveals weaknesses in logical coherence, patient-centeredness, empathy, and intuition, with most deviations from expert reasoning in the domain of intuition. Our findings underscore the importance of adopting a multidimensional framework for evaluating language model outputs and allow us to provide guidance for model selection and prompting strategies to enhance clinical reasoning performance.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -131,7 +141,8 @@
   address   = {Karlsruhe},
   year      = {2025},
   url       = {https://publikationen.bibliothek.kit.edu/1000186052},
-  note      = {Preprint: arXiv:2603.17737}
+  note      = {Preprint: arXiv:2603.17737},
+  abstract = {Embeddings are a powerful way to enrich data-driven machine learning models with the world knowledge of large language models (LLMs). Yet, there is limited evidence on how to design effective LLM-based embedding pipelines for tabular prediction. In this work, we systematically benchmark 256 pipeline configurations, covering 8 preprocessing strategies, 16 embedding models, and 2 downstream models. Our results show that it strongly depends on the specific pipeline design whether incorporating the prior knowledge of LLMs improves the predictive performance. In general, concatenating embeddings tends to outperform replacing the original columns with embeddings. Larger embedding models tend to yield better results, while public leaderboard rankings and model popularity are poor performance indicators. Finally, gradient boosting decision trees tend to be strong downstream models. Our findings provide researchers and practitioners with guidance for building more effective embedding pipelines for tabular prediction tasks.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -141,7 +152,8 @@
   year          = {2024},
   eprint        = {2411.19835},
   archivePrefix = {arXiv},
-  note          = {Published in the GFaI Tagungsband 2024 (Gesellschaft zur F{\"o}rderung angewandter Informatik)}
+  note          = {Published in the GFaI Tagungsband 2024 (Gesellschaft zur F{\"o}rderung angewandter Informatik)},
+  abstract = {Automated object detection has become increasingly valuable across diverse applications, yet efficient, high-quality annotation remains a persistent challenge. In this paper, we present the development and evaluation of a platform designed to interactively improve object detection models. The platform allows uploading and annotating images as well as fine-tuning object detection models. Users can then manually review and refine annotations, further creating improved snapshots that are used for automatic object detection on subsequent image uploads - a process we refer to as semi-automatic annotation resulting in a significant gain in annotation efficiency. Whereas iterative refinement of model results to speed up annotation has become common practice, we are the first to quantitatively evaluate its benefits with respect to time, effort, and interaction savings. Our experimental results show clear evidence for a significant time reduction of up to 53% for semi-automatic compared to manual annotation. Importantly, these efficiency gains did not compromise annotation quality, while matching or occasionally even exceeding the accuracy of manual annotations. These findings demonstrate the potential of our lightweight annotation platform for creating high-quality object detection datasets and provide best practices to guide future development of annotation platforms. The platform is open-source, with the frontend and backend repositories available on GitHub. To support the understanding of our labeling process, we have created an explanatory video demonstrating the methodology using microscopy images of E. coli bacteria as an example.}
 }
 
 % [scholar]
@@ -153,7 +165,8 @@
   number  = {11},
   pages   = {115001},
   year    = {2024},
-  doi     = {10.1117/1.JBO.29.11.115001}
+  doi     = {10.1117/1.JBO.29.11.115001},
+  abstract = {Optical mammography as a promising tool for cancer diagnosis has largely fallen behind expectations. Modern machine learning (ML) methods offer ways to improve cancer detection in diffuse optical transmission data. Aim: We aim to quantitatively evaluate the classification of cancer-positive versus cancer-negative patients using ML methods on raw transmission time series data from bilateral breast scans during subjects' rest. Approach: We use a support vector machine (SVM) with hyperparameter optimization and cross-validation to systematically explore a range of data preprocessing and feature-generation strategies. We also apply an automated ML (AutoML) framework to validate our findings. We use receiver operating characteristics and the corresponding area under the curve (AUC) to quantify classification performance. Results: , 18 cancer patients), we demonstrate an AUC score of up to 93.3% for SVM classification and up to 95.0% for the AutoML classifier. Conclusions: ML offers a viable strategy for clinically relevant breast cancer diagnosis using diffuse-optical transmission measurements. The diagnostic performance of ML on raw data can outperform traditional statistical biomarkers derived from reconstructed image time series. To achieve clinically relevant performance, our ML approach requires simultaneous bilateral scanning of the breasts with spatially dense channel coverage.}
 }
 
 % [direct] arXiv version (2507.00868) full text contains Project-ID 528483508
@@ -165,7 +178,8 @@
   publisher = {IEEE},
   year      = {2025},
   doi       = {10.1109/ICCV51701.2025.00254},
-  note      = {Preprint: arXiv:2507.00868}
+  note      = {Preprint: arXiv:2507.00868},
+  abstract = {In this paper, we explore the potential of visual in-context learning to enable a single model to handle multiple tasks and adapt to new tasks during test time without re-training. Unlike previous approaches, our focus is on training in-context learners to adapt to sequences of tasks, rather than individual tasks. Our goal is to solve complex tasks that involve multiple intermediate steps using a single model, allowing users to define entire vision pipelines flexibly at test time. To achieve this, we first examine the properties and limitations of visual in-context learning architectures, with a particular focus on the role of codebooks. We then introduce a novel method for training in-context learners using a synthetic compositional task generation engine. This engine bootstraps task sequences from arbitrary segmentation datasets, enabling the training of visual in-context learners for compositional tasks. Additionally, we investigate different masking-based training objectives to gather insights into how to train models better for solving complex, compositional tasks. Our exploration not only provides important insights especially for multi-modal medical task sequences but also highlights challenges that need to be addressed.}
 }
 
 % ---------------------------------------------------------------------
@@ -179,7 +193,8 @@
   journal = {Transactions on Machine Learning Research},
   issn    = {2835-8856},
   year    = {2025},
-  url     = {https://openreview.net/forum?id=OevFdPgk3h}
+  url     = {https://openreview.net/forum?id=OevFdPgk3h},
+  abstract = {In domains with privacy constraints, most knowledge resides in siloed datasets, hindering the development of a model with all relevant knowledge for a task. Clinical NLP is a prime example of these constraints in practice. Research in this area typically falls back to the canonical setting of sequential transfer learning, where a model pre-trained on large corpora is finetuned on a smaller annotated dataset. An avenue for knowledge transfer among diverse clinics is multi-step sequential transfer learning since models are more likely to be shared than private clinical data. This setting poses challenges of cross-linguality, domain diversity, and varying label distributions which undermine generalisation. We propose SPONGE, an efficient prototypical architecture that leverages competing sparse language representations. These encompass distributed knowledge and create the necessary level of redundancy for effective transfer learning across multiple datasets. We identify that prototypical classifiers are critically sensitive to label-recency bias which we mitigate with a novel strategy at inference time. SPONGE in combination with this strategy significantly boosts generalisation performance to unseen data. With the help of medical professionals, we show that the explainability of our models is clinically relevant. We make all source code available.}
 }
 
 % [direct] "funded by the DFG ... Project-ID 528483508 - FIP 12" (camera-ready PDF)
@@ -189,7 +204,8 @@
   journal = {Transactions on Machine Learning Research},
   issn    = {2835-8856},
   year    = {2026},
-  url     = {https://openreview.net/forum?id=nJ4p8rh3Ig}
+  url     = {https://openreview.net/forum?id=nJ4p8rh3Ig},
+  abstract = {Many real-world classification tasks involve datasets with large and imbalanced label spaces, making class-specific uncertainty quantification particularly challenging. Conformal Prediction (CP) provides a model-agnostic framework, which formally guarantees coverage, meaning that its prediction sets contain the true label with a user-defined probability (confidence level). However, standard class-conditional methods often fail when data is scarce for some classes. We propose a method that uses domain knowledge or label hierarchies to dynamically group semantically related classes to meet the desired coverage for a given confidence threshold. Our method maintains class-conditioned calibration when possible and provides group-conditioned guarantees where necessary. We evaluate our method on outcome diagnoses prediction, an important clinical task that does not only benefit from robust uncertainty estimation, but also presents a very imbalanced label distribution. We conduct experiments using three clinical datasets employing two medical taxonomies (ICD-10 and CCSR) and label spaces of varying sizes with up to more than 1,000 classes. Our results show that the proposed approach is able to successfully exploit the label hierarchy and consistently improves class-conditional coverage for infrequent diagnoses. By improving coverage for underrepresented classes, our method enhances the reliability and trustworthiness of predictive models. This improvement is especially valuable in clinical applications, where failure to detect rare but serious conditions can lead to harmful consequences.}
 }
 
 % [direct] "This work is also funded by the DFG ... Project-ID 528483508 - FIP 12"
@@ -201,7 +217,8 @@
   publisher = {Association for Computational Linguistics},
   address   = {Abu Dhabi, UAE},
   year      = {2025},
-  url       = {https://aclanthology.org/2025.finnlp-1.6/}
+  url       = {https://aclanthology.org/2025.finnlp-1.6/},
+  abstract = {Large language models (LLMs) have proven highly effective for a wide range of tasks, including code generation. Recently, advancements in their capabilities have shown promise in areas like mathematical reasoning, chain-of-thought processes and self-reflection. However, their effectiveness in domains requiring nuanced understanding of financial contexts, such as accounting, remains unclear. In this study, we evaluate how well LLMs perform in generating code for domain-specific languages (DSLs) in accounting, using Beancount as a case study. We create a set of tasks based on common financial ratios, to evaluate the numeracy and financial literacy of LLMs. Our findings reveal that while LLMs are state-of-the-art in generative tasks, they struggle severely with accounting, often producing inaccurate calculations and misinterpreting financial scenarios. We characterize these shortcomings through a comprehensive evaluation, shedding light on the limitations of LLMs in understanding and handling money-related tasks.}
 }
 
 % [scholar]
@@ -212,7 +229,8 @@
   pages     = {208--217},
   publisher = {Association for Computational Linguistics},
   year      = {2024},
-  doi       = {10.18653/v1/2024.clinicalnlp-1.18}
+  doi       = {10.18653/v1/2024.clinicalnlp-1.18},
+  abstract = {Clinical Decision Support Systems assist medical professionals in providing optimal care for patients.A prominent data source used for creating tasks for such systems is the Medical Information Mart for Intensive Care (MIMIC).MIMIC contains electronic health records (EHR) gathered in a tertiary hospital in the United States.The majority of past work is based on the third version of MIMIC, although the fourth is the most recent version.This new version, not only introduces more data into MIMIC, but also increases the variety of patients.While MIMIC-III is limited to intensive care units, MIMIC-IV also offers EHRs from the emergency department.In this work, we investigate how to adapt previous work to update clinical outcome prediction for MIMIC-IV.We revisit several established tasks, including prediction of diagnoses, procedures, length-of-stay, and also introduce a novel task: patient routing prediction.Furthermore, we quantitatively and qualitatively evaluate all tasks on several bio-medical transformer encoder models.Finally, we provide narratives for future research directions in the clinical outcome prediction domain.We make our source code publicly available to reproduce our experiments, data, and tasks.}
 }
 
 % [scholar]
@@ -224,7 +242,8 @@
   publisher = {Association for Computational Linguistics},
   year      = {2026},
   doi       = {10.18653/v1/2026.eacl-long.247},
-  note      = {Preprint: arXiv:2509.26136}
+  note      = {Preprint: arXiv:2509.26136},
+  abstract = {With their growing capabilities, generative large language models (LLMs) are being increasingly investigated for complex medical tasks. However, their effectiveness in real-world clinical applications remains underexplored. To address this, we present CliniBench, the first benchmark that enables comparability of well-studied encoder-based classifiers and generative LLMs for discharge diagnosis prediction from admission notes in MIMIC-IV dataset. Our extensive study compares 12 generative LLMs and 3 encoder-based classifiers and demonstrates that encoder-based classifiers consistently outperform generative models in diagnosis prediction. We assess several retrieval augmentation strategies for in-context learning from similar patients and find that they provide notable performance improvements for generative LLMs.}
 }
 
 % [scholar]
@@ -236,7 +255,8 @@
   publisher = {IOS Press},
   year      = {2025},
   doi       = {10.3233/FAIA251359},
-  note      = {Preprint: arXiv:2508.19077}
+  note      = {Preprint: arXiv:2508.19077},
+  abstract = {In a doctor-patient dialogue, the primary objective of physicians is to diagnose patients and propose a treatment plan. Medical doctors guide these conversations through targeted questioning to efficiently gather the information required to provide the best possible outcomes for patients. To the best of our knowledge, this is the first work that studies physician intent trajectories in doctor-patient dialogues. We use the `Ambient Clinical Intelligence Benchmark' (Aci-bench) dataset for our study. We collaborate with medical professionals to develop a fine-grained taxonomy of physician intents based on the SOAP framework (Subjective, Objective, Assessment, and Plan). We then conduct a large-scale annotation effort to label over 5000 doctor-patient turns with the help of a large number of medical experts recruited using Prolific, a popular crowd-sourcing platform. This large labeled dataset is an important resource contribution that we use for benchmarking the state-of-the-art generative and encoder models for medical intent classification tasks. Our findings show that our models understand the general structure of medical dialogues with high accuracy, but often fail to identify transitions between SOAP categories. We also report for the first time common trajectories in medical dialogue structures that provide valuable insights for designing `differential diagnosis' systems. Finally, we extensively study the impact of intent filtering for medical dialogue summarization and observe a significant boost in performance. We make the codes and data, including annotation guidelines, publicly available at https://github.com/DATEXIS/medical-intent-classification.}
 }
 
 % [scholar]
@@ -247,7 +267,8 @@
   pages     = {10764--10775},
   publisher = {European Language Resources Association (ELRA)},
   year      = {2026},
-  doi       = {10.63317/5ntn3gnmv9cy}
+  doi       = {10.63317/5ntn3gnmv9cy},
+  abstract = {Large language models (LLMs) show strong reasoning abilities, but full retraining for the medical domain is often infeasible because of lacking data or compute resources. We present DeepICD-R1, a framework for efficient medical reasoning fine-tuning that unites hierarchical rewards with distilled supervision. We reformulate ICD-10-CM prediction as a reinforcement learning problem and design a hierarchical outcome-based reward that reflects the ICD code structure across chapter, category, and full-code levels. In parallel, we publish a large-scale distilled dataset of over 90k reasoning traces derived from MIMIC-IV admission notes, integrating clinical validation and official coding guidelines. Fine-tuning smaller instruction-tuned LLMs with this data and GRPO reinforcement yields consistent gains in diagnostic accuracy and reasoning coherence. Extensive ablations confirm that hierarchical supervision and verifiable outcome rewards enable competitive, domain-specialized reasoning models without additional pretraining, providing a reproducible foundation for clinical NLP research.}
 }
 
 % [scholar]
@@ -259,7 +280,8 @@
   pages     = {434--449},
   publisher = {Springer Nature Switzerland},
   year      = {2024},
-  doi       = {10.1007/978-3-031-70368-3_26}
+  doi       = {10.1007/978-3-031-70368-3_26},
+  abstract = {Clinical Decision Support Systems (CDSS) have become ubiquitous in healthcare facilities, leveraging the increasing presence of Electronic Health Records (EHR). Predicting clinical outcomes from clinical text, such as identifying diagnoses based on the admission state of patients, is among the core tasks that a CDSS must address. The state-of-the-art for this task has been set by transformer encoder models, recently superseded by encoders enhanced with a prototypical network. This task remains a significant challenge due to the substantial imbalance of the outcome labels, which is characterized by a long-tailed distribution where the majority of diagnoses are under-represented. Motivated by recent biologically inspired findings in deep learning, we propose S-Proto, a novel, efficient, and sparse prototypical layer. Our method achieves state-of-the-art performance in outcome diagnosis prediction, without compromising on the explainability characteristics of prototypical encoders. Quantitative results demonstrate that our approach is robust to the challenges presented by clinical notes, and transfers successfully to a second, unseen dataset. Qualitative evaluation with medical doctors shows that S-Proto is capable of disaggregating the representations of a disease that manifests differently in patient cohorts.}
 }
 
 % [scholar]
@@ -271,7 +293,8 @@
   publisher = {IEEE},
   year      = {2025},
   doi       = {10.1109/NICE65350.2025.11064982},
-  note      = {Preprint: arXiv:2502.01706}
+  note      = {Preprint: arXiv:2502.01706},
+  abstract = {Biologically inspired neural networks offer alternative avenues to model data distributions. FlyVec is a recent example that draws inspiration from the fruit fly's olfactory circuit to tackle the task of learning word embeddings. Surprisingly, this model performs competitively even against deep learning approaches specifically designed to encode text, and it does so with the highest degree of computational efficiency. We pose the question of whether this performance can be improved further. For this, we introduce Comply. By incorporating positional information through complex weights, we enable a single-layer neural network to learn sequence representations. Our experiments show that Comply not only supersedes FlyVec but also performs on par with significantly larger state-of-the-art models. We achieve this without additional parameters. Comply yields sparse contextual representations of sentences that can be interpreted explicitly from the neuron weights.}
 }
 
 % [scholar]
@@ -283,7 +306,8 @@
   publisher = {Association for Computational Linguistics},
   year      = {2026},
   doi       = {10.18653/v1/2026.acl-long.1579},
-  note      = {Preprint: arXiv:2606.03817}
+  note      = {Preprint: arXiv:2606.03817},
+  abstract = {Idioms can be analysed in terms of their decomposability, the extent to which constituent meanings contribute to the figurative whole. Decomposability is thought to predict syntactic flexibility. Usage-based accounts instead attribute idiom behaviour to distributional experience, such as speaker familiarity and predictability. We examine these views using contextualised language models as controlled distributional learners. We propose a model-internal measure of decomposability and relate it to human ratings, syntactic flexibility, and predictability while tracking idiom learning during pretraining. Model-derived decomposability correlates weakly with human judgments and shows a small but consistent negative relationship with syntactic flexibility. Pretraining analyses show that stabilisation of idiom representations in models is not explained by frequency alone. Instead, surprisal, decomposability, and frequency all contribute, with decomposability showing the strongest training-dependent effect.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -295,7 +319,8 @@
   publisher = {European Language Resources Association (ELRA)},
   year      = {2026},
   doi       = {10.63317/297j5gohq2ip},
-  note      = {Preprint: arXiv:2602.17316}
+  note      = {Preprint: arXiv:2602.17316},
+  abstract = {The rapid advancement of Large Language Models (LLMs) has established standardized evaluation benchmarks as the primary instrument for model comparison. Yet, their reliability is increasingly questioned due to sensitivity to shallow variations in input prompts. This paper examines how controlled, truth-conditionally equivalent lexical and syntactic perturbations affect the absolute performance and relative ranking of 23 contemporary LLMs across three benchmarks: MMLU, SQuAD, and AMEGA. We employ two linguistically principled pipelines to generate meaning-preserving variations: one performing synonym substitution for lexical changes, and another using dependency parsing to determine applicable syntactic transformations. Results show that lexical perturbations consistently induce substantial, statistically significant performance degradation across nearly all models and tasks, while syntactic perturbations have more heterogeneous effects, occasionally improving results. Both perturbation types destabilize model leaderboards on complex tasks. Furthermore, model robustness did not consistently scale with model size, revealing strong task dependence. Overall, the findings suggest that LLMs rely more on surface-level lexical patterns than on abstract linguistic competence, underscoring the need for robustness testing as a standard component of LLM evaluation.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -305,7 +330,8 @@
   year          = {2026},
   eprint        = {2604.12378},
   archivePrefix = {arXiv},
-  note          = {Under review (as of September 2026)}
+  note          = {Under review (as of September 2026)},
+  abstract = {Despite advances in multilingual capabilities, most large language models (LLMs) remain English-centric in their training and, crucially, in their production of reasoning traces. Even when tasked with non-English problems, these models predominantly reason in English, creating a fundamental mismatch for non-English usage scenarios. We address this disparity directly with three contributions. (i) We introduce ReasonXL, the first large-scale parallel corpus of cross-domain reasoning traces spanning five European languages (English, German, French, Italian, and Spanish), with over two million aligned samples per language, each comprising prompts, reasoning traces, and final outputs, enabling direct supervision of language-specific reasoning. (ii) Using ReasonXL, we demonstrate that LLMs can be adapted to reason entirely in a desired target language, using a simple two-stage pipeline of supervised fine-tuning (SFT) followed by reinforcement learning with verifiable rewards (RLVR). The resulting models match or exceed baseline performance, with minimal loss in general knowledge and broadly preserved cross-lingual transfer. (iii) We conduct an extensive representational analysis of the adaptation and find a clear functional division across model depth: early layers contain an activation bottleneck that causally determines language identity, while upper layers concentrate the weight and activation changes driven by adaptation. We further find that RLVR achieves greater behavioral divergence from the base model with smaller parameter updates than SFT, suggesting a more efficient representational rerouting despite much smaller weight updates.}
 }
 
 % [scholar]
@@ -316,7 +342,8 @@
   volume  = {7},
   pages   = {358},
   year    = {2024},
-  doi     = {10.1038/s41746-024-01356-6}
+  doi     = {10.1038/s41746-024-01356-6},
+  abstract = {Autonomous Medical Evaluation for Guideline Adherence (AMEGA) is a comprehensive benchmark designed to evaluate large language models’ adherence to medical guidelines across 20 diagnostic scenarios spanning 13 specialties. It includes an evaluation framework and methodology to assess models’ capabilities in medical reasoning, differential diagnosis, treatment planning, and guideline adherence, using open-ended questions that mirror real-world clinical interactions. It includes 135 questions and 1337 weighted scoring elements designed to assess comprehensive medical knowledge. In tests of 17 LLMs, GPT-4 scored highest with 41.9/50, followed closely by Llama-3 70B and WizardLM-2-8x22B. For comparison, a recent medical graduate scored 25.8/50. The benchmark introduces novel content to avoid the issue of LLMs memorizing existing medical data. AMEGA’s publicly available code supports further research in AI-assisted clinical decision-making, aiming to enhance patient care by aiding clinicians in diagnosis and treatment under time constraints.}
 }
 
 % [scholar]
@@ -328,7 +355,8 @@
   pages     = {90--104},
   publisher = {Springer Nature Switzerland},
   year      = {2025},
-  doi       = {10.1007/978-3-031-98417-4_7}
+  doi       = {10.1007/978-3-031-98417-4_7},
+  abstract = {This study employed a randomized between-subjects design to compare the effects of a job interview training simulation with the physical vs. virtual robot Furhat. The simulation was designed to assist students in preparing for their final exam and real-world job interviews. The system integrates Retrieval-Augmented Generation (RAG) and OpenAI’s Large Language Model GPT4.o (LLM). 37 students participated in one of the two conditions: a physical or a virtual robot. In both conditions, enjoyment and attitudes toward robots significantly predicted students’ willingness to reuse the training. Students, who had more positive attitudes towards robots, experienced greater advantages from the simulation. While male students had significantly more positive attitudes toward robots, female students experienced significantly higher levels of emotional tension during training. Despite these differences, both female and male students were equally willing to recommend and repeat the training. The results showed no significant differences between conditions in self-assessed learning outcomes, interaction quality, intrinsic motivation, or cognitive workload. These findings suggest that virtual robots may be a viable and scalable alternative to physical robots in educational settings. The study contributes to research on AI-powered physical and virtual pedagogical agents.}
 }
 
 % ---------------------------------------------------------------------
@@ -344,7 +372,8 @@
   pages   = {117684},
   year    = {2026},
   doi     = {10.1016/j.geoderma.2026.117684},
-  note    = {Preprint: arXiv:2508.03785}
+  note    = {Preprint: arXiv:2508.03785},
+  abstract = {Recent advances in artificial intelligence (AI), in particular foundation models, have improved the state of the art in many application domains including geosciences. Some specific problems, however, could not benefit from this progress yet. Soil horizon classification, for instance, remains challenging because of its multimodal and multitask characteristics and a complex hierarchically structured label taxonomy. Accurate classification of soil horizons is crucial for monitoring soil condition. In this work, we propose textitSoilNet - a multimodal multitask model to tackle this problem through a structured modularized pipeline. In contrast to omnipurpose AI foundation models, our approach is designed to be inherently transparent by following the task structure human experts developed for solving this challenging annotation task. The proposed approach integrates image data and geotemporal metadata to first predict depth markers, segmenting the soil profile into horizon candidates. Each segment is characterized by a set of horizon-specific morphological features. Finally, horizon labels are predicted based on the multimodal concatenated feature vector, leveraging a graph-based label representation to account for the complex hierarchical relationships among soil horizons. Our method is designed to address complex hierarchical classification, where the number of possible labels is very large, imbalanced and non-trivially structured. We demonstrate the effectiveness of our approach on a real-world soil profile dataset and a comprehensive user study with domain experts. Our empirical evaluations demonstrate that SoilNet reliably predicts soil horizons that are plausible and accurate. User study results indicate that SoilNet achieves predictive performance on par with or better than that of human experts. All code can be found at: https://github.com/calgo-lab/BGR/}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -354,7 +383,8 @@
   year          = {2025},
   eprint        = {2509.24873},
   archivePrefix = {arXiv},
-  note          = {Presented at the CLEAR-AI Workshop at ECAI 2025, Bologna}
+  note          = {Presented at the CLEAR-AI Workshop at ECAI 2025, Bologna},
+  abstract = {Uncertainty quantification is essential in human-machine collaboration, as human agents tend to adjust their decisions based on the confidence of the machine counterpart. Reliably calibrated model uncertainties, hence, enable more effective collaboration, targeted expert intervention and more responsible usage of Machine Learning (ML) systems. Conformal prediction has become a well established model-agnostic framework for uncertainty calibration of ML models, offering statistically valid confidence estimates for both regression and classification tasks. In this work, we apply conformal prediction to $textitSoilNet$, a multimodal multitask model for describing soil profiles. We design a simulated human-in-the-loop (HIL) annotation pipeline, where a limited budget for obtaining ground truth annotations from domain experts is available when model uncertainty is high. Our experiments show that conformalizing SoilNet leads to more efficient annotation in regression tasks and comparable performance scores in classification tasks under the same annotation budget when tested against its non-conformal counterpart. All code and experiments can be found in our repository: https://github.com/calgo-lab/BGR}
 }
 
 % [scholar]
@@ -367,7 +397,8 @@
   publisher = {Springer Nature Switzerland},
   year      = {2025},
   doi       = {10.1007/978-3-032-08333-3_18},
-  note      = {Preprint: arXiv:2504.03736}
+  note      = {Preprint: arXiv:2504.03736},
+  abstract = {Understanding uncertainty in Explainable AI (XAI) is crucial for building trust and ensuring reliable decision-making in Machine Learning models. This paper introduces a unified framework for quantifying and interpreting Uncertainty in XAI by defining a general explanation function $e_θ(x, f)$ that captures the propagation of uncertainty from key sources: perturbations in input data and model parameters. By using both analytical and empirical estimates of explanation variance, we provide a systematic means of assessing the impact uncertainty on explanations. We illustrate the approach using a first-order uncertainty propagation as the analytical estimator. In a comprehensive evaluation across heterogeneous datasets, we compare analytical and empirical estimates of uncertainty propagation and evaluate their robustness. Extending previous work on inconsistencies in explanations, our experiments identify XAI methods that do not reliably capture and propagate uncertainty. Our findings underscore the importance of uncertainty-aware explanations in high-stakes applications and offer new insights into the limitations of current XAI methods. The code for the experiments can be found in our repository at https://github.com/TeodorChiaburu/UXAI}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -377,7 +408,8 @@
   year          = {2026},
   eprint        = {2605.10592},
   archivePrefix = {arXiv},
-  note          = {Accepted at IJCAI-ECAI 2026, Demonstrations Track}
+  note          = {Accepted at IJCAI-ECAI 2026, Demonstrations Track},
+  abstract = {Aging combined sewer systems in many historical cities are increasingly stressed by extreme rainfall events, which can trigger combined sewer overflows (CSO) with significant environmental and public health impacts. Forecasting the filling dynamics of overflow basins is critical for anticipating capacity exceedance and enabling timely preventive actions for CSO. We present a web-based demonstrator that integrates Deep Learning forecasting methods in both cloud and edge settings into an interactive monitoring dashboard for overflow monitoring, resilient to network outages. A video showcase is available online (https://cloud.bht-berlin.de/index.php/s/b9xt4T3SdiLBiFZ).}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -387,7 +419,8 @@
   year          = {2024},
   eprint        = {2408.11619},
   archivePrefix = {arXiv},
-  note          = {Presented at the 2nd Workshop on Public Interest AI, co-located with KI 2024, W{\"u}rzburg}
+  note          = {Presented at the 2nd Workshop on Public Interest AI, co-located with KI 2024, W{\"u}rzburg},
+  abstract = {Climate change poses complex challenges, with extreme weather events becoming increasingly frequent and difficult to model. Examples include the dynamics of Combined Sewer Systems (CSS). Overburdened CSS during heavy rainfall will overflow untreated wastewater into surface water bodies. Classical approaches to modeling the impact of extreme rainfall events rely on physical simulations, which are particularly challenging to create for large urban infrastructures. Deep Learning (DL) models offer a cost-effective alternative for modeling the complex dynamics of sewer systems. In this study, we present a comprehensive empirical evaluation of several state-of-the-art DL time series models for predicting sewer system dynamics in a large urban infrastructure, utilizing three years of measurement data. We especially investigate the potential of DL models to maintain predictive precision during network outages by comparing global models, which have access to all variables within the sewer system, and local models, which are limited to data from a restricted set of local sensors. Our findings demonstrate that DL models can accurately predict the dynamics of sewer system load, even under network outage conditions. These results suggest that DL models can effectively aid in balancing the load redistribution in CSS, thereby enhancing the sustainability and resilience of urban infrastructures.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -397,7 +430,8 @@
   year          = {2026},
   eprint        = {2608.18260},
   archivePrefix = {arXiv},
-  note          = {Accepted at WIPE-OUT 2026, 2nd Workshop on Machine Unlearning and Privacy Preservation at ECML-PKDD 2026}
+  note          = {Accepted at WIPE-OUT 2026, 2nd Workshop on Machine Unlearning and Privacy Preservation at ECML-PKDD 2026},
+  abstract = {Large Language Models (LLMs) are being increasingly used in everyday applications. A major challenge in the context of LLMs or Artificial Intelligence (AI) in general is to ensure privacy when using them, meaning that personally identifiable information (PII) is removed from any text that enters an LLM. These challenges have become more urgent with novel EU legislation. Uncertainty around LLM usage with respect to privacy concerns in EU countries can be a major blocker for the speed of innovation and transfer from research to applications. Here we present textbfRedakto, a tool that can be used for anonymizing text prior to feeding it to an LLM or other downstream text processing. We provide state-of-the-art functionalities for both redaction of PII but also when used for pseudonymization. These functionalities are exposed such that they can easily be used by end-users, through the Redakto web application, and by developers and researchers, via REST APIs and model context protocol (MCP) hooks. The implementation is fully open source, requires modest compute resources, and can be readily deployed on local hardware. In contrast to prior work and in order to better assess the quality of the anonymized texts, we conduct extensive empirical evaluations on textual data from legal and medical domain with respect to both privacy and utility of the redacted texts. Our empirical results demonstrate that the texts anonymized with different redaction strategies achieve utility scores on par with the original texts, suggesting that anonymization with Redakto can be used for LLM tasks without substantial negative impact for the tasks we explored.}
 }
 
 % [scholar]
@@ -406,7 +440,8 @@
   title     = {End-to-end Pseudonymization of German Texts with Deep Learning -- An Empirical Comparison of Classical and Modern Approaches},
   booktitle = {Proceedings of the 1st International Conference on AI in Medicine and Healthcare (AiMH 2025)},
   address   = {Innsbruck, Austria},
-  year      = {2025}
+  year      = {2025},
+  abstract = {In contrast to other domains, the potential of text data remains difficult to explore in health care: Artificial Intelligence (AI) innovations using text data in health care require robust and reliable redaction of personally identifying information. Rule based systems are working reliably for de-identification of some entities (dates, e-mails) but not for others that e.g. require contextual information, such as family names. Leveraging the potential of AI for text data thus requires a better understanding of the de-identification quality using different approaches. Here we explore the potential of classical and modern deep learning techniques for end-to-end pseudonymization of text data, meaning that we focus on models that can conduct the entire pseudonymisation process in one component, including detection of personally identifying information as well as finding sensible pseudonyms. We investigate the potential of large language models (LLMs) that can be readily applied on-premise, without requiring to send patient records to cloud providers. In extensive empirical evaluations on a large corpus of German text we compare methods with respect to redaction performance and utility of pseudonymized texts for training AI models and explore the dependency of redaction performance on the amount of training data. We demonstrate the efficacy of a unified end-to-end pseudonymization system capable of detecting private entities and generating type-compliant pseudonyms. Compared to fine-tuned models, mere prompting of pretrained LLMs for redaction and pseudonymization did not yield better redaction and pseudonymization quality in our experiments. These findings highlight the potential of fine-tuned models over prompting of off-the-shelf pretrained LLMs. Consequently, these results imply the need for well curated large training data sets for de-identification. Based on these results we argue that more and better automated de-identification and pseudonymization tools are a prerequisite for responsible usage and research of AI, in particular LLMs, in health care.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -416,7 +451,8 @@
   year          = {2026},
   eprint        = {2608.17711},
   archivePrefix = {arXiv},
-  note          = {Accepted at the GREEN-AI Workshop at ECML-PKDD 2026}
+  note          = {Accepted at the GREEN-AI Workshop at ECML-PKDD 2026},
+  abstract = {Prediction cascades significantly reduce energy consumption of Artificial Intelligence (AI) models while maintaining high predictive performance. The idea is that easy inputs are routed through a lightweight small model, and difficult uncertain cases are deferred to a larger model. While this design can improve computational efficiency on clean data, its effectiveness depends on the reliability of confidence-based routing. Input degradations, such as static corruptions and sequential perturbations, can shift model confidence and routing decisions. In this paper, we study confidence-based cascade frameworks for image classification and investigate how such degradations affect their confidence-based deferral behavior. We select a model cascade at the pareto-optimum of accuracy, routing quality, and energy consumption that achieves competitive predictive performance with an up to 10-fold decrease in CO$_2$ emissions. We study the behavior of that model cascade under input corruptions and analyze how the cascade's routing decisions change when the input distribution shifts. Our analysis identifies three failure modes. Static corruptions either (1) break the routing signal while the large model remains useful, or (2) degrade both models so deferral no longer recovers accuracy. Sequential perturbations reveal a third mode: predictions stabilize but deferral suppresses, yielding stable but unreliable predictions. These findings demonstrate that energy efficient model cascades require evaluation beyond clean accuracy, with explicit attention to routing reliability under distribution shift.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -426,7 +462,8 @@
   year          = {2026},
   eprint        = {2608.18268},
   archivePrefix = {arXiv},
-  note          = {Accepted at the 2nd International Workshop on Sustainable Artificial Intelligence for addressing Online Information Disorder (SAI4OID) at ECML-PKDD 2026}
+  note          = {Accepted at the 2nd International Workshop on Sustainable Artificial Intelligence for addressing Online Information Disorder (SAI4OID) at ECML-PKDD 2026},
+  abstract = {Today most media content is consumed based on algorithmic recommendations. Evidence suggests that this can lead to politically biased media consumption patterns. Automated extraction of political agendas from texts can reveal and analyze political biases in online media -- and thus help fostering politically unbiased media consumption. Here we employ modern political text analysis methods demonstrating the potential of automated fine-grained political bias analysis in online media. We conduct an analysis of political content in German language online media during the period 2019--2022, encompassing several million articles and tweets covering events with profound societal impact globally and nationally, the COVID-19 pandemic and the beginning of the war in Ukraine. Our analysis identifies thematic similarity between national (German and Swiss) reporting, particularly for categories driven by international events. We also find divergences emerging in domestically influenced categories, reflecting differences in national policies and institutional structures. A comparison of newspaper and Twitter discourse reveals that both media converge around a shared core during the pandemic, yet differ in intensity and temporal dynamics. Newspapers exhibit more stable political content, while Twitter reacts through short-lived event-driven spikes. These findings indicate that international crises act as a powerful synchronizing force on political content in classical media, temporarily overriding both national and media-form differences. Our automated political analysis empowers citizens by rendering political agendas in online media transparent. This transparency also enables media outlets to bridge the gap between algorithm-driven echo chambers and a more informed, balanced public discourse.}
 }
 
 % [scholar]
@@ -438,7 +475,8 @@
   publisher = {IEEE},
   year      = {2025},
   doi       = {10.1109/DSIS67228.2025.11390600},
-  note      = {Preprint: arXiv:2512.04138}
+  note      = {Preprint: arXiv:2512.04138},
+  abstract = {Data quality monitoring is a core challenge in modern information processing systems. While many approaches to detect data errors or shifts have been proposed, few studies investigate the mechanisms governing error generation. We argue that knowing how errors were generated can be key to tracing and fixing them. In this study, we build on existing work in the statistics literature on missing values and propose MechDetect, a simple algorithm to investigate error generation mechanisms. Given a tabular data set and a corresponding error mask, the algorithm estimates whether or not the errors depend on the data using machine learning models. Our work extends established approaches to detect mechanisms underlying missing values and can be readily applied to other error types, provided that an error mask is available. We demonstrate the effectiveness of MechDetect in experiments on established benchmark datasets.}
 }
 
 % [scholar]
@@ -450,7 +488,8 @@
   number  = {4},
   pages   = {1--27},
   year    = {2025},
-  doi     = {10.1145/3774914}
+  doi     = {10.1145/3774914},
+  abstract = {Errors in data are a key challenge in modern data management and processing systems. Monitoring and mitigating risks associated with errors in data transformations and downstream applications, such as Machine Learning (ML) model training, requires a profound understanding of error generation and impact of errors on data pipelines. Unfortunately, scientific progress in the field is facing two main challenges: For one, research on data errors often does not adhere to the FAIR (Findable, Accessible, Interoperable, and Reusable) principles, which impedes reproducibility and comparisons. Second, existing data error models are oversimplified and fail to capture the complex statistical dependencies underlying the types and distributions of errors observed in real-world data. Building on prior work in the database management systems and statistics literature, we extend the theory on missing values to encompass a broader range of errors in tables and provide an overview of relevant error types. Combining error sampling mechanisms often observed in real data with a comprehensive categorization of errors, we introduce a latent factor model for tabular data errors that is simple to implement and can effectively model realistic error dependencies. Error sampling is decoupled from error types, which allows for simple extensions with more error types or sampling mechanisms. Using established benchmarks, we evaluate our model in two application scenarios, data cleaning and tabular ML tasks. In a comprehensive suite of experiments we demonstrate the impact of realistic error models on data cleaning benchmarks. Our results also show that a simple generative error model captures a wide range of error mechanisms and offers a convenient formalization of data perturbations to improve the generalizability, robustness and reproducibility of data cleaning research.}
 }
 
 % [scholar]
@@ -462,7 +501,8 @@
   publisher = {IEEE},
   year      = {2024},
   doi       = {10.1109/IS262782.2024.10704131},
-  note      = {Preprint: arXiv:2407.21453}
+  note      = {Preprint: arXiv:2407.21453},
+  abstract = {Monitoring biodiversity at scale is challenging. Detecting and identifying species in fine grained taxonomies requires highly accurate machine learning (ML) methods. Training such models requires large high quality data sets. And deploying these models to low power devices requires novel compression techniques and model architectures. While species classification methods have profited from novel data sets and advances in ML methods, in particular neural networks, deploying these state of the art models to low power devices remains difficult. Here we present a comprehensive empirical comparison of various tinyML neural network architectures and compression techniques for species classification. We focus on the example of bird song detection, more concretely a data set curated for studying the corn bunting bird species. The data set is released along with all code and experiments of this study. In our experiments we compare predictive performance, memory and time complexity of classical spectrogram based methods and recent approaches operating on raw audio signal. Our results indicate that individual bird species can be robustly detected with relatively simple architectures that can be readily deployed to low power devices.}
 }
 
 % [scholar]
@@ -474,7 +514,8 @@
   pages     = {130--146},
   publisher = {Springer Nature Switzerland},
   year      = {2025},
-  doi       = {10.1007/978-3-032-07109-5_10}
+  doi       = {10.1007/978-3-032-07109-5_10},
+  abstract = {Blood sample analysis is a cornerstone of daily medical practice and is commonly employed for the detection of a large range of diseases. The recent availability of large-scale medical datasets, such as MIMIC-III, makes it feasible to evaluate the efficacy of blood samples for predicting a wide spectrum of diseases using machine learning (ML). A central challenge in this context is data quality of patient health records. Often patient data is incomplete or not informative enough. Here we address these problems with modern ML approaches to impute missing values and to incorporate auxiliary information to improve predictive performance. Our proposed clinical decision support system (CDSS) achieves an average state-of-the-art ROC-AUC score of 82.2% across the 50 most prevalent diseases in the MIMIC-III dataset. In order to validate our findings we complement the MIMIC-III data with survey data collected from trained medical doctors, who rated the predictive capacity of blood samples. Their ratings were compared to ROC-AUC values of the ML models. While Spearman’s (rho ) indicates a moderate agreement ( (rho = 0.515) ), there are some diseases, where high ROC-AUC co-occurs with low predictability ratings from the medical doctors, i.e. some diseases were identified which are not commonly known to be detectable via blood samples. Finally, we derive explanations for individual predictions and demonstrate their reliability and clinical relevance in evaluations by medical experts.}
 }
 
 % [scholar]
@@ -486,7 +527,8 @@
   number  = {7},
   pages   = {e0001522},
   year    = {2026},
-  doi     = {10.1371/journal.pdig.0001522}
+  doi     = {10.1371/journal.pdig.0001522},
+  abstract = {Machine Learning (ML) research in healthcare remains challenging as large, privacy-preserving open datasets are lacking. Synthetic data could offer a solution, but the value of synthetic data depends on diverse and conflicting criteria such as utility, fidelity, and privacy, which are rarely evaluated comprehensively. To close this gap, we explore the trade-off between these metrics in an empirical evaluation across a broad spectrum of generative models, datasets and metrics. In order to include as many metrics and models as possible and to ensure both applicability and comparability with other studies, we focus on the most widely available data modality and task setting: tabular data associated with a classification task. Extending prior work our results demonstrate that no single generative model excels across all metrics and datasets. Across 9 datasets and 11 generative models, the first principal variance direction of all metrics captures the dominant trade-off between fidelity and utility metrics on one side and the privacy metrics on the other side. Sensitivity analyses indicate that the privacy–fidelity/utility trade-off captured by the first principal variance direction remains consistent across several datasets and may support model selection. These insights highlight the potential of synthetic data for responsible data sharing in health care as well as the need for better tooling in synthetic data generation with a higher degree of automation when optimizing for metrics capturing fidelity, utility and privacy.}
 }
 
 % [scholar]
@@ -497,7 +539,8 @@
   volume  = {13},
   pages   = {1089},
   year    = {2026},
-  doi     = {10.1038/s41597-026-07910-z}
+  doi     = {10.1038/s41597-026-07910-z},
+  abstract = {Artificial Intelligence (AI) bears potential for improving health care, but this depends on the availability of open-access, realistic, and useful data. To facilitate AI model development in health care we release SynTabFall, a novel synthetic dataset for fall risk assessment. With a total of 745,380 samples and 44 attributes such as demographics, diseases, mobility and cognition related risk factors, this tabular dataset allows for training fall risk prediction models without access to the original patient data. Models trained on our synthetic dataset can reach predictive performance scores in fall risk assessment which are on par with models trained on real data. To support others in sharing data we also describe a process that was developed over multiple years in one of Germany’s largest hospitals in close collaboration between data protection officers, health care staff, informaticians and AI engineers. The proposed data sharing approach combines established methods for anonymization and modern generative AI (genAI) methods for synthesizing tabular data and allows for sharing health care data responsibly without sacrificing its utility. We release the synthetic fall risk dataset along with the software developed for synthetic data generation and evaluation.}
 }
 
 % [scholar]
@@ -508,7 +551,8 @@
   volume  = {9},
   pages   = {e84148},
   year    = {2026},
-  doi     = {10.2196/84148}
+  doi     = {10.2196/84148},
+  abstract = {Background Integrating artificial intelligence (AI) systems into nursing care often encounters obstacles stemming from unmet requirements and insufficient engagement with well-documented sociotechnical pitfalls. Readiness models offer a systematic way to evaluate project preparedness and to build the capabilities needed for successful artificial intelligence in nursing care (AINC) research, development, and implementation. As of yet, an evidence-based AI readiness assessment prioritizing AINC projects and accounting for their diversity in care settings is missing. Objective This study aimed to develop a comprehensive artificial intelligence nursing care readiness assessment (AINCRA) to support planning, execution, and evaluation of AINC projects. Methods In a sequential exploratory multimethods bottom-up approach to maturity model development, key AI readiness dimensions and attributes were identified to develop a pilot readiness assessment. The pilot version was grounded on insights from an expert workshop (n=21) and expert interviews (n=14), an online survey (n=53), a rapid review (n=292), and a nominal group consensus process. A systematic literature review (n=7) further triangulated AI readiness attributes. Finally, a think-aloud interview study and focus group discussions involving experts (n=18) from nursing practice, nursing science, and AI research and development who had conducted AINC projects prior to data collection validated the attributes. Results The resulting AINCRA encompasses 5 core dimensions: regulatory, processual, technical, social, ethical, and community building requirements and aspects. Including 69 attributes and capabilities of AI nursing care readiness, the core dimensions reflect key areas of action where AINC project stakeholders can influence project outcomes. Clinical partners can assess their organization’s maturity level in relation to the implementation of AI. An assessment of each dimension and its attributes across 5 maturity levels allows reflecting on and proactively shaping individual project approaches. Overall, experts regarded AINCRA as a useful instrument for the development, management, and evaluation of AINC projects while emphasizing that established principles of good practice in project and data management should not be neglected when using AINCRA as a project management tool. Conclusions AINCRA enables practitioners from AI research and development, clinical partners, and nursing and health scientists to plan, evaluate, and enhance AI projects across their lifecycle, thereby supporting effective AI integration in nursing care. While AINCRA was developed within the European and German legal framework for AI in health care settings, respective attributes can be adapted to international requirements.}
 }
 
 % [scholar]
@@ -520,7 +564,8 @@
   number  = {2},
   pages   = {11},
   year    = {2024},
-  doi     = {10.1007/s11023-024-09663-3}
+  doi     = {10.1007/s11023-024-09663-3},
+  abstract = {Research on fairness in machine learning (ML) has been largely focusing on individual and group fairness. With the adoption of ML-based technologies as assistive technology in complex societal transformations or crisis situations on a global scale these existing definitions fail to account for algorithmic fairness transnationally. We propose to complement existing perspectives on algorithmic fairness with a notion of transnational algorithmic fairness and take first steps towards an analytical framework. We exemplify the relevance of a transnational fairness assessment in a case study on a disaster response system using images from online social media. In the presented case, ML systems are used as a support tool in categorizing and classifying images from social media after a disaster event as an almost instantly available source of information for coordinating disaster response. We present an empirical analysis assessing the transnational fairness of the application’s outputs-based on national socio-demographic development indicators as potentially discriminatory attributes. In doing so, the paper combines interdisciplinary perspectives from data analytics, ML, digital media studies and media sociology in order to address fairness beyond the technical system. The case study investigated reflects an embedded perspective of peoples’ everyday media use and social media platforms as the producers of sociality and processing data-with relevance far beyond the case of algorithmic fairness in disaster scenarios. Especially in light of the concentration of artificial intelligence (AI) development in the Global North and a perceived hegemonic constellation, we argue that transnational fairness offers a perspective on global injustices in relation to AI development and application that has the potential to substantiate discussions by identifying gaps in data and technology. These analyses ultimately will enable researchers and policy makers to derive actionable insights that could alleviate existing problems with fair use of AI technology and mitigate risks associated with future developments.}
 }
 
 % ---------------------------------------------------------------------
@@ -534,7 +579,8 @@
   year          = {2024},
   eprint        = {2409.01138},
   archivePrefix = {arXiv},
-  note          = {Presented at the 2nd Workshop on Public Interest AI, co-located with KI 2024, W{\"u}rzburg}
+  note          = {Presented at the 2nd Workshop on Public Interest AI, co-located with KI 2024, W{\"u}rzburg},
+  abstract = {Generative deep learning architectures can produce realistic, high-resolution fake imagery -- with potentially drastic societal implications. A key question in this context is: How easy is it to generate realistic imagery, in particular for niche domains. The iterative process required to achieve specific image content is difficult to automate and control. Especially for rare classes, it remains difficult to assess fidelity, meaning whether generative approaches produce realistic imagery and alignment, meaning how (well) the generation can be guided by human input. In this work, we present a large-scale empirical evaluation of generative architectures which we fine-tuned to generate synthetic satellite imagery. We focus on nuclear power plants as an example of a rare object category - as there are only around 400 facilities worldwide, this restriction is exemplary for many other scenarios in which training and test data is limited by the restricted number of occurrences of real-world examples. We generate synthetic imagery by conditioning on two kinds of modalities, textual input and image input obtained from a game engine that allows for detailed specification of the building layout. The generated images are assessed by commonly used metrics for automatic evaluation and then compared with human judgement from our conducted user studies to assess their trustworthiness. Our results demonstrate that even for rare objects, generation of authentic synthetic satellite imagery with textual or detailed building layouts is feasible. In line with previous work, we find that automated metrics are often not aligned with human perception -- in fact, we find strong negative correlations between commonly used image quality metrics and human ratings.}
 }
 
 % [direct] arXiv full text contains Project-ID 528483508
@@ -547,7 +593,8 @@
   pages     = {15--26},
   year      = {2025},
   doi       = {10.24132/csrn.2025-2},
-  note      = {Preprint: arXiv:2409.03887}
+  note      = {Preprint: arXiv:2409.03887},
+  abstract = {In this study we provide empirical evidence demonstrating that the quality of training data impacts model performance in Human Pose Estimation (HPE). Inaccurate labels in widely used data sets, ranging from minor errors to severe mislabeling, can negatively influence learning and distort performance metrics. We perform an in-depth analysis of popular HPE data sets to show the extent and nature of label inaccuracies. Our findings suggest that accounting for the impact of faulty labels will facilitate the development of more robust and accurate HPE models for a variety of real-world applications. We show improved performance with cleansed data.}
 }
 
 % ---------------------------------------------------------------------
@@ -564,7 +611,8 @@
   number  = {3},
   pages   = {2546--2553},
   year    = {2026},
-  doi     = {10.1109/LRA.2026.3653326}
+  doi     = {10.1109/LRA.2026.3653326},
+  abstract = {This paper introduces a control framework that leverages Lagrangian neural networks (LNNs) for computed torque control (CTC) of robotic systems with unknown dynamics. Unlike prior LNN-based controllers that are placed outside the feedback-linearization framework (e.g., feedforward), we embed an LNN inverse-dynamics model within a CTC loop, thereby shaping the closed-loop error dynamics. This strategy, referred to as LNN-CTC, ensures a physically consistent model and improves extrapolation, requiring neither prior model knowledge nor extensive training data. The approach is experimentally validated on a robotic arm with four degrees of freedom and compared with conventional model-based CTC, physics-informed neural network (PINN)-CTC, deep neural network (DNN)-CTC, an LNN-based feedforward controller, and a PID controller. Results demonstrate that LNN-CTC significantly outperforms model-based baselines by up to 30% in tracking accuracy, achieving high performance with minimal training data. In addition, LNN-CTC outperforms all other evaluated baselines in both tracking accuracy and data efficiency, attaining lower joint-space RMSE for the same training data. The findings highlight the potential of physics-informed neural architectures to generalize robustly across various operating conditions and contribute to narrowing the performance gap between learned and classical control strategies.}
 }
 
 % [scholar]
@@ -575,7 +623,8 @@
   pages     = {134--140},
   publisher = {IEEE},
   year      = {2024},
-  doi       = {10.23919/ECC64448.2024.10590932}
+  doi       = {10.23919/ECC64448.2024.10590932},
+  abstract = {In this study, we introduce a control strategy that combines Proportional-Derivative (PD) control with Iterative Learning Control (ILC) to enhance legged robot velocity control with only the inverse kinematics and no additional system identification. This approach leverages the realtime feedback capabilities of PD control for gait tracking while incorporating ILC's learning abilities to eliminate inaccuracies from unmodeled dynamics iteratively and to reach desired velocities without residual errors. By uniting these techniques, the proposed method empowers legged robots to adapt and optimize their control behavior, achieving and maintaining desired walking velocities. Experimental results on the physical legged robot Go1 demonstrate the effectiveness of the proposed approach, highlighting its adaptability and reliability in real-world scenarios. This research represents a first step towards overcoming high computational effort and extensive data collection for quadruped robot velocity tracking through onboard learning.}
 }
 
 % [direct] IEEE Xplore funding metadata carries grant number "528483508-FIP12"
@@ -587,7 +636,8 @@
   pages     = {1213--1218},
   publisher = {IEEE},
   year      = {2024},
-  doi       = {10.1109/ICARCV63323.2024.10821620}
+  doi       = {10.1109/ICARCV63323.2024.10821620},
+  abstract = {This work presents a body velocity control strategy for quadruped robots. Such control typically requires accurate kinematic and dynamic model knowledge, which is very challenging because of the multidimensional input-output system and the ground contact. Based on the inverse kinematics, we propose a Proportional-Derivative controlled robot that uses Iterative Learning Control to learn discrete body velocities, which are then generalized using the Gaussian Process Regression model for each joint separately. This controller design enables onboard control and learning in real-time without any simulation. This study illustrates the effectiveness of the proposed methodology over a range of velocities while emphasizing the minimal computational effort associated with its application in a practical context.}
 }
 
 % [direct] IEEE Xplore funding metadata names the Deutsche Forschungsgemeinschaft;
@@ -599,7 +649,8 @@
   pages     = {272--277},
   publisher = {IEEE},
   year      = {2025},
-  doi       = {10.1109/CoDIT66093.2025.11321475}
+  doi       = {10.1109/CoDIT66093.2025.11321475},
+  abstract = {This paper investigates a novel approach for continuous gravity compensation in robotic systems using a Lagrangian Neural Network (LNN)-based Computed Torque Controller (CTC). Specifically, we use LNNs to model the system’s dynamics and adaptively improve the performance of the CTC. Unlike traditional methods relying on predefined models or extensive offline training, this approach enables the controller to learn and adapt in real-time, without prior model knowledge, and within seconds during operation. The proposed approach focuses on energy-based representations and uses Lagrangian mechanics to ensure that the learned dynamics are physically interpretable and reliable, reducing the need for extensive training datasets. The LNN-CTC utilizes an online learning mechanism to continuously update the LNN-based on real-time data, ensuring accurate gravity compensation without prior model knowledge. Real-world experiments on a humanoid robotic arm with 4 degrees of freedom show that the LNN-based online learning CTC effectively compensates for gravity and adapts to changes in mass within 25s. We compare the proposed controller to a conventional model-based controller that relies on precise parameter knowledge and demonstrate that the LNN-CTC achieves similar trajectory tracking accuracy with significantly less data, no prior knowledge, and rapid adaptation to dynamic changes, such as added payloads without requiring parameter identification. This work contributes an adaptive real-time control framework that compensates for gravity. It overcomes high modeling efforts and large datasets, showing promise for scalability and generalization in autonomous systems and advanced robotics in uncertain environments.}
 }
 
 % ---------------------------------------------------------------------
@@ -615,7 +666,8 @@
   number  = {5},
   pages   = {4324--4331},
   year    = {2025},
-  doi     = {10.1109/LRA.2025.3549658}
+  doi     = {10.1109/LRA.2025.3549658},
+  abstract = {Variable Stiffness Actuators (VSAs) are promising for advanced robotic systems, offering benefits such as improved energy efficiency, impact safety, stiffness adaptability, mechanical robustness, and dynamic versatility. However, traditional designs often rely on complex mechanical assemblies to achieve nonlinear torque–deflection characteristics, increasing system intricacy and introducing potential points of failure. This letter presents the design, implementation, and validation of a novel antagonistic VSA that drastically simplifies complexity of the mechanisms by utilizing 3D-printed progressive nonlinear torsional springs (3DNS). By directly 3D-printing springs, we enable precise control over nonlinear behavior through strategic variation of their geometry. Empirical testing and finite element simulations demonstrate that our springs exhibit low hysteresis, low variance across samples, and a strong correlation between simulated and measured behavior. Integrating these springs into an antagonistic setup demonstrates the feasibility of achieving VSAs with low damping, minimal hysteresis, and stiffness that aligns well with modeled predictions. Our findings suggest that this approach offers a cost-effective and accessible solution for the development of high-performance VSAs.}
 }
 
 % [scholar]
@@ -626,7 +678,8 @@
   pages     = {5556--5562},
   publisher = {IEEE},
   year      = {2025},
-  doi       = {10.1109/ICRA55743.2025.11127353}
+  doi       = {10.1109/ICRA55743.2025.11127353},
+  abstract = {Soft robotic hands compensate for uncertainty in perception and actuation by leveraging passive deformation in their intrinsically compliant hardware, facilitating robust and dexterous interactions with their environment. The ability to adjust the level of compliance during operation has the potential to further improve the performance of these hands by enabling novel interaction strategies. However, achieving variable stiffness mechanically typically requires significant engineering complexity, making these systems difficult to manufacture, prone to error, and expensive. We present a novel, very simple mechanism for achieving variable stiffness. This mechanism employs tendon-driven antagonistic actuation, with Bowden cables connecting elastic elements to servomotors. It supports compact actuator designs, while the Bowden cables facilitate flexible component placement within a robotic system. Following our approach, variable stiffness actuators can be easily manufactured at low-cost from readily available materials. Despite its simplicity, we demonstrate that our mechanism provides consistent and precise control over stiffness levels and contact torques, showcasing its potential for a broad range of applications in soft robotic systems.}
 }
 
 % [scholar]
@@ -637,7 +690,8 @@
   pages     = {9175--9181},
   publisher = {IEEE},
   year      = {2024},
-  doi       = {10.1109/IROS58592.2024.10801459}
+  doi       = {10.1109/IROS58592.2024.10801459},
+  abstract = {Soft robots exhibit complex behaviors despite simple control, due to their inherently compliant hardware which passively deforms upon contact ± a concept commonly referred to as morphological computation. To fully determine the behavior of soft robots, not only their control software but also their passive behavior needs to be programmed. We show that deliberate programming of passive deformation in soft fingertips can significantly influence the grasping and manipulation performance of various robotic grippers. For this, the fingertips display strategically modulated compliance levels across their palmar surface, realized through adjustments to the local thickness of a lattice structure within their soft material, resulting in desired passive deformation. The grippers are operated by human participants, solving diverse tasks involving a variety of objects. We analyze 2025 human trials and show that the distinct passive behaviors programmed into the fingertips significantly affect grasping and manipulation performance. Furthermore, we discovered that specific compliance profiles consistently demonstrate superior performance, indicating that not merely inherent softness by itself, but a purposeful combination of varying compliance levels plays a pivotal role in successful soft interaction.}
 }
 
 % ---------------------------------------------------------------------
@@ -652,7 +706,8 @@
   volume  = {17},
   pages   = {2275},
   year    = {2026},
-  doi     = {10.1038/s41467-026-70181-0}
+  doi     = {10.1038/s41467-026-70181-0},
+  abstract = {Microtubules are ubiquitous yet diverse cytoskeleton filaments. However, tubulin conservation presents challenges in understanding the origins of diverse microtubule architectures. The mechanisms by which microtubule architecture varies through the life cycle of the malaria-causing parasite Plasmodium are not understood and provide a valuable framework for exploring how intrinsic properties of tubulin contribute to architectural variety. Using parasite-purified tubulin, we determine P. falciparum microtubule structures by cryo-electron microscopy. Parasite-specific sequences change the tubulin dimer structure, suggesting how drug susceptibility and polymer properties are modified. Within the P. falciparum microtubule, lateral contacts are smaller but stronger, and the lattice is stiffer than in brain microtubules. Non-canonical microtubule architectures found in parasites are highly similar to those observed in vitro, validating the physiological relevance of these properties. Our findings show how evolutionary adaptation of tubulin modulates the material properties of the microtubule cytoskeleton.}
 }
 
 % [scholar]
@@ -663,7 +718,8 @@
   volume  = {16},
   pages   = {7597},
   year    = {2025},
-  doi     = {10.1038/s41467-025-62605-0}
+  doi     = {10.1038/s41467-025-62605-0},
+  abstract = {The confinement of macromolecules has profound implications for cellular biochemistry. It generates environments with specific physical properties affecting diffusion, macromolecular crowding, and reaction rates. Yet, it remains unknown how intracellular density distributions emerge and affect cellular physiology. Here, we show that the nucleus is less dense than the cytoplasm and that living systems establish a conserved density ratio between these compartments due to a pressure balance across the nuclear envelope. Nuclear transport establishes a specific nuclear proteome that exerts a colloid osmotic pressure, which, assisted by chromatin pressure, increases nuclear volume. During C. elegans development, the nuclear-to-cytoplasmic density ratio is robustly maintained even when nuclear-to-cytoplasmic volume ratios change. We show that loss of density homeostasis correlates with altered cell functions like senescence and propose density distributions as key markers in pathophysiology. In summary, this study reveals a homeostatic coupling of macromolecular densities that drives cellular organization and function.}
 }
 
 % [scholar]
@@ -674,7 +730,8 @@
   volume  = {27},
   pages   = {959--971},
   year    = {2025},
-  doi     = {10.1038/s41556-025-01678-x}
+  doi     = {10.1038/s41556-025-01678-x},
+  abstract = {Mitotic spindles are dynamically intertwined with the cytoplasm they assemble in. How the physicochemical properties of the cytoplasm affect spindle architecture and size remains largely unknown. Using quantitative biochemistry in combination with adaptive feedback microscopy, we investigated mitotic cell and spindle morphology during neural differentiation of embryonic stem cells. While tubulin biochemistry and microtubule dynamics remained unchanged, spindles changed their scaling behaviour; in differentiating cells, spindles were considerably smaller than those in equally sized undifferentiated stem cells. Integrating quantitative phase imaging, biophysical perturbations and theory, we found that as cells differentiated, their cytoplasm became more dilute. The concomitant decrease in free tubulin activated CPAP (centrosomal P4.1-associated protein) to enhance the centrosomal nucleation capacity. As a consequence, in differentiating cells, microtubule mass shifted towards spindle poles at the expense of the spindle bulk, explaining the differentiation-associated switch in spindle architecture. This study shows that cell state-specific cytoplasmic density tunes mitotic spindle architecture. Thus, we reveal physical properties of the cytoplasm as a major determinant in organelle size control.}
 }
 
 % [scholar]
@@ -683,7 +740,8 @@
   title        = {Weak interactions drive selective proteome demixing and tune the differential response to environmental perturbations},
   howpublished = {bioRxiv preprint},
   year         = {2026},
-  doi          = {10.64898/2026.07.22.739830}
+  doi          = {10.64898/2026.07.22.739830},
+  abstract = {The intracellular space is a crowded environment where macromolecules perform distinct tasks despite pervasive "non-specific" interactions. Whether these interactions are functionally relevant and how they influence cellular organization remains unclear. Here, we developed QuPID-MS, which measures the propensity of proteins to phase separate in native cell extracts proteome-wide. We find that weak interactions drive condensation of half of the proteome in a crowding- and temperature-dependent manner and we present evidence that this proteome demixing occurs in cells. Importantly, protein condensation properties are conserved and broadly change when cells adapt to new environments, demonstrating that weak interactions are regulated and linked to function. Indeed, condensation of the growth regulator TORC1 coincides with its rapid inactivation, while high solubility of the stress-activated Hog1 ensures its activity across conditions. We thus uncover a fundamental organizing principle that allows tuning of cell growth to environmental fluctuations while ensuring other processes function robustly despite perturbations.}
 }
 
 % [scholar]
@@ -692,7 +750,8 @@
   title        = {Inhomogeneous Tau polymerization, core--shell organization, and seed formation during Tau condensate aging},
   howpublished = {bioRxiv preprint},
   year         = {2026},
-  doi          = {10.64898/2026.03.18.711671}
+  doi          = {10.64898/2026.03.18.711671},
+  abstract = {Several proteins aggregating in neurodegenerative diseases spontaneously segregate into liquid condensates, which can catalyze protein aggregation. How liquid-solid transitions are catalyzed in the confined condensate volume is not clear. For the microtubule associated protein Tau, aggregating intra-neuronally in Alzheimer’s disease, we show that, during maturation, Tau condensates convert into elastic protein networks, accompanied by inhomogeneous polymerization of the condensate interior and the formation of high-density nodes and a “shell”. During condensation, Tau molecules extend, favoring intermolecular interactions and priming for progressive parallel Tau arrangement that can enable amyloid- like Tau oligomerization. In cells, aged condensates seed small Tau clusters in cytosol and at the nuclear envelope, precursors of larger aggregates. By bridging molecular to condensate level, we present mechanistic insight into how Tau condensates evolve into pathological, beta-structure containing seeds. The interior of aged Tau condensates remains accessible for smaller molecules, providing the opportunity to molecularly target Tau seed formation inside condensates. Teaser Aging Tau/RNA/PEG condensates change their viscoelasticity and protein/RNA distribution, promoting pathological Tau species.}
 }
 
 % [scholar] SSRN preprint; Fachet (BHT/Reber lab) is co-author
@@ -701,7 +760,8 @@
   title        = {2-Naphthyl tetrazoles are tubulin polymerization inhibitors with potent antiproliferative and apoptotic induction activities with distinct mechanisms},
   howpublished = {SSRN preprint},
   year         = {2025},
-  doi          = {10.2139/ssrn.5510720}
+  doi          = {10.2139/ssrn.5510720},
+  abstract = {Microtubule-targeting agents continue to be a cornerstone of cancer treatment; however, issues like systemic toxicity, poor metabolic stability, and multidrug resistance often restrict their effectiveness. Identifying new molecules that can overcome these limitations is crucial for enhancing therapeutic outcomes. In this work, we present a library of 12 new tubulin-binding compounds, analogs of Combretastatin A-4, incorporating a tetrazole bridge designed to preserve the cisoid disposition required for binding to the colchicine site. These compounds were assayed against a wide range of cancer cell lines, with compounds 23, 31, and 32 showing antiproliferative potencies in the low nanomolar range. The mechanism of action was assessed through microscopy experiments, which confirmed disruption of microtubule polymerization in cells. In vitro microtubule polymerization reactions with tubulin isolated from HEK-293 cells showed that compounds with drastically different inhibitory effects on polymerization dynamics elicit similar antiproliferative effects, thus questioning the usual assumption that interference with microtubule dynamics are the fundamental mechanism behind tubulin inhibitors' actions. Cell cycle and cell death assays revealed atypical behavior for antimitotic agents, not showing typical mitotic arrest but a significant increase in apoptotic cell populations, thus suggesting that they trigger cell death in an unusual way. In silico conformational and docking studies supported binding at the colchicine site and suggested favorable pharmacokinetic profiles. Together, these results position these compounds as highly promising candidates for development as new antitumor agents, especially for glioblastoma.}
 }
 
 % ---------------------------------------------------------------------
@@ -716,5 +776,6 @@
   volume  = {7},
   pages   = {uqag009},
   year    = {2026},
-  doi     = {10.1093/femsml/uqag009}
+  doi     = {10.1093/femsml/uqag009},
+  abstract = {Type IV secretion systems (T4SS) are found in both monoderm and diderm bacteria. The broad-host-range conjugative plasmid pIP501 from Enterococcus faecalis harbors a T4SS encoding 15 tra genes responsible for the spread of antimicrobial resistance genes among diverse G+ pathogens. Eight Tra proteins (TraB, TraCB3, TraF, TraHB8, TraI, TraK, TraLB6, and TraMB8) are postulated to form the mating pair formation (MPF) complex representing the central DNA translocation pore. One of these proteins is TraF, a 52.8 kDa transmembrane protein, which lacks any homologs in other well described T4SSs. In this study, TraF was proven to be an essential conjugative transfer protein. The TraF pulldown co-eluted all Tra proteins except TraGB1 and TraN. Bacterial-two-hybrid assay showed a strong interaction between TraF and TraMB8. We present a 1.25 Å resolution crystal structure of the N-terminal domain of TraF, which adopts a pseudokinase fold. AlphaFold predictions of full-length TraF with membrane mimetics show a transmembrane protein with two distinct soluble domains. FoldSeek revealed a strong similarity to YukC (EssB), a transmembrane pseudokinase from type VII secretion system (T7SS). YukC was shown to function as an interaction hub by mediating contacts between its pseudokinase domain and other T7SS proteins as part of the central membrane core complex. We postulate that TraF might play an important role in T4SS complex formation.}
 }

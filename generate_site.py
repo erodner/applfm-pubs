@@ -63,9 +63,13 @@ def parse_bib(text: str):
             i += 1
             while i < len(lines) and not lines[i].startswith("}"):
                 body.append(lines[i])
-                raw.append(lines[i])
+                # keep the displayed/copyable BibTeX compact: omit the abstract
+                if not re.match(r"\s*abstract\s*=", lines[i]):
+                    raw.append(lines[i])
                 i += 1
             raw.append("}")
+            if raw[-2].rstrip().endswith(","):
+                raw[-2] = raw[-2].rstrip().rstrip(",")
             fields = {}
             for fm in re.finditer(r"(\w+)\s*=\s*\{(.*)\}\s*,?\s*$", "\n".join(body), re.M):
                 fields[fm.group(1).lower()] = fm.group(2)

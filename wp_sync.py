@@ -66,6 +66,7 @@ F_BIBTEX = "acf[field_69b30b0eca792]"                          # code editor
 F_TAX_CATEGORY = "acf[field_69b308c077956]"                    # taxonomy select (term id)
 F_TAX_YEAR = "acf[field_69b30a9758056]"                        # taxonomy select (term id)
 F_TAX_TYPE = "acf[field_69b30aa158057]"                        # taxonomy select (term id)
+F_ABSTRACT = "acf[field_69b30b48ca793]"                        # wysiwyg
 AUTH_REP = "acf[field_69b30be47cff9]"                          # authors repeater
 AUTH_CONN = "field_69b30cbd7cffe"                              # 'Team' | 'External'
 AUTH_TEAM = "field_69b30c657cffc"                              # team post id
@@ -262,6 +263,7 @@ def build_entries():
                 "doi": f.get("doi", ""), "url": f.get("url", ""),
                 "arxiv": arxiv_id(e) or "", "pdf": pdf_url(e, proof),
                 "bibtex": deescape_bibtex(e["raw"]), "group": g["name"],
+                "abstract": f.get("abstract", ""),
             })
     return entries
 
@@ -326,6 +328,8 @@ def entry_fields(entry, team_index, terms, inst_map=None):
         F_PUBLISHED: entry["venue"],
         F_BIBTEX: entry["bibtex"],
     }
+    if entry.get("abstract"):
+        fields[F_ABSTRACT] = entry["abstract"]
     year_id = terms["year"].get(entry["year"])
     type_id = terms["type"].get(type_name)
     cat_id = terms["category"].get(cat) if cat else None
