@@ -121,19 +121,41 @@ Verification method is tagged per entry in `applfm.bib`:
 ## WordPress sync
 
 `wp_sync.py` syncs the bib entries to the `publication` post type on
-foundationmodels.bht-berlin.de via the WordPress REST API.
+foundationmodels.bht-berlin.de.
 
-1. In wp-admin → Users → Profile → **Application Passwords**, create one (e.g. `applfm-sync`).
-2. `cp wp_credentials.example.json wp_credentials.json` and fill in your username and the
-   application password. The file is gitignored — never commit it.
-3. `python3 wp_sync.py --inspect` — first run: verifies access, finds the REST route, and dumps
-   an existing publication's JSON so dedicated meta/ACF fields can be mapped (`META_MAP` in the script).
-4. `python3 wp_sync.py` — dry run showing what would be created/updated.
-5. `python3 wp_sync.py --apply` — creates missing entries as **drafts** (add `--publish` for
-   immediate publishing, `--update` to also update already-synced posts).
+**Setup:** `cp wp_credentials.example.json wp_credentials.json` and fill in `base_url`,
+`username`, and the account's normal WordPress `password` (the site blocks unauthenticated
+REST *and* application passwords, so the script logs in via `wp-login.php` cookies; reads go
+through the REST API with a nonce, writes through the classic-editor `post.php` form using the
+ACF field keys documented at the top of the script). The credentials file is gitignored —
+never commit it, and never `git add -A` in this repo.
 
-Posts are matched by a hidden `applfm-key` marker (falling back to title), never deleted, and
-carry the formatted citation, DOI/arXiv/PDF links, and the raw BibTeX.
+**Usage:**
+
+```
+python3 wp_sync.py                     # dry run: create/match/orphan report
+python3 wp_sync.py --apply             # create missing entries as drafts
+python3 wp_sync.py --apply --publish   # create as published instead
+python3 wp_sync.py --apply --update    # also rewrite matched posts' fields
+python3 wp_sync.py --only KEY1,KEY2    # restrict to specific bib keys
+python3 wp_sync.py --apply --limit 2   # test run: only the first N creations
+python3 wp_sync.py --include-preprints # also sync @misc entries (skipped by default)
+```
+
+**Behavior:**
+
+- **Preprints (`@misc`) are not synced** unless `--include-preprints` is given.
+- Each post gets: title, venue (`published` field), abstract, de-escaped raw BibTeX
+  (`bibtex` field — also the matching marker: the bib key inside it identifies synced posts,
+  with normalized-title matching as fallback), author repeater rows (consortium/team members
+  are linked to their `team` posts, everyone else becomes an External author), DOI/arXiv/PDF
+  resource links, and the year/type/category taxonomies (term IDs are fetched at runtime).
+- Research-area categories (M1–M4, R1–R3) come from `KEY_CATEGORY`/`GROUP_CATEGORY` in the
+  script — add a mapping there for every new entry (rules: M1 imprinting, M2 vision,
+  M3 evaluation/robustness/fairness/XAI/data quality, M4 NLP, R1 robotics, R2 quantitative
+  biology, R3 medical NLP/predictive medicine).
+- Updates preserve manually entered external-author institutions and never touch fields the
+  bib doesn't provide; posts are never deleted (WordPress-only posts are reported as orphans).
 
 ## Notes
 
