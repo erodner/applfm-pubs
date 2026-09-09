@@ -6,6 +6,9 @@ Curated BibTeX collection of publications acknowledging the DFG project **ApplFM
 
 - `applfm.bib` — the BibTeX entries; one comment above each entry quotes the paper's funding wording as verified.
 - `README.md` — human-readable overview: inclusion criterion, paper list grouped by mention type, caveats.
+- `generate_site.py` → `index.html` — GitHub Pages site (https://www.erodner.de/applfm-pubs/); regenerate after every bib change.
+- `proofs.json` — per-entry funding quotations + verified PDF links, consumed by the generator.
+- `wp_sync.py` — sync to the WordPress `publication` post type on foundationmodels.bht-berlin.de (REST API + Application Password; credentials in gitignored `wp_credentials.json`; dry-run by default, see README). The site's REST API rejects unauthenticated requests, and its front end is password-protected — run `--inspect` once with credentials to map the post type's meta/ACF fields into `META_MAP` before the first real sync.
 
 ## Inclusion criterion (strict)
 

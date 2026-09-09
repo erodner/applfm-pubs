@@ -118,6 +118,23 @@ Verification method is tagged per entry in `applfm.bib`:
 |---|---|---|
 | `Kuhlmann2026TraF` | Gram-positive T4SS protein TraF is a structural homolog of EssB/YukC | microLife 7:uqag009, 2026 |
 
+## WordPress sync
+
+`wp_sync.py` syncs the bib entries to the `publication` post type on
+foundationmodels.bht-berlin.de via the WordPress REST API.
+
+1. In wp-admin → Users → Profile → **Application Passwords**, create one (e.g. `applfm-sync`).
+2. `cp wp_credentials.example.json wp_credentials.json` and fill in your username and the
+   application password. The file is gitignored — never commit it.
+3. `python3 wp_sync.py --inspect` — first run: verifies access, finds the REST route, and dumps
+   an existing publication's JSON so dedicated meta/ACF fields can be mapped (`META_MAP` in the script).
+4. `python3 wp_sync.py` — dry run showing what would be created/updated.
+5. `python3 wp_sync.py --apply` — creates missing entries as **drafts** (add `--publish` for
+   immediate publishing, `--update` to also update already-synced posts).
+
+Posts are matched by a hidden `applfm-key` marker (falling back to title), never deleted, and
+carry the formatted citation, DOI/arXiv/PDF links, and the raw BibTeX.
+
 ## Notes
 
 - **RamanBench** was initially excluded because arXiv v1 contained no funding statement; v2 (May 2026) added the DFG acknowledgment, so it is now included.
