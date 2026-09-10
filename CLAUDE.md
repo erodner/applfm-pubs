@@ -36,6 +36,7 @@ Consortium members to check for: Kristian Hildebrand, Ivo Boblan, Hannes Höppne
 
 - Entry keys: `AuthorYearShortTitle` (e.g. `Koddenbrock2026DeepBench`).
 - Special characters in author names use LaTeX escapes (`{\"o}`, `{\ss}`), not raw UTF-8.
+- **Canonical author names**: consortium members are written exactly as on the WordPress team page (titles stripped) — e.g. `Gers, Felix` (not "Felix A." / "Felix Alexander"), `Biessmann, Felix` (not `Bie{\ss}mann`). For recurring externals use one form consistently (e.g. `Bressem, Keno`, `Steffek, Thomas`). When adding entries, normalize the Crossref/arXiv author strings to these forms, and scan for variants (group all author names by lowercased first+last token with ß→ss; any key with >1 spelling is a conflict to fix).
 - Prefer the published/camera-ready version's metadata (title, venue, pages, DOI) over arXiv/OpenReview submission metadata; note preprint IDs in the `note` field.
 - TMLR papers are `@article` with `issn = {2835-8856}` and the OpenReview forum URL.
 - **Never `git add -A` here** — stage named files only (a vim swap file of the credentials was once committed that way and forced a password rotation). `wp_credentials.json` and `*.swp` are gitignored, but stay explicit anyway.

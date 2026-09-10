@@ -14,11 +14,11 @@ OUT = Path(__file__).parent / "index.html"
 PROOFS = Path(__file__).parent / "proofs.json"
 SCHOLAR_URL = "https://scholar.google.com/scholar?q=%22528483508%22"
 
+# Canonical consortium-member names = the WordPress team-page names (titles stripped).
 PIS = [
     "Kristian Hildebrand", "Ivo Boblan", "Hannes Höppner", "Alexander Löser",
-    "Erik Rodner", "Felix Biessmann", "Felix Bießmann", "Simone Reber",
-    "Elisabeth Grohmann", "Felix Gers", "Felix A. Gers", "Felix Alexander Gers",
-    "Amy Siu",
+    "Erik Rodner", "Felix Biessmann", "Simone Reber",
+    "Elisabeth Grohmann", "Felix Gers", "Amy Siu",
 ]
 
 LATEX = {
